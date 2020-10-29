@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Threading.Tasks;
 using BytesTools;
 using FileMapSystem;
 using libx;
 using Res.ABSystem;
 using UnityEngine;
 using UnityEngine.Networking;
+using Debug = UnityEngine.Debug;
 
 namespace NewWarMap.Patch
 {
@@ -40,7 +43,6 @@ namespace NewWarMap.Patch
         private Step _step;
 
         [SerializeField] private string baseURL = "http://127.0.0.1:7888/DLC/";
-        [SerializeField] private bool development;
         public const string VersionInfoFileName = "version.json";
 
         public IUpdater listener { get; set; }
@@ -85,6 +87,9 @@ namespace NewWarMap.Patch
             _tempDownloadPath = $"{Application.persistentDataPath}/TempDownload/";
             _platform = GetPlatformForAssetBundles(Application.platform);
             _step = Step.Wait;
+
+            var version = AssetBundleManager.Instance.GetFileMapSystem().Version.ToString();
+            OnVersion(version);
         }
 
         private void OnApplicationFocus(bool hasFocus)
@@ -233,7 +238,6 @@ namespace NewWarMap.Patch
 
         public void StartUpdate()
         {
-            Debug.Log("StartUpdate.Development:" + development);
             listener?.OnStart();
 
             if (_checking != null)
@@ -556,6 +560,8 @@ namespace NewWarMap.Patch
                 throw new Exception($"{nameof(_currentDownloadingGroupDesc) is null}");
             }
 
+            var watch = Stopwatch.StartNew();
+
             var assetBundleFromTableDic = new Dictionary<string, AssetBundleTable.AssetBundleBundleData>();
             var updatedAssetBundles = new List<AssetBundleTable.AssetBundleBundleData>();
             foreach (var info in _currentDownloadAssetBundleTable.BundleInfos)
@@ -586,10 +592,16 @@ namespace NewWarMap.Patch
                 newFileMapInfos.AddRange(infos);
             }
 
+            CommonLog.Log(MAuthor.WY, $"diff updated asset bundle cost time {watch.ElapsedMilliseconds} ms");
+            watch.Restart();
+
             var originTable = AssetBundleManager.Instance.GetTable();
             MergeArray(ref originTable.BundleInfos, updatedAssetBundles.ToArray());
             var xml = originTable.ToXML();
             File.WriteAllText(_savePath + AssetBundlePathResolver.DependFileName, xml);
+
+            CommonLog.Log(MAuthor.WY, $"write AssetBundleDataXml cost time {watch.ElapsedMilliseconds} ms");
+            watch.Restart();
 
             var map = AssetBundleManager.Instance.GetFileMapSystem();
             MergeArray(ref map.FileInfo.AllFileMapInfo, newFileMapInfos.ToArray());
@@ -603,6 +615,7 @@ namespace NewWarMap.Patch
             var writeFileMapStream = File.Create(xmfPath);
             writeFileMapStream.Write(mapperBs.GetRaw(), 0, mapperBs.WriterIndex);
             writeFileMapStream.Close();
+            CommonLog.Log(MAuthor.WY, $"write AssetbundlesCache.xmf cost time {watch.ElapsedMilliseconds} ms");
         }
 
         private void Update()
@@ -616,21 +629,36 @@ namespace NewWarMap.Patch
 
                     OnProgress(1);
                     OnMessage("更新完成");
-                    
-                    // todo reload asset bundle
-                    OnComplete();
+
+                    StartCoroutine(ReloadResources());
                 }
             }
         }
 
-        private void OnComplete()
+        private IEnumerator ReloadResources()
         {
-            var version = Versions.LoadVersion(_savePath + Versions.Filename);
-            if (version > 0)
+            CommonLog.Log(MAuthor.WY, "start reload resource");
+            Destroy(gameObject);
+            yield return null;
+
+            if (GameAssetManager.Instance.CheckAllAssetsDone())
             {
-                OnVersion(version.ToString());
+                yield return null;
             }
 
+            CommonLog.Log(MAuthor.WY, "start safe dispose asset");
+            GameAssetManager.Instance.SafeDisposeAllAsset();
+            AssetBundleManager.Instance.SafeDisposeAll();
+            yield return Resources.UnloadUnusedAssets();
+
+            CommonLog.Log(MAuthor.WY, "start reload asset bundles");
+            AssetBundleManager.Instance.LoadAssetBundleConfig();
+            
+            OnComplete();
+        }
+
+        private void OnComplete()
+        {
             ToLoginScene();
         }
 

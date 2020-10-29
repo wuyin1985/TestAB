@@ -62,7 +62,7 @@ namespace FileMapSystem
 
         public override string ToString()
         {
-            return string.Format("{0}_{1}_{2}", Version_Major, Version_Minor, Version_Build);
+            return string.Format("{0}.{1}.{2}", Version_Major, Version_Minor, Version_Build);
         }
 
         public override int GetHashCode()

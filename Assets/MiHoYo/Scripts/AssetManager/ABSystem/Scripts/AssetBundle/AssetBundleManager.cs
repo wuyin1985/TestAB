@@ -221,23 +221,26 @@ namespace Res.ABSystem
         //加载streamingAsset下的配表信息
         private bool LoadFileMapperConfig()
         {
-            var strBytes = FileMapper.GetFileBytes(AssetBundlePathResolver.DependFileName);
-            if (strBytes == null || strBytes.Length == 0)
-            {
-                CommonLog.Error("初始化AB系统配置表失败");
-                return false;
-            }
-
-            //尝试获取补丁包新增AssetBundleXMLData.xml 
-            string patchCfgStr = null;
+            string cfgStr;
+            //优先加载PersistentPath
             var patchXmlPath = AssetBundlePathResolver.GetBundleSourceFile(AssetBundlePathResolver.DependFileName);
             if (File.Exists(patchXmlPath))
             {
-                patchCfgStr = File.ReadAllText(patchXmlPath);
+                cfgStr = File.ReadAllText(patchXmlPath);
             }
-
-            var xml = System.Text.Encoding.UTF8.GetString(strBytes).TrimEnd('\0');
-            return ParseBundleConfig(xml, patchCfgStr);
+            else
+            {
+                //加载FileMap
+                var strBytes = FileMapper.GetFileBytes(AssetBundlePathResolver.DependFileName);
+                if (strBytes == null || strBytes.Length == 0)
+                {
+                    CommonLog.Error("初始化AB系统配置表失败");
+                    return false;
+                }
+                cfgStr = System.Text.Encoding.UTF8.GetString(strBytes).TrimEnd('\0');
+            }
+        
+            return ParseBundleConfig(cfgStr);
         }
 
         //加载streamingAsset下的配表信息
@@ -250,20 +253,13 @@ namespace Res.ABSystem
         }
 
         //解析配表
-        private bool ParseBundleConfig(string cfgStr, string patchCfgStr = null)
+        private bool ParseBundleConfig(string cfgStr)
         {
             try
             {
                 var table = cfgStr.FromXML<AssetBundleTable>();
                 if (table != null)
                 {
-                    //合并patch
-                    var patchTable = patchCfgStr.FromXML<AssetBundleTable>();
-                    if (patchTable != null)
-                    {
-                        table.Merge(patchTable);
-                    }
-
                     _abNameToData.Clear();
                     _resPathTofullAssetPathData.Clear();
                     _resNameToBundleName.Clear();

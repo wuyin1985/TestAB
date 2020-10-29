@@ -10,6 +10,7 @@ using libx;
 using Res.ABSystem;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using Debug = UnityEngine.Debug;
 
 namespace NewWarMap.Patch
@@ -29,7 +30,7 @@ namespace NewWarMap.Patch
 
     [RequireComponent(typeof(Downloader))]
     [RequireComponent(typeof(NetworkMonitor))]
-    public class Updater : MonoBehaviour, IUpdater, INetworkMonitorListener
+    public class Updater : MonoBehaviour, INetworkMonitorListener
     {
         enum Step
         {
@@ -42,8 +43,8 @@ namespace NewWarMap.Patch
 
         private Step _step;
 
-        [SerializeField] private string baseURL = "http://127.0.0.1:7888/DLC/";
-        public const string VersionInfoFileName = "version.json";
+        [SerializeField] private string baseURL = "http://139.196.48.246/";
+        public const string VersionInfoFileName = "versioninfo.xml";
 
         public IUpdater listener { get; set; }
 
@@ -90,9 +91,11 @@ namespace NewWarMap.Patch
 
             var version = AssetBundleManager.Instance.GetFileMapSystem().Version.ToString();
             OnVersion(version);
+
+            StartUpdate();
         }
 
-        private void OnApplicationFocus(bool hasFocus)
+        private void OnApplicationFocus2(bool hasFocus)
         {
             if (_reachabilityChanged || _step == Step.Wait)
             {
@@ -200,8 +203,6 @@ namespace NewWarMap.Patch
             _step = Step.Wait;
             _reachabilityChanged = false;
 
-            Assets.Clear();
-
             listener?.OnClear();
 
             if (Directory.Exists(_savePath))
@@ -254,6 +255,7 @@ namespace NewWarMap.Patch
         {
             var currentMap = AssetBundleManager.Instance.GetFileMapSystem();
             var misses = currentMap.GetMissFileMaps(newMap);
+            _currentDownloadingGroupDesc = misses;
             CommonLog.Log(MAuthor.WY, $"{misses.Count} files miss in current file map");
             foreach (var fileMapGroupDescIter in misses)
             {
@@ -482,7 +484,7 @@ namespace NewWarMap.Patch
             if (state == VersionInfo.State.NeedUpdate)
             {
                 //下载xmf
-                var xmfFileName = AssetBundlePathResolver.BundleSaveDirName + FileMapInfo.FileExtension;
+                var xmfFileName = AssetBundlePathResolver.BundleSaveDirName + FileMapGroupInfo.FileExtension;
                 var xmfTargetPath = _tempDownloadPath + xmfFileName;
                 singleFileDownloadRequest.Reset(GetDownloadURL(xmfFileName, versionStr), xmfTargetPath);
                 yield return DownloadSingleFile(singleFileDownloadRequest);
@@ -552,12 +554,12 @@ namespace NewWarMap.Patch
         {
             if (_currentDownloadAssetBundleTable == null)
             {
-                throw new Exception($"{nameof(_currentDownloadAssetBundleTable) is null}");
+                throw new Exception($"{nameof(_currentDownloadAssetBundleTable)}is null");
             }
 
             if (_currentDownloadingGroupDesc == null)
             {
-                throw new Exception($"{nameof(_currentDownloadingGroupDesc) is null}");
+                throw new Exception($"{nameof(_currentDownloadingGroupDesc)} is null");
             }
 
             var watch = Stopwatch.StartNew();
@@ -598,6 +600,7 @@ namespace NewWarMap.Patch
             var originTable = AssetBundleManager.Instance.GetTable();
             MergeArray(ref originTable.BundleInfos, updatedAssetBundles.ToArray());
             var xml = originTable.ToXML();
+            //todo delete duplicate infos
             File.WriteAllText(_savePath + AssetBundlePathResolver.DependFileName, xml);
 
             CommonLog.Log(MAuthor.WY, $"write AssetBundleDataXml cost time {watch.ElapsedMilliseconds} ms");
@@ -605,11 +608,12 @@ namespace NewWarMap.Patch
 
             var map = AssetBundleManager.Instance.GetFileMapSystem();
             MergeArray(ref map.FileInfo.AllFileMapInfo, newFileMapInfos.ToArray());
+            //todo update version 
             var mapperBs = new ByteBuf(10000);
             map.FileInfo.WriteToByteBuf(mapperBs);
 
             var xmfPath = _savePath + AssetBundlePathResolver.BundleSaveDirName +
-                          FileMapInfo.FileExtension;
+                          FileMapGroupInfo.FileExtension;
             DeleteFile(xmfPath);
 
             var writeFileMapStream = File.Create(xmfPath);
@@ -638,7 +642,6 @@ namespace NewWarMap.Patch
         private IEnumerator ReloadResources()
         {
             CommonLog.Log(MAuthor.WY, "start reload resource");
-            Destroy(gameObject);
             yield return null;
 
             if (GameAssetManager.Instance.CheckAllAssetsDone())
@@ -653,17 +656,13 @@ namespace NewWarMap.Patch
 
             CommonLog.Log(MAuthor.WY, "start reload asset bundles");
             AssetBundleManager.Instance.LoadAssetBundleConfig();
-            
+
             OnComplete();
         }
 
         private void OnComplete()
         {
-            ToLoginScene();
-        }
-
-        private void ToLoginScene()
-        {
+            SceneManager.LoadScene(1, LoadSceneMode.Single);
         }
 
         private void OnDestroy()

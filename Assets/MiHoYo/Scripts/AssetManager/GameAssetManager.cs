@@ -47,11 +47,11 @@ public class GameAssetManager : SimpleSingletonProvider<GameAssetManager>
 #endif
         if (!IsInit)
         {
-#if UNITY_EDITOR
+/*#if UNITY_EDITOR
             USED_AB_MODE = UnityEngine.PlayerPrefs.GetInt("AB_MODE", 0) == 1;
-#else
+#else*/
             USED_AB_MODE = true;
-#endif
+//#endif
             //GameObjectPool.InitPool();
             UnityFileLoaderHelper.InitForMainThread();
             UnityFileLoaderHelper.USED_AB_MODE = USED_AB_MODE;

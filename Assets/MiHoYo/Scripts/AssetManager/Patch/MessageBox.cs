@@ -38,7 +38,6 @@ namespace NewWarMap.Patch
         private Text _textOk;
         private Text _textNo;
 
-        private static readonly GameObject _prefab = Resources.Load<GameObject>("MessageBox");
         private static readonly List<MessageBox> _showed = new List<MessageBox>();
         private static readonly List<MessageBox> _hidden = new List<MessageBox>();
 
@@ -99,7 +98,8 @@ namespace NewWarMap.Patch
 
         private MessageBox(string title, string content, string ok, string no)
         {
-            gameObject = Object.Instantiate(_prefab);
+            var prefab = GameAssetManager.Instance.LoadRawAsset<GameObject>("AssetBundles/PatchAsset/UI/MessageBox");
+            gameObject = Object.Instantiate(prefab);
             gameObject.name = title;
 
             _title = GetComponent<Text>("Title");

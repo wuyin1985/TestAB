@@ -1,15 +1,19 @@
+[LicensingClient] ERROR Failed to connect to local IPC
+[Licensing::Module] Failed to connect to channel: LicenseClient-yin.wu
+[Licensing::Module] Successfully launched the LicensingClient
 [Licensing::Module] Successfully connected to LicensingClient on channel: LicenseClient-yin.wu
+[Licensing::Module] Successfully launched and connected to LicensingClient
 Entitlement-based licensing initiated
 [LicensingClient] Licenses Updated successfully in LicensingClient
 
-LICENSE SYSTEM [20201027 16:36:52] Next license update check is after 2020-10-27T03:01:47
+LICENSE SYSTEM [20201029 20:47:24] Next license update check is after 2020-10-30T07:46:11
 
 
-LICENSE SYSTEM [20201027 16:36:52] Current license is already valid and activated. Skipping license activation process (Provided username/password will be ignored).
+LICENSE SYSTEM [20201029 20:47:24] Current license is already valid and activated. Skipping license activation process (Provided username/password will be ignored).
 Built from '2019.4/china_unity/release' branch; Version is '2019.4.8f1 (35029ca7eba8) revision 3474076'; Using compiler version '191627012'
 OS: 'Windows 10  (10.0.0) 64bit' Language: 'zh' Physical Memory: 32703 MB
 [Licensing::Module] Serial number assigned to: "F4-FMDH-AERW-2E6X-KRFX-XXXX"\nBatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
-[Package Manager] Server::Start -- Port 49981 was selected
+[Package Manager] Server::Start -- Port 51940 was selected
 Adding genesis user token 
  COMMAND LINE ARGUMENTS:
 C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Unity.exe
@@ -75,8 +79,8 @@ Registered 40 packages:
     com.unity.modules.subsystems@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.subsystems)
 
 [Subsystems] No new subsystems found in resolved package list.
-[Package Manager] Done registering packages in 0.05s seconds
-Refreshing native plugins compatible for Editor in 21.94 ms, found 0 plugins.
+[Package Manager] Done registering packages in 0.06s seconds
+Refreshing native plugins compatible for Editor in 29.59 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2019.4.8f1 (35029ca7eba8)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/Resources/UnitySubsystems
@@ -91,133 +95,137 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56248
-ImportWorker Server TCP listen port: 51605
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56220
+ImportWorker Server TCP listen port: 65412
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005332 seconds.
+Registered in 0.005253 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 19.94 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 33.59 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.014 seconds
+- Completed reload, in  1.107 seconds
 Registering precompiled user dll's ...
-Registered in 0.078822 seconds.
+Registered in 0.083434 seconds.
 Platform modules already initialized, skipping
-Validating Project structure ... 0.005271 seconds.
+Validating Project structure ... 0.005073 seconds.
 Shader import version has changed; will reimport all shaders...
-Upgrading shader files ...0.006332 seconds.
+Upgrading shader files ...0.006585 seconds.
+Start importing Assets/AssetBundles/Actor using Guid(136d98398bc2999488c0159f17a31c33) Importer(-1,00000000000000000000000000000000)
+Done importing asset: 'Assets/AssetBundles/Actor' (target hash: 'd418b5f7c1193cdbb965da1ab3a0d211') in 0.037087 seconds
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image E:\TestAB\xasset-master\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.700 seconds
+- Completed reload, in  0.695 seconds
 Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
 RefreshInfo: InitialScriptRefreshV2(NoUpdateAssetOptions)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 1282.033ms
-	ApplyChangesToAssetFolders: 0.626ms
-	WriteModifiedImportersToTextMetaFiles: 0.042ms
+	InvokeBeforeRefreshCallbacks: 1801.791ms
+	ApplyChangesToAssetFolders: 0.647ms
+	WriteModifiedImportersToTextMetaFiles: 0.061ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 60.475ms
-	UnregisterDeletedAssets: 0.000ms
+	OnSourceAssetsModified: 91.158ms
+	UnregisterDeletedAssets: 0.815ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 0.097ms
-	CategorizeAssets: 0.090ms
-	ImportAndPostprocessOutOfDateAssets: 22.231ms (1191.286ms without children)
-		ImportManagerImport: 1190.867ms (0.000ms without children)
-			ImportInProcess: 0.000ms
-			ImportOutOfProcess: 0.000ms
+	GetAllGuidsForCategorization: 0.095ms
+	CategorizeAssets: 0.108ms
+	ImportAndPostprocessOutOfDateAssets: 34.120ms (1662.961ms without children)
+		ImportManagerImport: 1187.231ms (47.487ms without children)
+			ImportInProcess: 0.384ms
+			ImportOutOfProcess: 47.082ms
 			UpdateCategorizedAssets: 0.000ms
-			RemoteAssetCacheGetArtifact: 0.000ms (0.000ms without children)
+			RemoteAssetCacheGetArtifact: 0.021ms (0.000ms without children)
 				RemoteAssetCacheResolve: 0.000ms
 				RemoteAssetCacheDownloadFile: 0.000ms
 		CompileScripts: 0.000ms
 		PostProcessAllAssets: 0.000ms
-		ReloadImportedAssets: 0.000ms
+		ReloadImportedAssets: 425.598ms
 		VerifyAssetsAreUpToDateAndCorrect: 0.000ms
 		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
-		InitializingProgressBar: 0.125ms
+		InitializingProgressBar: 0.147ms
 		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
-		OnDemandSchedulerStart: 0.077ms
+		OnDemandSchedulerStart: 0.089ms
 		RestoreLoadedAssetsState: 0.000ms
 	InvokeProjectHasChanged: 0.216ms
 	UpdateImportedAssetsSnapshot: 0.000ms
-	ReloadSourceAssets: 0.000ms
-	UnloadImportedAssets: 0.243ms
+	ReloadSourceAssets: 2.192ms
+	UnloadImportedAssets: 0.221ms
 	Hotreload: 0.002ms
-	FixTempGuids: 0.133ms
-	VerifyGuidPMRegistrations: 0.002ms
+	FixTempGuids: 4.441ms
+	VerifyGuidPMRegistrations: 0.003ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
 	UnloadStreamsBegin: 0.000ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.234ms
-	GetLoadedSourceAssetsSnapshot: 0.002ms
-	PersistCurrentRevisions: 0.267ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.318ms
+	GetLoadedSourceAssetsSnapshot: 0.219ms
+	PersistCurrentRevisions: 0.588ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 5.219ms
+	GenerateScriptTypeHashes: 5.118ms
 Start importing Library/BuildPlayer.prefs using Guid(00000000000000005000000000000000) Importer(-1,00000000000000000000000000000000)
-Done importing asset: 'Library/BuildPlayer.prefs' (target hash: 'fe3108a9ccf4ffdc149e560e6cf05620') in 0.015500 seconds
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Done importing asset: 'Library/BuildPlayer.prefs' (target hash: 'fe3108a9ccf4ffdc149e560e6cf05620') in 0.014115 seconds
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Refresh completed in 0.572702 seconds.
+Refresh completed in 0.523563 seconds.
 RefreshInfo: RefreshV2(ForceSynchronousImport)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 572.693ms
-	ApplyChangesToAssetFolders: 0.950ms
-	WriteModifiedImportersToTextMetaFiles: 0.074ms
+	InvokeBeforeRefreshCallbacks: 523.271ms
+	ApplyChangesToAssetFolders: 0.694ms
+	WriteModifiedImportersToTextMetaFiles: 0.043ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 74.751ms
+	OnSourceAssetsModified: 161.186ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 2.422ms
-	CategorizeAssets: 0.111ms
-	ImportAndPostprocessOutOfDateAssets: 21.681ms (466.918ms without children)
-		ImportManagerImport: 0.879ms (16.585ms without children)
-			ImportInProcess: 0.677ms
-			ImportOutOfProcess: 15.903ms
+	GetAllGuidsForCategorization: 1.381ms
+	CategorizeAssets: 0.114ms
+	ImportAndPostprocessOutOfDateAssets: 28.390ms (328.219ms without children)
+		ImportManagerImport: 6.401ms (15.214ms without children)
+			ImportInProcess: 0.689ms
+			ImportOutOfProcess: 14.519ms
 			UpdateCategorizedAssets: 0.000ms
-			RemoteAssetCacheGetArtifact: 0.005ms (0.000ms without children)
+			RemoteAssetCacheGetArtifact: 0.006ms (0.000ms without children)
 				RemoteAssetCacheResolve: 0.000ms
 				RemoteAssetCacheDownloadFile: 0.000ms
 		CompileScripts: 0.000ms
 		PostProcessAllAssets: 0.000ms
-		ReloadImportedAssets: 447.141ms
+		ReloadImportedAssets: 304.281ms
 		VerifyAssetsAreUpToDateAndCorrect: 0.001ms
 		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
-		InitializingProgressBar: 0.155ms
+		InitializingProgressBar: 0.162ms
 		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
-		OnDemandSchedulerStart: 0.095ms
-		RestoreLoadedAssetsState: 0.429ms
-	InvokeProjectHasChanged: 0.467ms
+		OnDemandSchedulerStart: 0.096ms
+		RestoreLoadedAssetsState: 0.341ms
+	InvokeProjectHasChanged: 0.524ms
 	UpdateImportedAssetsSnapshot: 0.000ms
-	ReloadSourceAssets: 1.166ms
-	UnloadImportedAssets: 0.219ms
-	Hotreload: 0.042ms
-	FixTempGuids: 4.341ms
-	VerifyGuidPMRegistrations: 0.003ms
+	ReloadSourceAssets: 1.196ms
+	UnloadImportedAssets: 0.262ms
+	Hotreload: 0.047ms
+	FixTempGuids: 1.145ms
+	VerifyGuidPMRegistrations: 0.002ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.101ms
+	UnloadStreamsBegin: 0.105ms
 	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.004ms
-	GetLoadedSourceAssetsSnapshot: 0.233ms
-	PersistCurrentRevisions: 0.980ms
+	GetLoadedSourceAssetsSnapshot: 0.417ms
+	PersistCurrentRevisions: 1.109ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.029ms
+	GenerateScriptTypeHashes: 0.016ms
 RefreshInfo: StopAssetImportingV2(ForceSynchronousImport)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 62.586ms
-	ApplyChangesToAssetFolders: 0.745ms
-	WriteModifiedImportersToTextMetaFiles: 0.043ms
+	InvokeBeforeRefreshCallbacks: 48.476ms
+	ApplyChangesToAssetFolders: 0.818ms
+	WriteModifiedImportersToTextMetaFiles: 0.044ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 59.355ms
+	OnSourceAssetsModified: 45.035ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.367ms
+	GetAllGuidsForCategorization: 1.464ms
 	CategorizeAssets: 0.000ms
 	ImportAndPostprocessOutOfDateAssets: 0.000ms (0.000ms without children)
 		ImportManagerImport: 0.000ms (0.000ms without children)
@@ -241,30 +249,30 @@ RefreshProfiler: Total: 0.000ms
 	ReloadSourceAssets: 0.000ms
 	UnloadImportedAssets: 0.000ms
 	Hotreload: 0.000ms
-	FixTempGuids: 0.014ms
-	VerifyGuidPMRegistrations: 0.002ms
+	FixTempGuids: 0.017ms
+	VerifyGuidPMRegistrations: 0.003ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.108ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.018ms
-	GetLoadedSourceAssetsSnapshot: 0.290ms
-	PersistCurrentRevisions: 0.237ms
+	UnloadStreamsBegin: 0.111ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.020ms
+	GetLoadedSourceAssetsSnapshot: 0.304ms
+	PersistCurrentRevisions: 0.241ms
 	UnloadStreamsEnd: 0.000ms
 	GenerateScriptTypeHashes: 0.005ms
-Refresh completed in 0.092774 seconds.
+Refresh completed in 0.097223 seconds.
 RefreshInfo: RefreshV2(NoUpdateAssetOptions)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 92.763ms
-	ApplyChangesToAssetFolders: 0.674ms
-	WriteModifiedImportersToTextMetaFiles: 0.043ms
+	InvokeBeforeRefreshCallbacks: 97.212ms
+	ApplyChangesToAssetFolders: 0.779ms
+	WriteModifiedImportersToTextMetaFiles: 0.045ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 66.676ms
+	OnSourceAssetsModified: 66.146ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.966ms
-	CategorizeAssets: 0.102ms
-	ImportAndPostprocessOutOfDateAssets: 19.882ms (1.413ms without children)
-		ImportManagerImport: 0.381ms (0.000ms without children)
+	GetAllGuidsForCategorization: 1.900ms
+	CategorizeAssets: 0.124ms
+	ImportAndPostprocessOutOfDateAssets: 24.677ms (1.561ms without children)
+		ImportManagerImport: 0.391ms (0.000ms without children)
 			ImportInProcess: 0.000ms
 			ImportOutOfProcess: 0.000ms
 			UpdateCategorizedAssets: 0.000ms
@@ -276,32 +284,32 @@ RefreshProfiler: Total: 0.000ms
 		ReloadImportedAssets: 0.000ms
 		VerifyAssetsAreUpToDateAndCorrect: 0.000ms
 		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
-		InitializingProgressBar: 0.154ms
+		InitializingProgressBar: 0.152ms
 		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
-		OnDemandSchedulerStart: 0.092ms
-		RestoreLoadedAssetsState: 0.319ms
-	InvokeProjectHasChanged: 0.467ms
+		OnDemandSchedulerStart: 0.091ms
+		RestoreLoadedAssetsState: 0.304ms
+	InvokeProjectHasChanged: 0.621ms
 	UpdateImportedAssetsSnapshot: 0.000ms
 	ReloadSourceAssets: 0.000ms
-	UnloadImportedAssets: 0.372ms
-	Hotreload: 0.042ms
-	FixTempGuids: 0.033ms
-	VerifyGuidPMRegistrations: 0.002ms
+	UnloadImportedAssets: 0.380ms
+	Hotreload: 0.044ms
+	FixTempGuids: 0.036ms
+	VerifyGuidPMRegistrations: 0.003ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.107ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.022ms
-	GetLoadedSourceAssetsSnapshot: 0.285ms
-	PersistCurrentRevisions: 0.742ms
+	UnloadStreamsBegin: 0.108ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.044ms
+	GetLoadedSourceAssetsSnapshot: 0.461ms
+	PersistCurrentRevisions: 0.939ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.004ms
+	GenerateScriptTypeHashes: 0.005ms
 Initializing Unity extensions:
  'C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll'  GUID: 4ba2329b63d54f0187bcaa12486b1b0f
-Unloading 62 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 40.9 MB.
-System memory in use after: 40.2 MB.
+Unloading 58 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 40.7 MB.
+System memory in use after: 40.0 MB.
 
-Unloading 84 unused Assets to reduce memory usage. Loaded Objects now: 1454.
-Total: 2.549600 ms (FindLiveObjects: 0.245900 ms CreateObjectMapping: 0.026100 ms MarkObjects: 1.818300 ms  DeleteObjects: 0.458900 ms)
+Unloading 81 unused Assets to reduce memory usage. Loaded Objects now: 1440.
+Total: 2.551000 ms (FindLiveObjects: 0.245700 ms CreateObjectMapping: 0.043600 ms MarkObjects: 1.813500 ms  DeleteObjects: 0.447700 ms)
 
 ExtraArg = [Development=true],[ConnectWithProfiler=false],[EnableDeepProfilingSupport=false],[AllowDebugging=false],[ReImportUIRes=true],[ClearOldAB=false],[ProductName=TheWar2061],[VersionCfg=${VersionCfg}],[IL2CPP=true],[AppVersion=1.0.0],[BundleIdentifier=com.thewar.wargame],[DefineSymbols=MHY_DEBUG]
 UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
@@ -492,20 +500,46 @@ AutoPacker:PackAB_PC() (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Editor\As
  
 (Filename: Assets/MiHoYo/Scripts/Common/CommonLog.cs Line: 124)
 
-Refreshing native plugins compatible for Editor in 0.84 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
 DisplayProgressbar: Loading
-Refresh completed in 0.054512 seconds.
+出现了重复的MD5路径对象,关注看下是否是创建了同名对象！Assets/AssetBundles/PatchAsset/Animations/MessageBox.anim,路径：MD5Creater+MD5Struct
+UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+CommonLog:Log(String) (at Assets\MiHoYo\Scripts\Common\CommonLog.cs:124)
+YSEditorBuildBundles:CheckBundleTableAboutShortMD5Repeat(List`1) (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Editor\AssetBundle\YSEditorBuildBundles.cs:57)
+YSEditorBuildBundles:AutoBuildAssetBundles_PC(Boolean) (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Editor\AssetBundle\YSEditorBuildBundles.cs:380)
+AutoPacker:PackAB(BuildTarget) (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Editor\AssetBundle\AutoPacker.cs:323)
+AutoPacker:PackAB_PC() (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Editor\AssetBundle\AutoPacker.cs:111)
+ 
+(Filename: Assets/MiHoYo/Scripts/Common/CommonLog.cs Line: 124)
+
+出现了重复的MD5路径对象,关注看下是否是创建了同名对象！Assets/AssetBundles/PatchAsset/Animations/SplashScreen.controller,路径：MD5Creater+MD5Struct
+UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+CommonLog:Log(String) (at Assets\MiHoYo\Scripts\Common\CommonLog.cs:124)
+YSEditorBuildBundles:CheckBundleTableAboutShortMD5Repeat(List`1) (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Editor\AssetBundle\YSEditorBuildBundles.cs:57)
+YSEditorBuildBundles:AutoBuildAssetBundles_PC(Boolean) (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Editor\AssetBundle\YSEditorBuildBundles.cs:380)
+AutoPacker:PackAB(BuildTarget) (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Editor\AssetBundle\AutoPacker.cs:323)
+AutoPacker:PackAB_PC() (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Editor\AssetBundle\AutoPacker.cs:111)
+ 
+(Filename: Assets/MiHoYo/Scripts/Common/CommonLog.cs Line: 124)
+
+Refresh completed in 0.069189 seconds.
 RefreshInfo: RefreshV2(NoUpdateAssetOptions)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 54.497ms
-	ApplyChangesToAssetFolders: 0.719ms
-	WriteModifiedImportersToTextMetaFiles: 0.046ms
+	InvokeBeforeRefreshCallbacks: 69.106ms
+	ApplyChangesToAssetFolders: 0.747ms
+	WriteModifiedImportersToTextMetaFiles: 0.044ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 50.669ms
+	OnSourceAssetsModified: 65.369ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.823ms
+	GetAllGuidsForCategorization: 1.636ms
 	CategorizeAssets: 0.000ms
 	ImportAndPostprocessOutOfDateAssets: 0.000ms (0.000ms without children)
 		ImportManagerImport: 0.000ms (0.000ms without children)
@@ -529,77 +563,77 @@ RefreshProfiler: Total: 0.000ms
 	ReloadSourceAssets: 0.000ms
 	UnloadImportedAssets: 0.000ms
 	Hotreload: 0.000ms
-	FixTempGuids: 0.025ms
-	VerifyGuidPMRegistrations: 0.003ms
+	FixTempGuids: 0.024ms
+	VerifyGuidPMRegistrations: 0.002ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.112ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.105ms
-	GetLoadedSourceAssetsSnapshot: 0.308ms
-	PersistCurrentRevisions: 0.282ms
+	UnloadStreamsBegin: 0.144ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.114ms
+	GetLoadedSourceAssetsSnapshot: 0.382ms
+	PersistCurrentRevisions: 0.248ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.006ms
+	GenerateScriptTypeHashes: 0.004ms
 Start importing ProjectSettings/ProjectSettings.asset using Guid(00000000000000004000000000000000) Importer(-1,00000000000000000000000000000000)
-Done importing asset: 'ProjectSettings/ProjectSettings.asset' (target hash: '521809b95cb097d406264bbf8fdafeb9') in 0.007321 seconds
+Done importing asset: 'ProjectSettings/ProjectSettings.asset' (target hash: '744ec4606201c05db2b11cf8c6e41893') in 0.003928 seconds
 Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 43.025ms
-	ApplyChangesToAssetFolders: 0.609ms
-	WriteModifiedImportersToTextMetaFiles: 0.045ms
+	InvokeBeforeRefreshCallbacks: 59.388ms
+	ApplyChangesToAssetFolders: 0.613ms
+	WriteModifiedImportersToTextMetaFiles: 0.042ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 25.805ms
+	OnSourceAssetsModified: 44.425ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.559ms
-	CategorizeAssets: 0.093ms
-	ImportAndPostprocessOutOfDateAssets: 0.685ms (12.471ms without children)
-		ImportManagerImport: 0.619ms (8.441ms without children)
-			ImportInProcess: 0.683ms
-			ImportOutOfProcess: 7.738ms
+	GetAllGuidsForCategorization: 1.719ms
+	CategorizeAssets: 0.109ms
+	ImportAndPostprocessOutOfDateAssets: 0.650ms (9.961ms without children)
+		ImportManagerImport: 0.617ms (5.451ms without children)
+			ImportInProcess: 0.960ms
+			ImportOutOfProcess: 4.464ms
 			UpdateCategorizedAssets: 0.000ms
-			RemoteAssetCacheGetArtifact: 0.020ms (0.000ms without children)
+			RemoteAssetCacheGetArtifact: 0.028ms (0.000ms without children)
 				RemoteAssetCacheResolve: 0.000ms
 				RemoteAssetCacheDownloadFile: 0.000ms
 		CompileScripts: 0.000ms
 		PostProcessAllAssets: 0.000ms
-		ReloadImportedAssets: 1.290ms
+		ReloadImportedAssets: 1.569ms
 		VerifyAssetsAreUpToDateAndCorrect: 0.001ms
 		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
-		InitializingProgressBar: 0.149ms
+		InitializingProgressBar: 0.144ms
 		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
-		OnDemandSchedulerStart: 0.095ms
-		RestoreLoadedAssetsState: 0.226ms
-	InvokeProjectHasChanged: 0.584ms
+		OnDemandSchedulerStart: 0.096ms
+		RestoreLoadedAssetsState: 0.338ms
+	InvokeProjectHasChanged: 0.648ms
 	UpdateImportedAssetsSnapshot: 0.000ms
-	ReloadSourceAssets: 1.065ms
+	ReloadSourceAssets: 1.096ms
 	UnloadImportedAssets: 0.370ms
-	Hotreload: 0.030ms
-	FixTempGuids: 0.278ms
-	VerifyGuidPMRegistrations: 0.001ms
+	Hotreload: 0.031ms
+	FixTempGuids: 0.287ms
+	VerifyGuidPMRegistrations: 0.002ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.112ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.018ms
-	GetLoadedSourceAssetsSnapshot: 0.249ms
-	PersistCurrentRevisions: 1.101ms
+	UnloadStreamsBegin: 0.107ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.015ms
+	GetLoadedSourceAssetsSnapshot: 0.398ms
+	PersistCurrentRevisions: 1.145ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.040ms
-Refresh completed in 0.087615 seconds.
+	GenerateScriptTypeHashes: 0.023ms
+Refresh completed in 0.084169 seconds.
 RefreshInfo: RefreshV2(NoUpdateAssetOptions)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 87.606ms
-	ApplyChangesToAssetFolders: 0.675ms
-	WriteModifiedImportersToTextMetaFiles: 0.044ms
+	InvokeBeforeRefreshCallbacks: 84.158ms
+	ApplyChangesToAssetFolders: 0.725ms
+	WriteModifiedImportersToTextMetaFiles: 0.041ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 62.634ms
+	OnSourceAssetsModified: 54.201ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.615ms
-	CategorizeAssets: 0.094ms
-	ImportAndPostprocessOutOfDateAssets: 19.506ms (1.365ms without children)
-		ImportManagerImport: 0.391ms (0.000ms without children)
+	GetAllGuidsForCategorization: 1.836ms
+	CategorizeAssets: 0.089ms
+	ImportAndPostprocessOutOfDateAssets: 24.152ms (1.518ms without children)
+		ImportManagerImport: 0.390ms (0.000ms without children)
 			ImportInProcess: 0.000ms
 			ImportOutOfProcess: 0.000ms
 			UpdateCategorizedAssets: 0.000ms
@@ -611,69 +645,211 @@ RefreshProfiler: Total: 0.000ms
 		ReloadImportedAssets: 0.000ms
 		VerifyAssetsAreUpToDateAndCorrect: 0.000ms
 		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
-		InitializingProgressBar: 0.154ms
+		InitializingProgressBar: 0.156ms
 		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
-		OnDemandSchedulerStart: 0.093ms
-		RestoreLoadedAssetsState: 0.251ms
-	InvokeProjectHasChanged: 0.475ms
+		OnDemandSchedulerStart: 0.173ms
+		RestoreLoadedAssetsState: 0.316ms
+	InvokeProjectHasChanged: 0.482ms
 	UpdateImportedAssetsSnapshot: 0.000ms
 	ReloadSourceAssets: 0.000ms
-	UnloadImportedAssets: 0.381ms
-	Hotreload: 0.045ms
-	FixTempGuids: 0.019ms
+	UnloadImportedAssets: 0.378ms
+	Hotreload: 0.041ms
+	FixTempGuids: 0.018ms
 	VerifyGuidPMRegistrations: 0.002ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.105ms
+	UnloadStreamsBegin: 0.132ms
 	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.005ms
-	GetLoadedSourceAssetsSnapshot: 0.282ms
-	PersistCurrentRevisions: 0.738ms
+	GetLoadedSourceAssetsSnapshot: 0.287ms
+	PersistCurrentRevisions: 0.744ms
 	UnloadStreamsEnd: 0.000ms
 	GenerateScriptTypeHashes: 0.004ms
+[ScriptCompilation] Recompiling all scripts because: Recompiling scripts for player build.
+BuildPlayer: start building target 19
+- Starting script compilation
+- Starting compile Library/PlayerScriptAssemblies/UnityEngine.TestRunner.dll
+- Starting compile Library/PlayerScriptAssemblies/UnityEngine.UI.dll
+- Finished compile Library/PlayerScriptAssemblies/UnityEngine.TestRunner.dll in 0.376999 seconds
+- Finished compile Library/PlayerScriptAssemblies/UnityEngine.UI.dll in 0.419 seconds
+- Starting compile Library/PlayerScriptAssemblies/Unity.TextMeshPro.dll
+- Starting compile Library/PlayerScriptAssemblies/Unity.Timeline.dll
+- Finished compile Library/PlayerScriptAssemblies/Unity.Timeline.dll in 0.435071 seconds
+- Finished compile Library/PlayerScriptAssemblies/Unity.TextMeshPro.dll in 0.633795 seconds
+- Starting compile Library/PlayerScriptAssemblies/Assembly-CSharp-firstpass.dll
+- Finished compile Library/PlayerScriptAssemblies/Assembly-CSharp-firstpass.dll in 0.220761 seconds
+- Starting compile Library/PlayerScriptAssemblies/Assembly-CSharp.dll
+- Finished compile Library/PlayerScriptAssemblies/Assembly-CSharp.dll in 0.321693 seconds
+- Finished script compilation in 1.674408 seconds
+Assets\MiHoYo\Scripts\FileLoaderSystem\FileMapSystemDefine.cs(9,19): warning CS0660: 'Version' defines operator == or operator != but does not override Object.Equals(object o)
+Assets\MiHoYo\Scripts\AssetManager\Patch\Download.cs(67,33): warning CS0672: Member 'Download.ReceiveContentLength(int)' overrides obsolete member 'DownloadHandler.ReceiveContentLength(int)'. Add the Obsolete attribute to 'Download.ReceiveContentLength(int)'.
+Assets\MiHoYo\Scripts\AssetManager\ABSystem\Scripts\AssetBundle\AssetBundleManager.cs(276,33): warning CS0219: The variable 'i' is assigned but its value is never used
+Assets\MiHoYo\Scripts\FileLoaderSystem\FileMapSystem.cs(175,21): warning CS0219: The variable 'i' is assigned but its value is never used
+Assets\MiHoYo\Scripts\FileLoaderSystem\FileMapSystem.cs(457,21): warning CS0219: The variable 'i' is assigned but its value is never used
+Assets\MiHoYo\Scripts\UI\ScrollContent.cs(34,45): warning CS0649: Field 'ScrollContent.scroll' is never assigned to, and will always have its default value null
+Assets\MiHoYo\Scripts\UI\ScrollContent.cs(35,40): warning CS0649: Field 'ScrollContent.speed' is never assigned to, and will always have its default value 0
 DisplayProgressbar: Building AssetBundle
 DisplayProgressbar: Building Asset Bundle
 
 ***Player size statistics***
-Total compressed size 1.7 KB. Total uncompressed size 4.4 KB.
-Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 40.7 MB.
-System memory in use after: 40.8 MB.
+Total compressed size 1.4 KB. Total uncompressed size 4.6 KB.
+DisplayProgressbar: Building AssetBundle
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+DisplayProgressbar: Compiling shader variants
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+DisplayProgressbar: Building Asset Bundle
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1481.
-Total: 3.853200 ms (FindLiveObjects: 0.237000 ms CreateObjectMapping: 0.025600 ms MarkObjects: 3.578700 ms  DeleteObjects: 0.011500 ms)
+***Player size statistics***
+Total compressed size 38.1 KB. Total uncompressed size 134.5 KB.
+DisplayProgressbar: Building AssetBundle
+DisplayProgressbar: Compiling shader variants
+DisplayProgressbar: Building Asset Bundle
+
+***Player size statistics***
+Total compressed size 38.4 KB. Total uncompressed size 135.6 KB.
+DisplayProgressbar: Building AssetBundle
+DisplayProgressbar: Building Asset Bundle
+
+***Player size statistics***
+Total compressed size 6.3 KB. Total uncompressed size 25.1 KB.
+Unloading 11 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 44.9 MB.
+System memory in use after: 44.2 MB.
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 1477.
+Total: 5.813200 ms (FindLiveObjects: 0.558400 ms CreateObjectMapping: 0.027600 ms MarkObjects: 4.730300 ms  DeleteObjects: 0.496200 ms)
+
+DisplayProgressbar: Building AssetBundle
+DisplayProgressbar: Building Asset Bundle
+
+***Player size statistics***
+Total compressed size 1.9 KB. Total uncompressed size 4.7 KB.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 43.2 MB.
+System memory in use after: 43.3 MB.
+
+Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 1479.
+Total: 4.479400 ms (FindLiveObjects: 0.295100 ms CreateObjectMapping: 0.025400 ms MarkObjects: 4.151900 ms  DeleteObjects: 0.006600 ms)
 
 
 -------------------------------------------------------------------------------
-Bundle Name: ab
-Compressed Size:1.7 kb
+Bundle Name: 9ee339894452084e
+Compressed Size:1.4 kb
 Uncompressed usage by category (Percentages based on user generated assets only):
 Textures               0.0 kb	 0.0% 
 Meshes                 0.0 kb	 0.0% 
 Animations             0.0 kb	 0.0% 
 Sounds                 0.0 kb	 0.0% 
 Shaders                0.0 kb	 0.0% 
-Other Assets           0.4 kb	 8.5% 
+Other Assets           0.6 kb	 13.7% 
 Levels                 0.0 kb	 0.0% 
 Scripts                0.0 kb	 0.0% 
 Included DLLs          0.0 kb	 0.0% 
-File headers           4.0 kb	 91.5% 
-Total User Assets      4.4 kb	 100.0% 
-Complete build size    4.4 kb
+File headers           4.0 kb	 86.3% 
+Total User Assets      4.6 kb	 100.0% 
+Complete build size    4.6 kb
 Used Assets and files from the Resources folder, sorted by uncompressed size:
- 0.3 kb	 6.2% Built-in AssetBundleManifest: AssetBundleManifest
- 0.1 kb	 2.3% AssetBundle Object
+ 0.5 kb	 10.5% Assets/AssetBundles/Actor/abcd.txt
+ 0.1 kb	 3.2% AssetBundle Object
 -------------------------------------------------------------------------------
-Refresh completed in 0.067919 seconds.
+-------------------------------------------------------------------------------
+Bundle Name: bc56580c6b75d2ec
+Compressed Size:38.1 kb
+Uncompressed usage by category (Percentages based on user generated assets only):
+Textures               0.0 kb	 0.0% 
+Meshes                 0.0 kb	 0.0% 
+Animations             0.0 kb	 0.0% 
+Sounds                 0.0 kb	 0.0% 
+Shaders                75.0 kb	 55.8% 
+Other Assets           1.6 kb	 1.2% 
+Levels                 0.0 kb	 0.0% 
+Scripts                0.0 kb	 0.0% 
+Included DLLs          0.0 kb	 0.0% 
+File headers           57.9 kb	 43.0% 
+Total User Assets      134.5 kb	 100.0% 
+Complete build size    134.5 kb
+Used Assets and files from the Resources folder, sorted by uncompressed size:
+ 76.0 kb	 56.5% Resources/unity_builtin_extra
+ 0.3 kb	 0.3% Assets/AssetBundles/Actor/Sphere.prefab
+ 0.2 kb	 0.2% AssetBundle Object
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Bundle Name: ffeaca440fc53ca2
+Compressed Size:38.4 kb
+Uncompressed usage by category (Percentages based on user generated assets only):
+Textures               0.0 kb	 0.0% 
+Meshes                 0.0 kb	 0.0% 
+Animations             0.0 kb	 0.0% 
+Sounds                 0.0 kb	 0.0% 
+Shaders                75.0 kb	 55.3% 
+Other Assets           2.0 kb	 1.5% 
+Levels                 0.0 kb	 0.0% 
+Scripts                0.0 kb	 0.0% 
+Included DLLs          0.0 kb	 0.0% 
+File headers           58.6 kb	 43.2% 
+Total User Assets      135.6 kb	 100.0% 
+Complete build size    135.6 kb
+Used Assets and files from the Resources folder, sorted by uncompressed size:
+ 76.0 kb	 56.0% Resources/unity_builtin_extra
+ 0.7 kb	 0.5% Assets/AssetBundles/Actor/Cube.prefab
+ 0.3 kb	 0.2% AssetBundle Object
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Bundle Name: 310ecd798244f3f8
+Compressed Size:6.3 kb
+Uncompressed usage by category (Percentages based on user generated assets only):
+Textures               0.0 kb	 0.0% 
+Meshes                 0.0 kb	 0.0% 
+Animations             0.0 kb	 0.0% 
+Sounds                 0.0 kb	 0.0% 
+Shaders                0.0 kb	 0.0% 
+Other Assets           21.1 kb	 84.1% 
+Levels                 0.0 kb	 0.0% 
+Scripts                0.0 kb	 0.0% 
+Included DLLs          0.0 kb	 0.0% 
+File headers           4.0 kb	 15.9% 
+Total User Assets      25.1 kb	 100.0% 
+Complete build size    25.1 kb
+Used Assets and files from the Resources folder, sorted by uncompressed size:
+ 20.9 kb	 83.5% Assets/AssetBundles/Actor/test.txt
+ 0.1 kb	 0.6% AssetBundle Object
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Bundle Name: ab
+Compressed Size:1.9 kb
+Uncompressed usage by category (Percentages based on user generated assets only):
+Textures               0.0 kb	 0.0% 
+Meshes                 0.0 kb	 0.0% 
+Animations             0.0 kb	 0.0% 
+Sounds                 0.0 kb	 0.0% 
+Shaders                0.0 kb	 0.0% 
+Other Assets           0.7 kb	 14.3% 
+Levels                 0.0 kb	 0.0% 
+Scripts                0.0 kb	 0.0% 
+Included DLLs          0.0 kb	 0.0% 
+File headers           4.0 kb	 85.7% 
+Total User Assets      4.7 kb	 100.0% 
+Complete build size    4.7 kb
+Used Assets and files from the Resources folder, sorted by uncompressed size:
+ 0.6 kb	 12.1% Built-in AssetBundleManifest: AssetBundleManifest
+ 0.1 kb	 2.2% AssetBundle Object
+-------------------------------------------------------------------------------
+Refresh completed in 0.081147 seconds.
 RefreshInfo: RefreshV2(NoUpdateAssetOptions)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 67.906ms
-	ApplyChangesToAssetFolders: 0.795ms
-	WriteModifiedImportersToTextMetaFiles: 0.049ms
+	InvokeBeforeRefreshCallbacks: 81.135ms
+	ApplyChangesToAssetFolders: 0.630ms
+	WriteModifiedImportersToTextMetaFiles: 0.046ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 64.188ms
+	OnSourceAssetsModified: 77.891ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.640ms
+	GetAllGuidsForCategorization: 1.450ms
 	CategorizeAssets: 0.000ms
 	ImportAndPostprocessOutOfDateAssets: 0.000ms (0.000ms without children)
 		ImportManagerImport: 0.000ms (0.000ms without children)
@@ -697,15 +873,15 @@ RefreshProfiler: Total: 0.000ms
 	ReloadSourceAssets: 0.000ms
 	UnloadImportedAssets: 0.000ms
 	Hotreload: 0.000ms
-	FixTempGuids: 0.053ms
-	VerifyGuidPMRegistrations: 0.016ms
+	FixTempGuids: 0.030ms
+	VerifyGuidPMRegistrations: 0.003ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
 	UnloadStreamsBegin: 0.108ms
 	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.006ms
-	GetLoadedSourceAssetsSnapshot: 0.287ms
-	PersistCurrentRevisions: 0.373ms
+	GetLoadedSourceAssetsSnapshot: 0.286ms
+	PersistCurrentRevisions: 0.251ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.004ms
+	GenerateScriptTypeHashes: 0.005ms
 热更新XML生成完成
 UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -719,18 +895,18 @@ AutoPacker:PackAB_PC() (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Editor\As
  
 (Filename: Assets/MiHoYo/Scripts/Common/CommonLog.cs Line: 228)
 
-Refresh completed in 0.079558 seconds.
+Refresh completed in 0.081308 seconds.
 RefreshInfo: RefreshV2(NoUpdateAssetOptions)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 79.545ms
-	ApplyChangesToAssetFolders: 0.673ms
-	WriteModifiedImportersToTextMetaFiles: 0.042ms
+	InvokeBeforeRefreshCallbacks: 81.296ms
+	ApplyChangesToAssetFolders: 0.682ms
+	WriteModifiedImportersToTextMetaFiles: 0.043ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 76.313ms
+	OnSourceAssetsModified: 77.844ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.370ms
+	GetAllGuidsForCategorization: 1.505ms
 	CategorizeAssets: 0.000ms
 	ImportAndPostprocessOutOfDateAssets: 0.000ms (0.000ms without children)
 		ImportManagerImport: 0.000ms (0.000ms without children)
@@ -755,14 +931,14 @@ RefreshProfiler: Total: 0.000ms
 	UnloadImportedAssets: 0.000ms
 	Hotreload: 0.000ms
 	FixTempGuids: 0.021ms
-	VerifyGuidPMRegistrations: 0.003ms
+	VerifyGuidPMRegistrations: 0.002ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.109ms
+	UnloadStreamsBegin: 0.107ms
 	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.006ms
-	GetLoadedSourceAssetsSnapshot: 0.315ms
-	PersistCurrentRevisions: 0.250ms
+	GetLoadedSourceAssetsSnapshot: 0.287ms
+	PersistCurrentRevisions: 0.407ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.029ms
+	GenerateScriptTypeHashes: 0.005ms
 资源打包完成！
 UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -788,56 +964,100 @@ AutoPacker:PackAB_PC() (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Editor\As
 (Filename: Assets/MiHoYo/Scripts/Common/CommonLog.cs Line: 124)
 
 Batchmode quit successfully invoked - shutting down!
-[Performance] WinEditorMain                                               :        1 samples, Peak.  1.05 s (1.0x), Avg.  1.05 s, Total. 1.049 s (13.0%)
-[Performance] WinEditorMain.ConfigureCrashHandler                         :        1 samples, Peak.  34.7 us (1.0x), Avg.  34.7 us, Total. 34.70 us (0.0%)
-[Performance] WinEditorMain.CurlRequestInitialize                         :        1 samples, Peak.  6.69 ms (1.0x), Avg.  6.69 ms, Total. 6.691 ms (0.1%)
-[Performance] WinEditorMain.SetupLogFile                                  :        1 samples, Peak.   631 us (1.0x), Avg.   631 us, Total. 631.4 us (0.0%)
+[Performance] WinEditorMain                                               :        1 samples, Peak.  1.79 s (1.0x), Avg.  1.79 s, Total. 1.793 s (13.9%)
+[Performance] WinEditorMain.ConfigureCrashHandler                         :        1 samples, Peak.  20.7 us (1.0x), Avg.  20.7 us, Total. 20.70 us (0.0%)
+[Performance] WinEditorMain.CurlRequestInitialize                         :        1 samples, Peak.  6.12 ms (1.0x), Avg.  6.12 ms, Total. 6.121 ms (0.0%)
+[Performance] WinEditorMain.SetupLogFile                                  :        1 samples, Peak.   656 us (1.0x), Avg.   656 us, Total. 656.2 us (0.0%)
 [Performance] WinEditorMain.RunNativeTestsIfRequiredAndExit               :        1 samples, Peak.  1.40 us (1.0x), Avg.  1.40 us, Total. 1.400 us (0.0%)
-[Performance] WinEditorMain.Licensing                                     :        1 samples, Peak.   945 ms (1.0x), Avg.   945 ms, Total. 944.8 ms (11.7%)
-[Performance] WinEditorMain.InitializeCrashHandler                        :        1 samples, Peak.  2.90 ms (1.0x), Avg.  2.90 ms, Total. 2.898 ms (0.0%)
-[Performance] WinEditorMain.CreateApplication                             :        1 samples, Peak.   333 us (1.0x), Avg.   333 us, Total. 333.4 us (0.0%)
-[Performance] Application.InitializeProject                               :        1 samples, Peak.  6.01 s (1.0x), Avg.  6.01 s, Total. 6.006 s (74.6%)
-[Performance] Application.PackageManager.StartServer                      :        1 samples, Peak.  5.59 ms (1.0x), Avg.  5.59 ms, Total. 5.592 ms (0.1%)
-[Performance] Application.IsBrowserCacheEmpty                             :        1 samples, Peak.  1.10 ms (1.0x), Avg.  1.10 ms, Total. 1.104 ms (0.0%)
-[Performance] Application.AcquireProjectLock                              :        1 samples, Peak.  7.06 ms (1.0x), Avg.  7.06 ms, Total. 7.058 ms (0.1%)
-[Performance] Application.InitializeEngineNoGraphics                      :        1 samples, Peak.  24.7 ms (1.0x), Avg.  24.7 ms, Total. 24.75 ms (0.3%)
-[Performance] Application.PackageManager.Initialize                       :        1 samples, Peak.  1.56 s (1.0x), Avg.  1.56 s, Total. 1.563 s (19.4%)
-[Performance] CurlRequestCheck                                            :       26 samples, Peak.   187 us (9.1x), Avg.  20.5 us, Total. 533.9 us (0.0%)
-[Performance] PackageManager::RunRequestSynchronously                     :        9 samples, Peak.  41.0 us (2.4x), Avg.  16.8 us, Total. 151.2 us (0.0%)
-[Performance] Application.EngineGraphics.Initialize                       :        1 samples, Peak.  24.9 ms (1.0x), Avg.  24.9 ms, Total. 24.88 ms (0.3%)
-[Performance] Application.GI.Initialize                                   :        1 samples, Peak.   304 ms (1.0x), Avg.   304 ms, Total. 303.7 ms (3.8%)
-[Performance] Application.LoadAllDefaultResourcesFromEditor               :        1 samples, Peak.  2.30 ms (1.0x), Avg.  2.30 ms, Total. 2.304 ms (0.0%)
-[Performance] Application.LoadMonoAssemblies                              :        1 samples, Peak.  1.19 s (1.0x), Avg.  1.19 s, Total. 1.187 s (14.7%)
-[Performance] ProcessService.EditorAfterLoadAllAssemblies                 :        2 samples, Peak.  24.8 ms (1.1x), Avg.  23.3 ms, Total. 46.64 ms (0.6%)
-[Performance] Application.ReadLicenseInfo                                 :        1 samples, Peak.   840 us (1.0x), Avg.   840 us, Total. 840.0 us (0.0%)
-[Performance] Application.InitialScriptRefresh                            :        1 samples, Peak.  1.28 s (1.0x), Avg.  1.28 s, Total. 1.283 s (15.9%)
-[Performance] Application.AssetDatabase.Refresh                           :        1 samples, Peak.   573 ms (1.0x), Avg.   573 ms, Total. 572.8 ms (7.1%)
-[Performance] BuildCatalog                                                :        1 samples, Peak.  34.0 ms (1.0x), Avg.  34.0 ms, Total. 34.00 ms (0.4%)
-[Performance] Application.ImportAssetsWithMismatchingAssetImporterVersion :        1 samples, Peak.   169 ms (1.0x), Avg.   169 ms, Total. 168.5 ms (2.1%)
-[Performance] Application.SyncCurrentColorSpace                           :        1 samples, Peak.  6.41 ms (1.0x), Avg.  6.41 ms, Total. 6.414 ms (0.1%)
-[Performance] Application.OnUsbDevicesChanged                             :        1 samples, Peak.  10.4 ms (1.0x), Avg.  10.4 ms, Total. 10.37 ms (0.1%)
-[Performance] Application.AssetInstanceCacheUpdate                        :        1 samples, Peak.   100 ns (1.0x), Avg.   100 ns, Total. 100.0 ns (0.0%)
-[Performance] Application.UnityExtensions.Initialize                      :        1 samples, Peak.   494 us (1.0x), Avg.   494 us, Total. 494.2 us (0.0%)
-[Performance] Application.InitializeManagedCompilationPipeline            :        1 samples, Peak.  61.3 ms (1.0x), Avg.  61.3 ms, Total. 61.33 ms (0.8%)
-[Performance] Application.ExecuteStartups                                 :        1 samples, Peak.  6.85 ms (1.0x), Avg.  6.85 ms, Total. 6.852 ms (0.1%)
-[Performance] Application.RebuildOSMenu                                   :        1 samples, Peak.  46.4 ms (1.0x), Avg.  46.4 ms, Total. 46.41 ms (0.6%)
-[Performance] UpdateAllMenus                                              :        1 samples, Peak.  44.5 ms (1.0x), Avg.  44.5 ms, Total. 44.54 ms (0.6%)
-[Performance] Application.editorInitializingProject                       :        1 samples, Peak.  7.00 us (1.0x), Avg.  7.00 us, Total. 7.000 us (0.0%)
-[Performance] GUIView.RepaintAll.PlayerLoopController                     :        1 samples, Peak.   700 ns (1.0x), Avg.   700 ns, Total. 700.0 ns (0.0%)
-[Performance] Application.InvokeFinishedLoadingProject                    :        1 samples, Peak.  26.8 ms (1.0x), Avg.  26.8 ms, Total. 26.84 ms (0.3%)
-[Performance] ProcessService.OnProjectLoaded                              :        1 samples, Peak.  24.7 ms (1.0x), Avg.  24.7 ms, Total. 24.69 ms (0.3%)
-Refresh completed in 0.064576 seconds.
+[Performance] WinEditorMain.Licensing                                     :        1 samples, Peak.  1.78 s (1.0x), Avg.  1.78 s, Total. 1.780 s (13.8%)
+[Performance] WinEditorMain.InitializeCrashHandler                        :        1 samples, Peak.  5.32 ms (1.0x), Avg.  5.32 ms, Total. 5.316 ms (0.0%)
+[Performance] WinEditorMain.CreateApplication                             :        1 samples, Peak.   332 us (1.0x), Avg.   332 us, Total. 332.1 us (0.0%)
+[Performance] Application.InitializeProject                               :        1 samples, Peak.  6.58 s (1.0x), Avg.  6.58 s, Total. 6.578 s (51.0%)
+[Performance] Application.PackageManager.StartServer                      :        1 samples, Peak.  5.68 ms (1.0x), Avg.  5.68 ms, Total. 5.679 ms (0.0%)
+[Performance] Application.IsBrowserCacheEmpty                             :        1 samples, Peak.   954 us (1.0x), Avg.   954 us, Total. 954.1 us (0.0%)
+[Performance] Application.AcquireProjectLock                              :        1 samples, Peak.  6.73 ms (1.0x), Avg.  6.73 ms, Total. 6.733 ms (0.1%)
+[Performance] Application.InitializeEngineNoGraphics                      :        1 samples, Peak.  35.4 ms (1.0x), Avg.  35.4 ms, Total. 35.44 ms (0.3%)
+[Performance] Application.PackageManager.Initialize                       :        1 samples, Peak.  1.54 s (1.0x), Avg.  1.54 s, Total. 1.545 s (12.0%)
+[Performance] CurlRequestCheck                                            :       26 samples, Peak.   313 us (7.6x), Avg.  41.1 us, Total. 1.069 ms (0.0%)
+[Performance] PackageManager::RunRequestSynchronously                     :        9 samples, Peak.  69.3 us (3.4x), Avg.  20.4 us, Total. 183.3 us (0.0%)
+[Performance] Application.EngineGraphics.Initialize                       :        1 samples, Peak.  26.9 ms (1.0x), Avg.  26.9 ms, Total. 26.85 ms (0.2%)
+[Performance] Application.GI.Initialize                                   :        1 samples, Peak.   270 ms (1.0x), Avg.   270 ms, Total. 270.0 ms (2.1%)
+[Performance] Application.LoadAllDefaultResourcesFromEditor               :        1 samples, Peak.  2.30 ms (1.0x), Avg.  2.30 ms, Total. 2.296 ms (0.0%)
+[Performance] Application.LoadMonoAssemblies                              :        1 samples, Peak.  1.29 s (1.0x), Avg.  1.29 s, Total. 1.286 s (10.0%)
+[Performance] ProcessService.EditorAfterLoadAllAssemblies                 :        2 samples, Peak.  24.4 ms (1.1x), Avg.  22.9 ms, Total. 45.75 ms (0.4%)
+[Performance] Application.ReadLicenseInfo                                 :        1 samples, Peak.  2.57 ms (1.0x), Avg.  2.57 ms, Total. 2.566 ms (0.0%)
+[Performance] Application.InitialScriptRefresh                            :        1 samples, Peak.  1.80 s (1.0x), Avg.  1.80 s, Total. 1.803 s (14.0%)
+[Performance] BuildCatalog                                                :        1 samples, Peak.  34.5 ms (1.0x), Avg.  34.5 ms, Total. 34.51 ms (0.3%)
+[Performance] Application.AssetDatabase.Refresh                           :        1 samples, Peak.   524 ms (1.0x), Avg.   524 ms, Total. 523.7 ms (4.1%)
+[Performance] Application.ImportAssetsWithMismatchingAssetImporterVersion :        1 samples, Peak.   159 ms (1.0x), Avg.   159 ms, Total. 158.9 ms (1.2%)
+[Performance] Application.SyncCurrentColorSpace                           :        1 samples, Peak.  6.56 ms (1.0x), Avg.  6.56 ms, Total. 6.564 ms (0.1%)
+[Performance] Application.OnUsbDevicesChanged                             :        1 samples, Peak.  9.32 ms (1.0x), Avg.  9.32 ms, Total. 9.320 ms (0.1%)
+[Performance] Application.AssetInstanceCacheUpdate                        :        1 samples, Peak.   200 ns (1.0x), Avg.   200 ns, Total. 200.0 ns (0.0%)
+[Performance] Application.UnityExtensions.Initialize                      :        1 samples, Peak.   629 us (1.0x), Avg.   629 us, Total. 629.1 us (0.0%)
+[Performance] Application.InitializeManagedCompilationPipeline            :        1 samples, Peak.  66.1 ms (1.0x), Avg.  66.1 ms, Total. 66.05 ms (0.5%)
+[Performance] Application.ExecuteStartups                                 :        1 samples, Peak.  7.89 ms (1.0x), Avg.  7.89 ms, Total. 7.893 ms (0.1%)
+[Performance] Application.RebuildOSMenu                                   :        1 samples, Peak.  58.8 ms (1.0x), Avg.  58.8 ms, Total. 58.84 ms (0.5%)
+[Performance] UpdateAllMenus                                              :        1 samples, Peak.  49.1 ms (1.0x), Avg.  49.1 ms, Total. 49.09 ms (0.4%)
+[Performance] Application.editorInitializingProject                       :        1 samples, Peak.  7.80 us (1.0x), Avg.  7.80 us, Total. 7.800 us (0.0%)
+[Performance] GUIView.RepaintAll.PlayerLoopController                     :        1 samples, Peak.   500 ns (1.0x), Avg.   500 ns, Total. 500.0 ns (0.0%)
+[Performance] Application.InvokeFinishedLoadingProject                    :        1 samples, Peak.  29.0 ms (1.0x), Avg.  29.0 ms, Total. 28.99 ms (0.2%)
+[Performance] ProcessService.OnProjectLoaded                              :        1 samples, Peak.  26.1 ms (1.0x), Avg.  26.1 ms, Total. 26.12 ms (0.2%)
+Refresh completed in 0.072044 seconds.
 RefreshInfo: RefreshV2(ForceSynchronousImport)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 64.356ms
-	ApplyChangesToAssetFolders: 0.626ms
+	InvokeBeforeRefreshCallbacks: 72.033ms
+	ApplyChangesToAssetFolders: 0.673ms
+	WriteModifiedImportersToTextMetaFiles: 0.043ms
+	CleanLegacyArtifacts: 0.000ms
+	Scan: 0.000ms
+	OnSourceAssetsModified: 68.788ms
+	UnregisterDeletedAssets: 0.000ms
+	InitializeImportedAssetsSnapshot: 0.000ms
+	GetAllGuidsForCategorization: 1.349ms
+	CategorizeAssets: 0.000ms
+	ImportAndPostprocessOutOfDateAssets: 0.000ms (0.000ms without children)
+		ImportManagerImport: 0.000ms (0.000ms without children)
+			ImportInProcess: 0.000ms
+			ImportOutOfProcess: 0.000ms
+			UpdateCategorizedAssets: 0.000ms
+			RemoteAssetCacheGetArtifact: 0.000ms (0.000ms without children)
+				RemoteAssetCacheResolve: 0.000ms
+				RemoteAssetCacheDownloadFile: 0.000ms
+		CompileScripts: 0.000ms
+		PostProcessAllAssets: 0.000ms
+		ReloadImportedAssets: 0.000ms
+		VerifyAssetsAreUpToDateAndCorrect: 0.000ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 0.000ms
+		RestoreLoadedAssetsState: 0.000ms
+	InvokeProjectHasChanged: 0.000ms
+	UpdateImportedAssetsSnapshot: 0.000ms
+	ReloadSourceAssets: 0.000ms
+	UnloadImportedAssets: 0.000ms
+	Hotreload: 0.000ms
+	FixTempGuids: 0.014ms
+	VerifyGuidPMRegistrations: 0.003ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
+	UnloadStreamsBegin: 0.108ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.005ms
+	GetLoadedSourceAssetsSnapshot: 0.389ms
+	PersistCurrentRevisions: 0.249ms
+	UnloadStreamsEnd: 0.000ms
+	GenerateScriptTypeHashes: 0.004ms
+Refresh completed in 0.072908 seconds.
+RefreshInfo: RefreshV2(ForceSynchronousImport)
+RefreshProfiler: Total: 0.000ms
+	InvokeBeforeRefreshCallbacks: 72.899ms
+	ApplyChangesToAssetFolders: 0.619ms
 	WriteModifiedImportersToTextMetaFiles: 0.042ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 60.735ms
+	OnSourceAssetsModified: 69.883ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.374ms
+	GetAllGuidsForCategorization: 1.303ms
 	CategorizeAssets: 0.000ms
 	ImportAndPostprocessOutOfDateAssets: 0.000ms (0.000ms without children)
 		ImportManagerImport: 0.000ms (0.000ms without children)
@@ -861,59 +1081,15 @@ RefreshProfiler: Total: 0.000ms
 	ReloadSourceAssets: 0.000ms
 	UnloadImportedAssets: 0.000ms
 	Hotreload: 0.000ms
-	FixTempGuids: 0.019ms
+	FixTempGuids: 0.013ms
 	VerifyGuidPMRegistrations: 0.003ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.112ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.006ms
-	GetLoadedSourceAssetsSnapshot: 0.489ms
-	PersistCurrentRevisions: 0.264ms
-	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.005ms
-Refresh completed in 0.065308 seconds.
-RefreshInfo: RefreshV2(ForceSynchronousImport)
-RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 64.861ms
-	ApplyChangesToAssetFolders: 0.727ms
-	WriteModifiedImportersToTextMetaFiles: 0.062ms
-	CleanLegacyArtifacts: 0.000ms
-	Scan: 0.000ms
-	OnSourceAssetsModified: 60.899ms
-	UnregisterDeletedAssets: 0.000ms
-	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.856ms
-	CategorizeAssets: 0.000ms
-	ImportAndPostprocessOutOfDateAssets: 0.000ms (0.000ms without children)
-		ImportManagerImport: 0.000ms (0.000ms without children)
-			ImportInProcess: 0.000ms
-			ImportOutOfProcess: 0.000ms
-			UpdateCategorizedAssets: 0.000ms
-			RemoteAssetCacheGetArtifact: 0.000ms (0.000ms without children)
-				RemoteAssetCacheResolve: 0.000ms
-				RemoteAssetCacheDownloadFile: 0.000ms
-		CompileScripts: 0.000ms
-		PostProcessAllAssets: 0.000ms
-		ReloadImportedAssets: 0.000ms
-		VerifyAssetsAreUpToDateAndCorrect: 0.000ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
-		InitializingProgressBar: 0.000ms
-		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
-		OnDemandSchedulerStart: 0.000ms
-		RestoreLoadedAssetsState: 0.000ms
-	InvokeProjectHasChanged: 0.000ms
-	UpdateImportedAssetsSnapshot: 0.000ms
-	ReloadSourceAssets: 0.000ms
-	UnloadImportedAssets: 0.000ms
-	Hotreload: 0.000ms
-	FixTempGuids: 0.017ms
-	VerifyGuidPMRegistrations: 0.005ms
-	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
 	UnloadStreamsBegin: 0.108ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.025ms
-	GetLoadedSourceAssetsSnapshot: 0.400ms
-	PersistCurrentRevisions: 0.301ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.004ms
+	GetLoadedSourceAssetsSnapshot: 0.291ms
+	PersistCurrentRevisions: 0.236ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.007ms
+	GenerateScriptTypeHashes: 0.004ms
 Cleanup mono
 Exiting batchmode successfully now!
 Exiting without the bug reporter. Application will terminate with return code 0

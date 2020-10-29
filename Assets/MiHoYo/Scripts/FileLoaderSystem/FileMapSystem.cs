@@ -104,7 +104,14 @@ namespace FileMapSystem
             {
                 //不行就读取本地
                 var SFM = CreateFromStreamAssetFile(Dir);
-                InitFileMapInfo(SFM);
+                if (SFM == null)
+                {
+                    CommonLog.Error("初始化AB系统配置表失败");
+                }
+                else
+                {
+                    InitFileMapInfo(SFM);
+                }
             }
         }
 
@@ -478,7 +485,6 @@ namespace FileMapSystem
                 if (dic.TryGetValue(key, out var desc))
                 {
                     desc.Len += newInfo.Len;
-                    dic[key] = desc;
                 }
             }
 

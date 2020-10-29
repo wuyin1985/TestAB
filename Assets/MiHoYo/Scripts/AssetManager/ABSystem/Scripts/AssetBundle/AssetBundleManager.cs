@@ -156,6 +156,8 @@ namespace Res.ABSystem
         protected override void InstanceInit()
         {
             base.InstanceInit();
+            //确保USED_AB_MODE已经初始化
+            var instance = GameAssetManager.Instance;
             LoadAssetBundleConfig();
         }
 
@@ -260,6 +262,7 @@ namespace Res.ABSystem
                 var table = cfgStr.FromXML<AssetBundleTable>();
                 if (table != null)
                 {
+                    _table = table;
                     _abNameToData.Clear();
                     _resPathTofullAssetPathData.Clear();
                     _resNameToBundleName.Clear();

@@ -8,6 +8,7 @@
   </ExtFolderAsset>
   <GroupABundlePathLists>
     <string>AssetBundles/Shaders/</string>
+    <string>AssetBundles/PatchAsset/UI/</string>
   </GroupABundlePathLists>
   <AtlasABunldePathLists>
     <string>AssetBundles/Atlas/Building1/</string>

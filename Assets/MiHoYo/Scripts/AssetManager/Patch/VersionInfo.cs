@@ -2,7 +2,7 @@
 {
     public class VersionInfo
     {
-        public int MarjorVersion;
+        public int MajorVersion;
         public int MinorVersion;
         public int BuildVersion;
         public string AppUpdateUrl;
@@ -16,12 +16,12 @@
 
         public string DumpVersion()
         {
-            return $"{MarjorVersion}.{MinorVersion}.{BuildVersion}";
+            return $"{MajorVersion}.{MinorVersion}.{BuildVersion}";
         }
 
         public State CheckUpdateState(FileMapSystem.Version current)
         {
-            if (MarjorVersion != current.Version_Major)
+            if (MajorVersion != current.Version_Major)
             {
                 return State.MustDownloadAppAgain;
             }

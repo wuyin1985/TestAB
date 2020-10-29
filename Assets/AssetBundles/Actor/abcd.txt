@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-16"?>
+<VersionData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <appVersion>1.0.6</appVersion>
+  <resVersion>1.0.0</resVersion>
+  <cfgVersion>1.0.0</cfgVersion>
+  <appUpdateUrl>http://download.thewar2061.com/</appUpdateUrl>
+  <resUpdateUrl>http://download.thewar2061.com/</resUpdateUrl>
+  <versionCfgUrl>https://home.thewar2061.com/version.xml</versionCfgUrl>
+</VersionData>
+qqqqqqqqqqqq

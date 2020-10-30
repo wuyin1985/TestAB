@@ -12,9 +12,10 @@ namespace NewWarMap.Patch
         private readonly List<Download> _downloads = new List<Download>();
         private readonly List<Download> _tostart = new List<Download>();
         private readonly List<Download> _progressing = new List<Download>();
+        private readonly Dictionary<int, Download> _finished = new Dictionary<int, Download>();
+
         public Action<long, long, float> onUpdate;
 
-        private int _finishedIndex;
         private float _startTime;
         private float _lastTime;
         private long _lastSize;
@@ -30,7 +31,7 @@ namespace NewWarMap.Patch
 
         public bool IsFinished()
         {
-            return _downloads.Count == _finishedIndex;
+            return _downloads.Count == _finished.Count;
         }
 
         private long GetDownloadSize()
@@ -51,7 +52,7 @@ namespace NewWarMap.Patch
         public void StartDownload()
         {
             _tostart.Clear();
-            _finishedIndex = 0;
+            _finished.Clear();
             _lastSize = 0L;
             Restart();
         }
@@ -61,10 +62,13 @@ namespace NewWarMap.Patch
             _startTime = Time.realtimeSinceStartup;
             _lastTime = 0;
             _started = true;
-            for (var i = _finishedIndex; i < _downloads.Count; i++)
+            for (var i = 0; i < _downloads.Count; i++)
             {
                 var item = _downloads[i];
-                _tostart.Add(item);
+                if (!_finished.ContainsKey(item.id))
+                {
+                    _tostart.Add(item);
+                }
             }
         }
 
@@ -86,7 +90,6 @@ namespace NewWarMap.Patch
             size = 0;
             position = 0;
 
-            _finishedIndex = 0;
             _lastTime = 0f;
             _lastSize = 0L;
             _startTime = 0;
@@ -96,6 +99,7 @@ namespace NewWarMap.Patch
                 item.Complete(true);
             }
 
+            _finished.Clear();
             _progressing.Clear();
             _downloads.Clear();
             _tostart.Clear();
@@ -172,7 +176,7 @@ namespace NewWarMap.Patch
 
                 if (download.finished)
                 {
-                    CommonLog.Log(MAuthor.WY, $"OnFinished:{_finishedIndex} {download.url},");
+                    CommonLog.Log(MAuthor.WY, $"OnFinished:{download.url},");
 
                     //下载失败文件重新下载
                     if (download.error != null)
@@ -187,7 +191,7 @@ namespace NewWarMap.Patch
                     {
                         _progressing.RemoveAt(index);
                         index--;
-                        _finishedIndex++;
+                        _finished.Add(download.id, download);
                     }
                 }
             }

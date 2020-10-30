@@ -40,7 +40,7 @@ namespace NewWarMap.Patch
             get
             {
                 var dir = Path.GetDirectoryName(savePath);
-                return $"{dir}/{md5.GetMD5Str(false)}";
+                return $"{dir}/{md5.GetMD5Str(false)}.temp";
             }
         }
 

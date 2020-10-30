@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using BytesTools;
 using FileMapSystem;
@@ -55,7 +56,7 @@ namespace NewWarMap.Patch
         private string _tempDownloadPath;
         private Dictionary<string, FileMapGroupDesc> _currentDownloadingGroupDesc;
         private AssetBundleTable _currentDownloadAssetBundleTable;
-
+        private VersionInfo _currentTargetVersion;
 
         public void OnStart()
         {
@@ -95,7 +96,12 @@ namespace NewWarMap.Patch
             StartUpdate();
         }
 
-        private void OnApplicationFocus2(bool hasFocus)
+        private void OnApplicationQuit()
+        {
+            _downloader.Stop();
+        }
+
+        /*private void OnApplicationFocus(bool hasFocus)
         {
             if (_reachabilityChanged || _step == Step.Wait)
             {
@@ -121,7 +127,7 @@ namespace NewWarMap.Patch
                     _downloader.Stop();
                 }
             }
-        }
+        }*/
 
         private bool _reachabilityChanged;
 
@@ -261,6 +267,22 @@ namespace NewWarMap.Patch
             {
                 var fileName = fileMapGroupDescIter.Key;
                 var desc = fileMapGroupDescIter.Value;
+                var fileSavePath = _savePath + fileName;
+
+                if (File.Exists(fileSavePath))
+                {
+                    var bytes = FileUtils.ReadAllBytes(fileSavePath);
+                    if (bytes != null && bytes.Length > 0)
+                    {
+                        var md5 = MD5Creater.Md5Struct(bytes);
+                        if (md5.MD51 == desc.Md51 && md5.MD52 == desc.Md52)
+                        {
+                            CommonLog.Log(MAuthor.WY, $"file {fileSavePath} already exist, skip");
+                            continue;
+                        }
+                    }
+                }
+
                 _downloader.AddDownload(GetDownloadURL(fileName, versionStr), _savePath + fileName,
                     new MD5Creater.MD5Struct {MD51 = desc.Md51, MD52 = desc.Md52},
                     desc.Len);
@@ -307,6 +329,7 @@ namespace NewWarMap.Patch
 
             _currentDownloadingGroupDesc = null;
             _currentDownloadAssetBundleTable = null;
+            _currentTargetVersion = null;
 
             _step = Step.Versions;
 
@@ -336,11 +359,10 @@ namespace NewWarMap.Patch
                 }
                 else
                 {
-                    OnComplete();
+                    _step = Step.Download;
                 }
             }
         }
-
 
         private void ShowAndroidUpdateDialog(string appUpdateUrl)
         {
@@ -479,6 +501,7 @@ namespace NewWarMap.Patch
             }
 
             var state = versionInfo.CheckUpdateState(AssetBundleManager.Instance.GetVersion());
+            _currentTargetVersion = versionInfo;
             var versionStr = versionInfo.DumpVersion();
             CommonLog.Log(MAuthor.WY, $"check version {versionStr} result {state}");
             if (state == VersionInfo.State.NeedUpdate)
@@ -550,6 +573,27 @@ namespace NewWarMap.Patch
             Array.Copy(addition, 0, target, originCount, addition.Length);
         }
 
+        private void MergeAssetBundleTable(AssetBundleTable table,
+            Dictionary<string, AssetBundleTable.AssetBundleBundleData> append)
+        {
+            var origin = new Dictionary<string, AssetBundleTable.AssetBundleBundleData>();
+            foreach (var assetBundleBundleData in table.BundleInfos)
+            {
+                origin.Add(
+                    assetBundleBundleData.bundleFileName + AssetBundleTable.AssetBundleBundleData.BundleExtension,
+                    assetBundleBundleData);
+            }
+
+            foreach (var assetBundleBundleData in append)
+            {
+                origin[assetBundleBundleData.Key] = assetBundleBundleData.Value;
+            }
+
+            var values = origin.Values;
+            Array.Resize(ref table.BundleInfos, values.Count);
+            values.CopyTo(table.BundleInfos, 0);
+        }
+
         private void MergeUpdateFileMaps()
         {
             if (_currentDownloadAssetBundleTable == null)
@@ -562,10 +606,15 @@ namespace NewWarMap.Patch
                 throw new Exception($"{nameof(_currentDownloadingGroupDesc)} is null");
             }
 
+            if (_currentTargetVersion == null)
+            {
+                throw new Exception($"{nameof(_currentTargetVersion)} is null");
+            }
+
             var watch = Stopwatch.StartNew();
 
             var assetBundleFromTableDic = new Dictionary<string, AssetBundleTable.AssetBundleBundleData>();
-            var updatedAssetBundles = new List<AssetBundleTable.AssetBundleBundleData>();
+            var updatedAssetBundles = new Dictionary<string, AssetBundleTable.AssetBundleBundleData>();
             foreach (var info in _currentDownloadAssetBundleTable.BundleInfos)
             {
                 var xbundleMD5Name = info.bundleNameMD5Struct.GetMD5Str(!info.isComplexName) +
@@ -582,7 +631,7 @@ namespace NewWarMap.Patch
                 {
                     if (assetBundleFromTableDic.TryGetValue(fileMapInfo.FileName, out var bundleData))
                     {
-                        updatedAssetBundles.Add(bundleData);
+                        updatedAssetBundles.Add(fileMapInfo.FileName, bundleData);
                     }
                     else
                     {
@@ -598,9 +647,8 @@ namespace NewWarMap.Patch
             watch.Restart();
 
             var originTable = AssetBundleManager.Instance.GetTable();
-            MergeArray(ref originTable.BundleInfos, updatedAssetBundles.ToArray());
+            MergeAssetBundleTable(originTable, updatedAssetBundles);
             var xml = originTable.ToXML();
-            //todo delete duplicate infos
             File.WriteAllText(_savePath + AssetBundlePathResolver.DependFileName, xml);
 
             CommonLog.Log(MAuthor.WY, $"write AssetBundleDataXml cost time {watch.ElapsedMilliseconds} ms");
@@ -608,8 +656,13 @@ namespace NewWarMap.Patch
 
             var map = AssetBundleManager.Instance.GetFileMapSystem();
             MergeArray(ref map.FileInfo.AllFileMapInfo, newFileMapInfos.ToArray());
-            //todo update version 
             var mapperBs = new ByteBuf(10000);
+            map.FileInfo.Ver = new FileMapSystem.Version
+            {
+                Version_Build = _currentTargetVersion.BuildVersion,
+                Version_Major = _currentTargetVersion.MajorVersion,
+                Version_Minor = _currentTargetVersion.MinorVersion
+            };
             map.FileInfo.WriteToByteBuf(mapperBs);
 
             var xmfPath = _savePath + AssetBundlePathResolver.BundleSaveDirName +

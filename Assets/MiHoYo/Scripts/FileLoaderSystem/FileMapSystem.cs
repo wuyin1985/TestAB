@@ -450,6 +450,8 @@ namespace FileMapSystem
             void Add2Dic(FileMapInfo mapInfo)
             {
                 var key = mapInfo.GetMappedFileName();
+                //判断本地成功下载了没有
+                
                 if (!dic.TryGetValue(key, out var desc))
                 {
                     desc = new FileMapGroupDesc {Md51 = mapInfo.MapedFileName_MD51, Md52 = mapInfo.MapedFileName_MD52};

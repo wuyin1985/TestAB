@@ -252,7 +252,7 @@ namespace NewWarMap.Patch
                 StopCoroutine(_checking);
             }
 
-            _checking = Checking();
+            _checking = Processing();
 
             StartCoroutine(_checking);
         }
@@ -315,7 +315,7 @@ namespace NewWarMap.Patch
             return version != null ? $"{baseURL}{_platform}/{version}/{filename}" : $"{baseURL}{_platform}/{filename}";
         }
 
-        private IEnumerator Checking()
+        private IEnumerator Processing()
         {
             if (!Directory.Exists(_savePath))
             {
@@ -355,11 +355,26 @@ namespace NewWarMap.Patch
                     else
                     {
                         Quit();
+                        yield break;
                     }
                 }
                 else
                 {
                     _step = Step.Download;
+                }
+            }
+            
+            if (_step == Step.Download)
+            {
+                if (_downloader.IsFinished())
+                {
+                    _step = Step.Refresh;
+                    MergeUpdateFileMaps();
+
+                    OnProgress(1);
+                    OnMessage("更新完成");
+
+                    StartCoroutine(ReloadResources());
                 }
             }
         }
@@ -675,22 +690,6 @@ namespace NewWarMap.Patch
             CommonLog.Log(MAuthor.WY, $"write AssetbundlesCache.xmf cost time {watch.ElapsedMilliseconds} ms");
         }
 
-        private void Update()
-        {
-            if (_step == Step.Download)
-            {
-                if (_downloader.IsFinished())
-                {
-                    _step = Step.Refresh;
-                    MergeUpdateFileMaps();
-
-                    OnProgress(1);
-                    OnMessage("更新完成");
-
-                    StartCoroutine(ReloadResources());
-                }
-            }
-        }
 
         private IEnumerator ReloadResources()
         {

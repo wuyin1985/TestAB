@@ -7,8 +7,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using BytesTools;
 using FileMapSystem;
-using libx;
 using Res.ABSystem;
+using SimpleDiskUtils;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -294,17 +294,14 @@ namespace NewWarMap.Patch
             switch (target)
             {
                 case RuntimePlatform.Android:
-                    return "Android";
-                case RuntimePlatform.IPhonePlayer:
-                    return "iOS";
-                case RuntimePlatform.WebGLPlayer:
-                    return "WebGL";
+                    return "android";
                 case RuntimePlatform.WindowsPlayer:
                 case RuntimePlatform.WindowsEditor:
-                    return "Windows";
+                    return "pc";
+                case RuntimePlatform.IPhonePlayer:
                 case RuntimePlatform.OSXEditor:
                 case RuntimePlatform.OSXPlayer:
-                    return "iOS"; // OSX
+                    return "ios"; // OSX
                 default:
                     return null;
             }

@@ -39,9 +39,8 @@ using UnityEngine;
 
 namespace SimpleDiskUtils
 {
-
-	public class DiskUtils
-	{
+    public class DiskUtils
+    {
         #region DISK_TOOLS
 
 #if UNITY_STANDALONE || UNITY_EDITOR
@@ -97,30 +96,30 @@ namespace SimpleDiskUtils
         private const string DEFAULT_DRIVE = "C:/";
 
         /// <summary>
-	    /// Checks the available space.
-	    /// </summary>
-	    /// <returns>The available spaces in MB.</returns>
-	    /// <param name="diskName">Disk name. For example, "C:/"</param>
-		public static int CheckAvailableSpace(string drive = DEFAULT_DRIVE)
+        /// Checks the available space.
+        /// </summary>
+        /// <returns>The available spaces in MB.</returns>
+        /// <param name="diskName">Disk name. For example, "C:/"</param>
+        public static int CheckAvailableSpace(string drive = DEFAULT_DRIVE)
         {
             return DiskUtils.getAvailableDiskSpace(new StringBuilder(drive));
         }
 
         /// <summary>
-	    /// Checks the total space.
-	    /// </summary>
-	    /// <returns>The total space in MB.</returns>
-	    /// <param name="diskName">Disk name. For example, "C:/"</param>
+        /// Checks the total space.
+        /// </summary>
+        /// <returns>The total space in MB.</returns>
+        /// <param name="diskName">Disk name. For example, "C:/"</param>
         public static int CheckTotalSpace(string drive = DEFAULT_DRIVE)
         {
             return DiskUtils.getTotalDiskSpace(new StringBuilder(drive));
         }
 
         /// <summary>
-	    /// Checks the busy space.
-	    /// </summary>
-	    /// <returns>The busy space in MB.</returns>
-	    /// <param name="diskName">Disk name. For example, "C:/"</param>
+        /// Checks the busy space.
+        /// </summary>
+        /// <returns>The busy space in MB.</returns>
+        /// <param name="diskName">Disk name. For example, "C:/"</param>
         public static int CheckBusySpace(string drive = DEFAULT_DRIVE)
         {
             return DiskUtils.getBusyDiskSpace(new StringBuilder(drive));
@@ -130,83 +129,47 @@ namespace SimpleDiskUtils
         {
             return Directory.GetLogicalDrives();
         }
-
-#else
-
-        private const long MEGA_BYTE = 1048576;
-	    private const string DEFAULT_DRIVE = "/";
-        
-	    /// <summary>
-	    /// Checks the available space.
-	    /// </summary>
-	    /// <returns>The available space in MB.</returns>
-	    public static int CheckAvailableSpace(){
-		    DriveInfo drive = GetDrive (DEFAULT_DRIVE);
-		    if (drive == null)
-			    return -1;
-		    return int.Parse((drive.AvailableFreeSpace / MEGA_BYTE).ToString());
-	    }
-
-	    /// <summary>
-	    /// Checks the total space.
-	    /// </summary>
-	    /// <returns>The total space in MB.</returns>
-	    public static int CheckTotalSpace(){
-		    DriveInfo drive = GetDrive (DEFAULT_DRIVE);
-		    if (drive == null)
-			    return -1;
-		    return int.Parse ((drive.TotalSize / MEGA_BYTE).ToString());
-	    }
-
-	    /// <summary>
-	    /// Checks the busy space.
-	    /// </summary>
-	    /// <returns>The busy space in MB.</returns>
-	    public static int CheckBusySpace(){
-		    DriveInfo drive = GetDrive (DEFAULT_DRIVE);
-		    if (drive == null)
-			    return -1;
-
-		    return int.Parse (((drive.TotalSize - drive.AvailableFreeSpace) / MEGA_BYTE).ToString());
-	    }
-
+#endif
 #endif
 
-#elif UNITY_ANDROID
-	
-	/// <summary>
-	/// Checks the available space.
-	/// </summary>
-	/// <returns>The available space in MB.</returns>
-	/// <param name="isExternalStorage">If set to <c>true</c> is external storage.</param>
-	public static int CheckAvailableSpace(bool isExternalStorage = true){
-	AndroidJavaClass dataUtils = new AndroidJavaClass ("com.dikra.diskutils.DiskUtils");
-	return dataUtils.CallStatic<int>("availableSpace", isExternalStorage);
-	}
+#if UNITY_ANDROID
 
-	/// <summary>
-	/// Checks the total space.
-	/// </summary>
-	/// <returns>The total space in MB.</returns>
-	/// <param name="isExternalStorage">If set to <c>true</c> is external storage.</param>
-	public static int CheckTotalSpace(bool isExternalStorage = true){
-	AndroidJavaClass dataUtils = new AndroidJavaClass ("com.dikra.diskutils.DiskUtils");
-	return dataUtils.CallStatic<int>("totalSpace", isExternalStorage);
-	}
+        /// <summary>
+        /// Checks the available space.
+        /// </summary>
+        /// <returns>The available space in MB.</returns>
+        /// <param name="isExternalStorage">If set to <c>true</c> is external storage.</param>
+        public static int CheckAvailableSpace(bool isExternalStorage = true)
+        {
+            AndroidJavaClass dataUtils = new AndroidJavaClass("com.dikra.diskutils.DiskUtils");
+            return dataUtils.CallStatic<int>("availableSpace", isExternalStorage);
+        }
 
-	/// <summary>
-	/// Checks the busy space.
-	/// </summary>
-	/// <returns>The busy space in MB.</returns>
-	/// <param name="isExternalStorage">If set to <c>true</c> is external storage.</param>
-	public static int CheckBusySpace(bool isExternalStorage = true){
-	AndroidJavaClass dataUtils = new AndroidJavaClass ("com.dikra.diskutils.DiskUtils");
-	return dataUtils.CallStatic<int>("busySpace", isExternalStorage);
-	}
+        /// <summary>
+        /// Checks the total space.
+        /// </summary>
+        /// <returns>The total space in MB.</returns>
+        /// <param name="isExternalStorage">If set to <c>true</c> is external storage.</param>
+        public static int CheckTotalSpace(bool isExternalStorage = true)
+        {
+            AndroidJavaClass dataUtils = new AndroidJavaClass("com.dikra.diskutils.DiskUtils");
+            return dataUtils.CallStatic<int>("totalSpace", isExternalStorage);
+        }
 
-	
-#elif UNITY_IOS
-	
+        /// <summary>
+        /// Checks the busy space.
+        /// </summary>
+        /// <returns>The busy space in MB.</returns>
+        /// <param name="isExternalStorage">If set to <c>true</c> is external storage.</param>
+        public static int CheckBusySpace(bool isExternalStorage = true)
+        {
+            AndroidJavaClass dataUtils = new AndroidJavaClass("com.dikra.diskutils.DiskUtils");
+            return dataUtils.CallStatic<int>("busySpace", isExternalStorage);
+        }
+#endif
+
+
+#if UNITY_IOS
 	[DllImport ("__Internal")]
 	private static extern ulong getAvailableDiskSpace();
 	[DllImport ("__Internal")]
@@ -250,176 +213,191 @@ namespace SimpleDiskUtils
         /// Deletes the file.
         /// </summary>
         /// <param name="filePath">File path.</param>
-        public static void DeleteFile (string filePath)
-		{
-			#if UNITY_IOS
+        public static void DeleteFile(string filePath)
+        {
+#if UNITY_IOS
 	if (!filePath.StartsWith("/private"))
 	filePath = "/private" + filePath;
-			#endif
+#endif
 
-			if (File.Exists (filePath))
-				File.Delete (filePath);
-		}
+            if (File.Exists(filePath))
+                File.Delete(filePath);
+        }
 
-		/// <summary>
-		/// Saves object to file.
-		/// </summary>
-		/// <param name="obj">Object.</param>
-		/// <param name="filePath">File path.</param>
-		public static void SaveFile (object obj, string filePath)
-		{
-			if (!obj.GetType ().IsSerializable) {
-				throw new ArgumentException ("Passed data is invalid: not serializable.", "obj");
-			}
+        /// <summary>
+        /// Saves object to file.
+        /// </summary>
+        /// <param name="obj">Object.</param>
+        /// <param name="filePath">File path.</param>
+        public static void SaveFile(object obj, string filePath)
+        {
+            if (!obj.GetType().IsSerializable)
+            {
+                throw new ArgumentException("Passed data is invalid: not serializable.", "obj");
+            }
 
-			int i = filePath.Length;
-			while (i > 0 && filePath [i - 1] != '/')
-				--i;
+            int i = filePath.Length;
+            while (i > 0 && filePath[i - 1] != '/')
+                --i;
 
-			if (i <= 0)
-				SaveFile (obj, "", filePath);
-			else
-				SaveFile (obj, filePath.Substring (0, i), filePath.Substring (i));
-		}
+            if (i <= 0)
+                SaveFile(obj, "", filePath);
+            else
+                SaveFile(obj, filePath.Substring(0, i), filePath.Substring(i));
+        }
 
-		/// <summary>
-		/// Saves object to file.
-		/// </summary>
-		/// <param name="obj">Serializable Object.</param>
-		/// <param name="dirPath">Directory path.</param>
-		/// <param name="fileName">File name.</param>
-		public static void SaveFile (object obj, string dirPath, string fileName)
-		{
-			if (!obj.GetType ().IsSerializable) {
-				throw new ArgumentException ("Passed data is invalid: not serializable.", "obj");
-			}
+        /// <summary>
+        /// Saves object to file.
+        /// </summary>
+        /// <param name="obj">Serializable Object.</param>
+        /// <param name="dirPath">Directory path.</param>
+        /// <param name="fileName">File name.</param>
+        public static void SaveFile(object obj, string dirPath, string fileName)
+        {
+            if (!obj.GetType().IsSerializable)
+            {
+                throw new ArgumentException("Passed data is invalid: not serializable.", "obj");
+            }
 
-			string filePath;
-		
-			if (dirPath == "") {
-				filePath = fileName;
-			} else {
-				if (dirPath.EndsWith ("/"))
-					filePath = dirPath + fileName;
-				else
-					filePath = dirPath + "/" + fileName;
+            string filePath;
 
-				if (!Directory.Exists (dirPath))
-					Directory.CreateDirectory (dirPath);
-			}
+            if (dirPath == "")
+            {
+                filePath = fileName;
+            }
+            else
+            {
+                if (dirPath.EndsWith("/"))
+                    filePath = dirPath + fileName;
+                else
+                    filePath = dirPath + "/" + fileName;
 
-			File.WriteAllBytes (filePath, ObjectToByteArray (obj));
-		}
+                if (!Directory.Exists(dirPath))
+                    Directory.CreateDirectory(dirPath);
+            }
 
-		/// <summary>
-		/// Loads the file.
-		/// </summary>
-		/// <returns>The file.</returns>
-		/// <param name="filePath">File path.</param>
-		/// <typeparam name="T">Return type of the loaded object.</typeparam>
-		public static T LoadFile<T> (string filePath)
-		{
-			if (File.Exists (filePath)) {
-				return ByteArrayToObject<T> (File.ReadAllBytes (filePath));
-			} else {
-				return default(T);
-			}
-		}
+            File.WriteAllBytes(filePath, ObjectToByteArray(obj));
+        }
 
-		/// <summary>
-		/// Saves a string to text file.
-		/// </summary>
-		/// <param name="str">String.</param>
-		/// <param name="filePath">File path.</param>
-		public static void SaveTextFile (string str, string filePath)
-		{
-			int i = filePath.Length;
-			while (i > 0 && filePath [i - 1] != '/')
-				--i;
+        /// <summary>
+        /// Loads the file.
+        /// </summary>
+        /// <returns>The file.</returns>
+        /// <param name="filePath">File path.</param>
+        /// <typeparam name="T">Return type of the loaded object.</typeparam>
+        public static T LoadFile<T>(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                return ByteArrayToObject<T>(File.ReadAllBytes(filePath));
+            }
+            else
+            {
+                return default(T);
+            }
+        }
 
-			if (i <= 0)
-				SaveTextFile (str, "", filePath);
-			else
-				SaveTextFile (str, filePath.Substring (0, i), filePath.Substring (i));
-		}
+        /// <summary>
+        /// Saves a string to text file.
+        /// </summary>
+        /// <param name="str">String.</param>
+        /// <param name="filePath">File path.</param>
+        public static void SaveTextFile(string str, string filePath)
+        {
+            int i = filePath.Length;
+            while (i > 0 && filePath[i - 1] != '/')
+                --i;
 
-		/// <summary>
-		/// Saves a string to text file.
-		/// </summary>
-		/// <param name="str">String.</param>
-		/// <param name="dirPath">Directory path.</param>
-		/// <param name="fileName">File name.</param>
-		public static void SaveTextFile (string str, string dirPath, string fileName)
-		{
-			string filePath;
+            if (i <= 0)
+                SaveTextFile(str, "", filePath);
+            else
+                SaveTextFile(str, filePath.Substring(0, i), filePath.Substring(i));
+        }
 
-			if (dirPath == "") {
-				filePath = fileName;
-			} else {
-				if (dirPath.EndsWith ("/"))
-					filePath = dirPath + fileName;
-				else
-					filePath = dirPath + "/" + fileName;
+        /// <summary>
+        /// Saves a string to text file.
+        /// </summary>
+        /// <param name="str">String.</param>
+        /// <param name="dirPath">Directory path.</param>
+        /// <param name="fileName">File name.</param>
+        public static void SaveTextFile(string str, string dirPath, string fileName)
+        {
+            string filePath;
 
-				if (!Directory.Exists (dirPath))
-					Directory.CreateDirectory (dirPath);
-			}
-		
+            if (dirPath == "")
+            {
+                filePath = fileName;
+            }
+            else
+            {
+                if (dirPath.EndsWith("/"))
+                    filePath = dirPath + fileName;
+                else
+                    filePath = dirPath + "/" + fileName;
 
-			StreamWriter sw = new StreamWriter (filePath);
-			sw.WriteLine (str);
-			sw.Close ();
-		}
-
-		/// <summary>
-		/// Loads the file.
-		/// </summary>
-		/// <returns>The file.</returns>
-		/// <param name="filePath">File path.</param>
-		/// <typeparam name="T">Return type of the loaded object.</typeparam>
-		public static string LoadTextFile<T> (string filePath)
-		{
-			if (File.Exists (filePath)) {
-				StreamReader sr = new StreamReader (filePath);
-				string str = sr.ReadToEnd ();
-				sr.Close ();
-				return str;
-			} else {
-				return null;
-			}
-		}
+                if (!Directory.Exists(dirPath))
+                    Directory.CreateDirectory(dirPath);
+            }
 
 
-		public static byte[] ObjectToByteArray (object obj)
-		{
-			if (obj == null)
-				return null;
+            StreamWriter sw = new StreamWriter(filePath);
+            sw.WriteLine(str);
+            sw.Close();
+        }
 
-			if (obj is byte[])
-				return (byte[])obj;
+        /// <summary>
+        /// Loads the file.
+        /// </summary>
+        /// <returns>The file.</returns>
+        /// <param name="filePath">File path.</param>
+        /// <typeparam name="T">Return type of the loaded object.</typeparam>
+        public static string LoadTextFile<T>(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                StreamReader sr = new StreamReader(filePath);
+                string str = sr.ReadToEnd();
+                sr.Close();
+                return str;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
-			BinaryFormatter bf = new BinaryFormatter ();
-			using (MemoryStream ms = new MemoryStream ()) {
-				bf.Serialize (ms, obj);
-				byte[] bytes = ms.ToArray ();
-				ms.Close ();
-				return bytes;
-			}
-		}
 
-		public static T ByteArrayToObject<T> (byte[] bytes)
-		{
-			using (MemoryStream memStream = new MemoryStream ()) {
-				BinaryFormatter bf = new BinaryFormatter ();
-				memStream.Write (bytes, 0, bytes.Length);
-				memStream.Seek (0, SeekOrigin.Begin);
-				T obj = (T)bf.Deserialize (memStream);
-				memStream.Close ();
-				return obj;
-			}
-		}
+        public static byte[] ObjectToByteArray(object obj)
+        {
+            if (obj == null)
+                return null;
 
-		#endregion
-	}
+            if (obj is byte[])
+                return (byte[]) obj;
 
+            BinaryFormatter bf = new BinaryFormatter();
+            using (MemoryStream ms = new MemoryStream())
+            {
+                bf.Serialize(ms, obj);
+                byte[] bytes = ms.ToArray();
+                ms.Close();
+                return bytes;
+            }
+        }
+
+        public static T ByteArrayToObject<T>(byte[] bytes)
+        {
+            using (MemoryStream memStream = new MemoryStream())
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                memStream.Write(bytes, 0, bytes.Length);
+                memStream.Seek(0, SeekOrigin.Begin);
+                T obj = (T) bf.Deserialize(memStream);
+                memStream.Close();
+                return obj;
+            }
+        }
+
+        #endregion
+    }
 }

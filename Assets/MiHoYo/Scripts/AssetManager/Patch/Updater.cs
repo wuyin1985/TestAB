@@ -131,6 +131,23 @@ namespace NewWarMap.Patch
 
         private bool _reachabilityChanged;
 
+        private bool CheckDiskSpaceEnough(long needBytes)
+        {
+            var needMb = needBytes / (1024 * 1024);
+            var currentMb = 0;
+
+#if UNITY_EDITOR_WIN
+            currentMb = DiskUtils.CheckAvailableSpace("C:/");
+#elif UNITY_IOS || UNITY_EDITOR_OSX
+            currentMb = DiskUtils.CheckAvailableSpace();
+#elif UNITY_ANDROID
+            currentMb = DiskUtils.CheckAvailableSpace(true);
+#endif
+
+            CommonLog.Log(MAuthor.WY, $"need {needMb}mb space , current available disk space is {currentMb}mb");
+            return needMb < currentMb;
+        }
+
         public void OnReachablityChanged(NetworkReachability reachability)
         {
             if (_step == Step.Wait)
@@ -360,19 +377,21 @@ namespace NewWarMap.Patch
                     _step = Step.Download;
                 }
             }
-            
+
             if (_step == Step.Download)
             {
-                if (_downloader.IsFinished())
+                while (!_downloader.IsFinished())
                 {
-                    _step = Step.Refresh;
-                    MergeUpdateFileMaps();
-
-                    OnProgress(1);
-                    OnMessage("更新完成");
-
-                    StartCoroutine(ReloadResources());
+                    yield return null;
                 }
+
+                _step = Step.Refresh;
+                MergeUpdateFileMaps();
+
+                OnProgress(1);
+                OnMessage("更新完成");
+
+                StartCoroutine(ReloadResources());
             }
         }
 

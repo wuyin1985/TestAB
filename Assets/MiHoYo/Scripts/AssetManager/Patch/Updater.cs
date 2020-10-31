@@ -92,7 +92,8 @@ namespace NewWarMap.Patch
 
         private void OnApplicationQuit()
         {
-            _downloader.Release();
+            _downloader?.Release();
+            _downloader = null;
         }
 
         /*private void OnApplicationFocus(bool hasFocus)
@@ -378,7 +379,6 @@ namespace NewWarMap.Patch
                     OnMessage(
                         $"下载中...{GetDisplaySize(progress.CompletedSize)}/{GetDisplaySize(progress.TotalSize)}, 速度：{GetDisplaySpeed(progress.Speed)}");
                     OnProgress(progress.CompletedSize * 1f / progress.TotalSize);
-                    CommonLog.Log($"complete size {progress.CompletedSize}");
                     yield return null;
                 } while (!progress.IsCompleted);
 

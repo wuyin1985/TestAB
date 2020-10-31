@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using UnityEngine;
-using UnityEngine.Networking;
-using System.Web;
 #if UNITY_EDITOR
 using UnityEditor;
 
@@ -28,7 +25,7 @@ public class HttpFileDownloader
         public HttpWebRequest request;
         public HttpWebResponse response;
         public Stream streamResponse;
-        public int downloadedSize = 0;
+        public int downloadedSize;
         public WWWFileDownloader.DownloadFileInfo fileInfo;
         public ManualResetEvent allDone = new ManualResetEvent(false);
 
@@ -73,8 +70,8 @@ public class HttpFileDownloader
     public HttpFileDownloader(Uri baseUri, string saveDir)
     {
         ServicePointManager.ServerCertificateValidationCallback = (o, certificate, chain, errors) => true;
-        this.BaseUri = baseUri;
-        this.SavedDir = saveDir;
+        BaseUri = baseUri;
+        SavedDir = saveDir;
 #if UNITY_EDITOR
         EditorApplication.playModeStateChanged += ChangePlayModeState;
 #endif
@@ -184,13 +181,13 @@ public class HttpFileDownloader
         try
         {
             var myHttpWebRequest = myRequestState.request;
-            // response 不能忘记close
             myRequestState.response = (HttpWebResponse) myHttpWebRequest.EndGetResponse(result);
 
             if (myRequestState.response.StatusCode != HttpStatusCode.OK &&
                 myRequestState.response.StatusCode != HttpStatusCode.PartialContent)
             {
-                CommonLog.Error($"{myRequestState.fileInfo.FileName} StatusCode : {myRequestState.response.StatusCode}");
+                CommonLog.Error(
+                    $"{myRequestState.fileInfo.FileName} StatusCode : {myRequestState.response.StatusCode}");
             }
 
             var responseStream = myRequestState.response.GetResponseStream();
@@ -217,7 +214,7 @@ public class HttpFileDownloader
         ms.Dispose();
 
         var pathRoot = UnityPersistFileHelper.GetPersistAssetFilePath(SavedDir, "");
-    
+
 
         if (md5Struct.MD51 == myRequestState.fileInfo.MapedFileName_MD51
             && md5Struct.MD52 == myRequestState.fileInfo.MapedFileName_MD52)
@@ -234,7 +231,8 @@ public class HttpFileDownloader
         else
         {
             var tempFilePath = pathRoot + myRequestState.fileInfo.FileName + TempExtension;
-            CommonLog.Error(MAuthor.WY, $"file {myRequestState.fileInfo.FileName} md5 error, delete file {tempFilePath}");
+            CommonLog.Error(MAuthor.WY,
+                $"file {myRequestState.fileInfo.FileName} md5 error, delete file {tempFilePath}");
             FileUtils.DeleteFile(tempFilePath);
             myRequestState.progress.SetException("md5 check failed",
                 WWWFileDownloader.eWWWErrorType.WriteFileError);
@@ -244,7 +242,7 @@ public class HttpFileDownloader
     private void ReadCallBack(IAsyncResult asyncResult)
     {
         RequestState myRequestState = (RequestState) asyncResult.AsyncState;
-        //try
+        try
         {
             Stream responseStream = myRequestState.streamResponse;
             int read = responseStream.EndRead(asyncResult);
@@ -269,13 +267,13 @@ public class HttpFileDownloader
                 myRequestState.allDone.Set();
             }
         }
-        /*catch (Exception e)
+        catch (Exception e)
         {
             myRequestState.m_file_stream?.Close();
             CommonLog.Error(MAuthor.WY, $"download {myRequestState.fileInfo.FileName} read exception {e.Message}");
             myRequestState.progress.SetException(e, WWWFileDownloader.eWWWErrorType.WriteFileError);
             myRequestState.allDone.Set();
-        }*/
+        }
     }
 
     public static byte[] ToBytes(object obj)
@@ -292,23 +290,22 @@ public class HttpFileDownloader
         }
     }
 
-    // Abort the request if the timer fires.
     private static void TimeoutCallback(object state, bool timedOut)
     {
+        var myRequestState = state as RequestState;
+        CommonLog.Log(MAuthor.WY, $"download {myRequestState.fileInfo.FileName} timeout {timedOut}");
         if (timedOut)
         {
-            var myRequestState = state as RequestState;
             myRequestState.request?.Abort();
-            CommonLog.Log(MAuthor.WY, $"download {myRequestState.fileInfo.FileName} timeout");
             myRequestState.progress.SetException("timeout ", WWWFileDownloader.eWWWErrorType.DownloadNetError);
         }
     }
 
-    const int DefaultTimeout = 2 * 60 * 1000; // 2 minutes timeout
+    const int DefaultTimeout = 2 * 60 * 1000;
 
     private bool DownloadFile(RequestState myRequestState)
     {
-        //try
+        try
         {
             myRequestState.allDone.Reset();
             var pathRoot = UnityPersistFileHelper.GetPersistAssetFilePath(SavedDir, "");
@@ -317,7 +314,7 @@ public class HttpFileDownloader
             if (Directory.Exists(pathRoot) == false)
                 Directory.CreateDirectory(pathRoot);
 
-            string tempName = myRequestState.fileInfo.FileName + TempExtension;
+            var tempName = myRequestState.fileInfo.FileName + TempExtension;
             myRequestState.m_file_stream =
                 new FileStream(pathRoot + tempName, FileMode.OpenOrCreate, FileAccess.ReadWrite);
             var position = myRequestState.m_file_stream.Length;
@@ -328,19 +325,16 @@ public class HttpFileDownloader
                 var httpWebRequest = (HttpWebRequest) WebRequest.Create(uri);
                 httpWebRequest.Method = "GET";
                 httpWebRequest.KeepAlive = true;
-                httpWebRequest.ReadWriteTimeout = 5 * 60 * 1000;
+                httpWebRequest.ReadWriteTimeout = DefaultTimeout;
                 httpWebRequest.AddRange(position);
                 myRequestState.request = httpWebRequest;
 
                 CommonLog.Log(MAuthor.WY, $"start Download {uri} from position {position}");
-                // Start the asynchronous request.
-                IAsyncResult result =
+                var result =
                     httpWebRequest.BeginGetResponse(RespCallback, myRequestState);
-                ThreadPool.RegisterWaitForSingleObject(result.AsyncWaitHandle, new WaitOrTimerCallback(TimeoutCallback),
+                ThreadPool.RegisterWaitForSingleObject(result.AsyncWaitHandle, TimeoutCallback,
                     myRequestState, DefaultTimeout, true);
 
-                // The response came in the allowed time. The work processing will happen in the 
-                // callback function.
                 bool waitDone;
                 do
                 {
@@ -359,7 +353,7 @@ public class HttpFileDownloader
                 } while (!waitDone);
 
                 // Release the HttpWebResponse resource.
-                myRequestState.response.Close();
+                myRequestState.response?.Close();
                 myRequestState.streamResponse?.Close();
             }
             else
@@ -367,13 +361,14 @@ public class HttpFileDownloader
                 CheckMd5AndReplaceTempFile(myRequestState);
             }
         }
-        /*catch (Exception ex)
+        catch (Exception ex)
         {
             myRequestState.m_file_stream?.Close();
-            CommonLog.Error(MAuthor.WY, $"download {myRequestState.fileInfo.FileName} cause exception {ex.Message}");
+            CommonLog.Error(MAuthor.WY,
+                $"download {myRequestState.fileInfo.FileName} cause exception {ex.Message}\n{ex.StackTrace}");
             myRequestState.progress.SetException(ex, WWWFileDownloader.eWWWErrorType.DownloadNetError);
             return false;
-        }*/
+        }
 
         return true;
     }
@@ -397,7 +392,7 @@ public class HttpFileDownloader
 
     private void ThreadFunc(object obj)
     {
-        WWWFileDownloader.DownloaderProgress progress = obj as WWWFileDownloader.DownloaderProgress;
+        var progress = obj as WWWFileDownloader.DownloaderProgress;
         while (!progress.IsStop && !stopAllDownload)
         {
             while (progress.IsPause)

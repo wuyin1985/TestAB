@@ -104,9 +104,11 @@ public class FileUtils
 
     public static void DeleteFile(string pathName)
     {
-        if (File.Exists(pathName))
+        var info = new FileInfo(pathName);
+        if (info.Exists)
         {
-            File.Delete(pathName);
+            info.Attributes = FileAttributes.Normal;
+            info.Delete();
         }
     }
 

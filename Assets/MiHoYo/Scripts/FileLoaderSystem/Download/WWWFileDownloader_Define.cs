@@ -360,7 +360,7 @@ public partial class WWWFileDownloader
         }
         public void SetException(string e, eWWWErrorType type)
         {
-            Debug.LogWarning($"SetException {e} {type}");
+            CommonLog.Log($"SetException {e} {type}");
             //Debug.LogError(StackTraceUtility.ExtractStackTrace());
             ErrorType = type;
             if (e == null)
@@ -374,9 +374,8 @@ public partial class WWWFileDownloader
                 ErrorMsg = e;
             }
             IsCompleted = true;
-            //FinishSignal.Dispatch(this);
-            //base.BaseFinishSignal.Dispatch();
         }
+        
         private string _Text;
         public string Text
         {
@@ -409,6 +408,11 @@ public partial class WWWFileDownloader
             IsCompleted = true;
             //FinishSignal.Dispatch(this);
             //base.BaseFinishSignal.Dispatch();
+        }
+
+        public void SetComplete()
+        {
+            IsCompleted = true;
         }
 
         public override void UpdateProgress()

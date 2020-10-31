@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using BytesTools;
 using FileMapSystem;
 using Res.ABSystem;
@@ -12,7 +10,6 @@ using SimpleDiskUtils;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
-using Debug = UnityEngine.Debug;
 
 namespace NewWarMap.Patch
 {
@@ -29,7 +26,6 @@ namespace NewWarMap.Patch
         void OnClear();
     }
 
-    [RequireComponent(typeof(Downloader))]
     [RequireComponent(typeof(NetworkMonitor))]
     public class Updater : MonoBehaviour, INetworkMonitorListener
     {
@@ -49,7 +45,8 @@ namespace NewWarMap.Patch
 
         public IUpdater listener { get; set; }
 
-        private Downloader _downloader;
+        private HttpFileDownloader _downloader;
+
         private NetworkMonitor _monitor;
         private string _platform;
         private string _savePath;
@@ -79,9 +76,6 @@ namespace NewWarMap.Patch
 
         private void Start()
         {
-            _downloader = gameObject.GetComponent<Downloader>();
-            _downloader.onUpdate = OnUpdate;
-
             _monitor = gameObject.GetComponent<NetworkMonitor>();
             _monitor.listener = this;
 
@@ -98,7 +92,7 @@ namespace NewWarMap.Patch
 
         private void OnApplicationQuit()
         {
-            _downloader.Stop();
+            _downloader.Release();
         }
 
         /*private void OnApplicationFocus(bool hasFocus)
@@ -156,12 +150,8 @@ namespace NewWarMap.Patch
             }
 
             _reachabilityChanged = true;
-            if (_step == Step.Download)
-            {
-                _downloader.Stop();
-            }
 
-            if (reachability == NetworkReachability.NotReachable)
+            /*if (reachability == NetworkReachability.NotReachable)
             {
                 MessageBox.Show("提示！", "找不到网络，请确保手机已经联网", "确定", "退出").onComplete += delegate(MessageBox.EventId id)
                 {
@@ -197,41 +187,7 @@ namespace NewWarMap.Patch
 
                 _reachabilityChanged = false;
                 MessageBox.CloseAll();
-            }
-        }
-
-        private void OnUpdate(long progress, long size, float speed)
-        {
-            OnMessage(
-                $"下载中...{Downloader.GetDisplaySize(progress)}/{Downloader.GetDisplaySize(size)}, 速度：{Downloader.GetDisplaySpeed(speed)}");
-
-            OnProgress(progress * 1f / size);
-        }
-
-        public void Clear()
-        {
-            MessageBox.Show("提示", "清除数据后所有数据需要重新下载，请确认！", "清除").onComplete += id =>
-            {
-                if (id != MessageBox.EventId.Ok)
-                    return;
-                OnClear();
-            };
-        }
-
-        public void OnClear()
-        {
-            OnMessage("数据清除完毕");
-            OnProgress(0);
-            _downloader.Clear();
-            _step = Step.Wait;
-            _reachabilityChanged = false;
-
-            listener?.OnClear();
-
-            if (Directory.Exists(_savePath))
-            {
-                Directory.Delete(_savePath, true);
-            }
+            }*/
         }
 
         public static void DeleteDirectory(FileSystemInfo fileSystemInfo)
@@ -248,15 +204,6 @@ namespace NewWarMap.Patch
             fileSystemInfo.Delete();
         }
 
-        public static void DeleteFile(string path)
-        {
-            var info = new FileInfo(path);
-            if (info.Exists)
-            {
-                info.Attributes = FileAttributes.Normal;
-                info.Delete();
-            }
-        }
 
         private IEnumerator _checking;
 
@@ -276,10 +223,19 @@ namespace NewWarMap.Patch
 
         private void PrepareDownloads(FileMapSystem.FileMapSystem newMap, string versionStr)
         {
+            if (_downloader != null)
+            {
+                _downloader.Release();
+                _downloader = null;
+            }
+
+            _downloader = new HttpFileDownloader(new Uri(GetDownloadBaseURL(versionStr)),
+                AssetBundlePathResolver.BundleSaveDirName);
             var currentMap = AssetBundleManager.Instance.GetFileMapSystem();
             var misses = currentMap.GetMissFileMaps(newMap);
             _currentDownloadingGroupDesc = misses;
             CommonLog.Log(MAuthor.WY, $"{misses.Count} files miss in current file map");
+
             foreach (var fileMapGroupDescIter in misses)
             {
                 var fileName = fileMapGroupDescIter.Key;
@@ -300,10 +256,41 @@ namespace NewWarMap.Patch
                     }
                 }
 
-                _downloader.AddDownload(GetDownloadURL(fileName, versionStr), _savePath + fileName,
-                    new MD5Creater.MD5Struct {MD51 = desc.Md51, MD52 = desc.Md52},
-                    desc.Len);
+                _downloader.AddDownLoad(new WWWFileDownloader.DownloadFileInfo
+                {
+                    FileName = fileName,
+                    FileSize = desc.Len,
+                    MapedFileName_MD51 = desc.Md51,
+                    MapedFileName_MD52 = desc.Md52,
+                });
             }
+        }
+        
+        private const float BYTES_2_MB = 1f / (1024 * 1024);
+        
+        public static string GetDisplaySpeed(float downloadSpeed)
+        {
+            if (downloadSpeed >= 1024 * 1024)
+            {
+                return $"{downloadSpeed * BYTES_2_MB:f2}MB/s";
+            }
+
+            if (downloadSpeed >= 1024)
+            {
+                return $"{downloadSpeed / 1024:f2}KB/s";
+            }
+
+            return $"{downloadSpeed:f2}B/s";
+        }
+
+        public static string GetDisplaySize(long downloadSize)
+        {
+            if (downloadSize >= 1024 * 1024)
+            {
+                return $"{downloadSize * BYTES_2_MB:f2}MB";
+            }
+
+            return downloadSize >= 1024 ? $"{downloadSize / 1024:f2}KB" : $"{downloadSize:f2}B";
         }
 
         private static string GetPlatformForAssetBundles(RuntimePlatform target)
@@ -326,7 +313,12 @@ namespace NewWarMap.Patch
 
         private string GetDownloadURL(string filename, string version = null)
         {
-            return version != null ? $"{baseURL}{_platform}/{version}/{filename}" : $"{baseURL}{_platform}/{filename}";
+            return $"{GetDownloadBaseURL(version)}{filename}";
+        }
+
+        private string GetDownloadBaseURL(string version = null)
+        {
+            return version != null ? $"{baseURL}{_platform}/{version}/" : $"{baseURL}{_platform}/";
         }
 
         private IEnumerator Processing()
@@ -355,15 +347,15 @@ namespace NewWarMap.Patch
             if (_step == Step.Prepared)
             {
                 OnMessage("正在检查版本信息...");
-                var totalSize = _downloader.size;
+                var totalSize = _downloader.GetToDownloadSize();
                 if (totalSize > 0)
                 {
-                    var tips = $"发现内容更新，总计需要下载 {Downloader.GetDisplaySize(totalSize)} 内容";
+                    var tips = $"发现内容更新，总计需要下载 {GetDisplaySize(totalSize)} 内容";
                     var mb = MessageBox.Show("提示", tips, "下载", "退出");
                     yield return mb;
                     if (mb.isOk)
                     {
-                        _downloader.StartDownload();
+                        _downloader.StartDownloadFile();
                         _step = Step.Download;
                     }
                     else
@@ -380,17 +372,37 @@ namespace NewWarMap.Patch
 
             if (_step == Step.Download)
             {
-                while (!_downloader.IsFinished())
+                var progress = _downloader.GetProgress();
+                do
                 {
+                    OnMessage(
+                        $"下载中...{GetDisplaySize(progress.CompletedSize)}/{GetDisplaySize(progress.TotalSize)}, 速度：{GetDisplaySpeed(progress.Speed)}");
+                    OnProgress(progress.CompletedSize * 1f / progress.TotalSize);
+                    CommonLog.Log($"complete size {progress.CompletedSize}");
                     yield return null;
+                } while (!progress.IsCompleted);
+
+                if (progress.IsError)
+                {
+                    var tips = $"下载文件时发生错误(错误码:00{(int) progress.ErrorType}), 是否重新下载";
+                    var mb = MessageBox.Show("提示", tips, "下载", "退出");
+                    yield return mb;
+                    if (mb.isOk)
+                    {
+                        StartUpdate();
+                    }
+                    else
+                    {
+                        Quit();
+                    }
+
+                    yield break;
                 }
 
                 _step = Step.Refresh;
                 MergeUpdateFileMaps();
-
                 OnProgress(1);
                 OnMessage("更新完成");
-
                 StartCoroutine(ReloadResources());
             }
         }
@@ -444,7 +456,7 @@ namespace NewWarMap.Patch
 
         private IEnumerator DownloadSingleFile(SingleFileDownloadRequest sr)
         {
-            DeleteFile(sr.targetPath);
+            FileUtils.DeleteFile(sr.targetPath);
 
             var request = UnityWebRequest.Get(sr.url);
             request.downloadHandler = new DownloadHandlerFile(sr.targetPath);
@@ -514,7 +526,7 @@ namespace NewWarMap.Patch
             }
             catch (Exception e)
             {
-                Debug.LogException(e);
+                CommonLog.Error(e.Message);
                 MessageBox.Show("提示", "版本文件加载失败", "重试", "退出").onComplete +=
                     delegate(MessageBox.EventId id)
                     {
@@ -698,7 +710,7 @@ namespace NewWarMap.Patch
 
             var xmfPath = _savePath + AssetBundlePathResolver.BundleSaveDirName +
                           FileMapGroupInfo.FileExtension;
-            DeleteFile(xmfPath);
+            FileUtils.DeleteFile(xmfPath);
 
             var writeFileMapStream = File.Create(xmfPath);
             writeFileMapStream.Write(mapperBs.GetRaw(), 0, mapperBs.WriterIndex);

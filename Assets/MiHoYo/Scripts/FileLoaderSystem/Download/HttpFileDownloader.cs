@@ -10,6 +10,7 @@ using UnityEngine.Networking;
 using System.Web;
 #if UNITY_EDITOR
 using UnityEditor;
+
 #endif
 
 /// <summary>
@@ -33,6 +34,7 @@ public class HttpFileDownloader
 
         public FileStream m_file_stream;
         public WWWFileDownloader.DownloaderProgress progress;
+
         public RequestState()
         {
             BufferRead = new byte[BUFFER_SIZE];
@@ -40,6 +42,7 @@ public class HttpFileDownloader
             streamResponse = null;
         }
     }
+
     private List<WWWFileDownloader.DownloadFileInfo> m_DownList = new List<WWWFileDownloader.DownloadFileInfo>();
 
     public Uri BaseUri { get; private set; }
@@ -48,28 +51,28 @@ public class HttpFileDownloader
 
     int m_nNextDownIndex = 0;
     int m_nDownCount = 0;
-    
+    private const string TempExtension = ".download";
+
     int m_nDownThreadNumb = 0; // 下载线程数量
     //int m_nWriteThreadNumb = 0;
 
-    bool stopAllDownload = false; // 停止所有下载标识
+    bool stopAllDownload; // 停止所有下载标识
     Thread[] m_runThreads;
+
+    private readonly WWWFileDownloader.DownloaderProgress _progress = new WWWFileDownloader.DownloaderProgress();
+
     //Thread m_runWriteThread;
-    
+
     //long m_nLimitDownSize; // 每秒限制下载的大小
 
-    private HttpFileDownloader()
+    public WWWFileDownloader.DownloaderProgress GetProgress()
     {
+        return _progress;
     }
 
     public HttpFileDownloader(Uri baseUri, string saveDir)
     {
         ServicePointManager.ServerCertificateValidationCallback = (o, certificate, chain, errors) => true;
-        // 提前调用persitentPath让其缓存，否则线程那边会报错
-//#if UNITY_EDITOR
-//        Debug.Log(UnityFileLoaderHelper.PersistenPath);
-//#endif
-
         this.BaseUri = baseUri;
         this.SavedDir = saveDir;
 #if UNITY_EDITOR
@@ -87,96 +90,58 @@ public class HttpFileDownloader
     }
 #endif
 
-    /*public WWWFileDownloader.DownloaderProgress StartHttpGetRaw(string fileName, WWWFileDownloader.DownloaderProgress _progress = null)
+    public void AddDownLoad(WWWFileDownloader.DownloadFileInfo download)
     {
-        WWWFileDownloader.DownloaderProgress progress = null;
-        if (_progress == null)
-            progress = new WWWFileDownloader.DownloaderProgress();
-        else
-            progress = _progress;
-        GameTaskManager.Instance.CreateTask(IHTTPGetFile(fileName, progress));
-        return progress;
-    }*/
-
-    protected virtual IEnumerator IHTTPGetFile(string relativePath, WWWFileDownloader.DownloaderProgress outProgress, bool isSaveResult = false)
-    {
-        System.Net.ServicePointManager.DefaultConnectionLimit = 50;
-
-        outProgress.UpdateProgress();
-        byte[] data;
-        string path = this.GetAbsoluteUri(relativePath);
-        //Debug.Log("IHTTPGetFile " + path);
-
-        using (UnityWebRequest www = new UnityWebRequest(path))
-        {
-            www.downloadHandler = new DownloadHandlerBuffer();
-            www.SendWebRequest();
-            while (!www.isDone)
-            {
-                if (www.downloadProgress >= 0)
-                {
-                    if (outProgress.TotalSize <= 0)
-                    {
-                        outProgress.InitCompletedSize((long)(www.downloadedBytes / www.downloadProgress), (long)www.downloadedBytes);
-                    }
-                    outProgress.RealCompletedSize = (long)www.downloadedBytes;
-                    outProgress.UpdateProgress();
-                }
-                yield return null;
-            }
-
-            if (!string.IsNullOrEmpty(www.error))
-            {
-                outProgress.SetException(www.error, WWWFileDownloader.eWWWErrorType.DownloadNetError);
-                yield break;
-            }
-
-            data = www.downloadHandler.data;
-        }
-        outProgress.SetRaw(data);
+        m_DownList.Add(download);
     }
 
-    public WWWFileDownloader.DownloaderProgress StartDownloadFile(List<WWWFileDownloader.DownloadFileInfo> downList,
-        WWWFileDownloader.DownloaderProgress _progress = null)
+    public long GetToDownloadSize()
     {
-        WWWFileDownloader.DownloaderProgress progress = null;
-        if (_progress == null)
-            progress = new WWWFileDownloader.DownloaderProgress();
-        else
-            progress = _progress;
+        long ret = 0;
+        foreach (var downloadFileInfo in m_DownList)
+        {
+            var info = new FileInfo(
+                UnityPersistFileHelper.GetPersistAssetFilePath(SavedDir, downloadFileInfo.FileName + TempExtension));
+            if (info.Exists)
+            {
+                ret += downloadFileInfo.FileSize - info.Length;
+            }
+            else
+            {
+                ret += downloadFileInfo.FileSize;
+            }
+        }
 
+        return ret;
+    }
+
+    public void StartDownloadFile()
+    {
         long totalSize = 0;
-        foreach (var file in downList)
+        foreach (var file in m_DownList)
         {
             totalSize += file.FileSize;
         }
-        long downloadedSize = 0;
-        progress.InitCompletedSize(totalSize, downloadedSize);
 
-        m_nDownThreadNumb = 1;//SystemInfo.processorCount * 2;
+        long downloadedSize = 0;
+        _progress.InitCompletedSize(totalSize, downloadedSize);
+
+        m_nDownThreadNumb = 1; //SystemInfo.processorCount * 2;
         //if (m_nDownThreadNumb > downList.Count)
         //    m_nDownThreadNumb = downList.Count;
 
-        m_DownList = downList;
-        m_nDownCount = downList.Count;
+        m_nDownCount = m_DownList.Count;
         m_nNextDownIndex = 0;
         m_runThreads = new Thread[m_nDownThreadNumb];
         for (int i = 0; i < m_nDownThreadNumb; i++)
         {
-            Thread t = new Thread(ThreadFunc);
-            t.Priority = System.Threading.ThreadPriority.Lowest;
-            t.Start(progress);
+            var t = new Thread(ThreadFunc) {Priority = System.Threading.ThreadPriority.Lowest};
+            t.Start(_progress);
             m_runThreads[i] = t;
         }
-
-        // 启动写线程
-        //m_nWriteThreadNumb = 1;
-        //Thread tw = new Thread(WriteThreadFunc);
-        //m_runWriteThread = tw;
-        return progress;
     }
 
-    void Release()
+    public void Release()
     {
         this.stopAllDownload = true;
 
@@ -184,12 +149,11 @@ public class HttpFileDownloader
         {
             foreach (var t in m_runThreads)
             {
-                if (t != null)
-                    t.Abort();
+                t?.Abort();
             }
+
+            m_runThreads = null;
         }
-        //if (m_runWriteThread != null)
-        //    m_runWriteThread.Abort();
     }
 
     ~HttpFileDownloader()
@@ -212,47 +176,75 @@ public class HttpFileDownloader
         return path + "/" + relativePath;
     }
 
-    private bool DownloadFile(RequestState requestState)//, int nLastDownSize)
-    {
-        bool bSuc = DownPart(requestState, 0, 0);
-        return bSuc;
-    }
-
     const int BUFFER_SIZE = 1024;
 
     private void RespCallback(IAsyncResult result)
     {
-        RequestState myRequestState = result.AsyncState as RequestState;
+        var myRequestState = result.AsyncState as RequestState;
         try
         {
-            HttpWebRequest myHttpWebRequest = myRequestState.request;
-
+            var myHttpWebRequest = myRequestState.request;
             // response 不能忘记close
-            myRequestState.response = (HttpWebResponse)myHttpWebRequest.EndGetResponse(result);
+            myRequestState.response = (HttpWebResponse) myHttpWebRequest.EndGetResponse(result);
 
-            if (myRequestState.response.StatusCode != HttpStatusCode.OK)
+            if (myRequestState.response.StatusCode != HttpStatusCode.OK &&
+                myRequestState.response.StatusCode != HttpStatusCode.PartialContent)
             {
-                CommonLog.Error("StatusCode : {myRequestState.response.StatusCode}");
+                CommonLog.Error($"{myRequestState.fileInfo.FileName} StatusCode : {myRequestState.response.StatusCode}");
             }
 
-            Stream responseStream = myRequestState.response.GetResponseStream();
+            var responseStream = myRequestState.response.GetResponseStream();
             myRequestState.streamResponse = responseStream;
-
             responseStream.BeginRead(myRequestState.BufferRead, 0, BUFFER_SIZE, ReadCallBack, myRequestState);
         }
         catch (Exception ex)
         {
-            if (myRequestState.m_file_stream != null)
-                myRequestState.m_file_stream.Close();
+            myRequestState.m_file_stream?.Close();
+            CommonLog.Error(MAuthor.WY, $"download {myRequestState.fileInfo.FileName} resp exception {ex.Message}");
             myRequestState.progress.SetException(ex, WWWFileDownloader.eWWWErrorType.WriteFileError);
             myRequestState.allDone.Set();
         }
     }
 
+
+    private void CheckMd5AndReplaceTempFile(RequestState myRequestState)
+    {
+        var ms = new MemoryStream();
+        myRequestState.m_file_stream.Position = 0;
+        myRequestState.m_file_stream.CopyTo(ms);
+        var md5Struct = MD5Creater.GenerateMd5Code(ms.ToArray());
+        myRequestState.m_file_stream.Close();
+        ms.Dispose();
+
+        var pathRoot = UnityPersistFileHelper.GetPersistAssetFilePath(SavedDir, "");
+    
+
+        if (md5Struct.MD51 == myRequestState.fileInfo.MapedFileName_MD51
+            && md5Struct.MD52 == myRequestState.fileInfo.MapedFileName_MD52)
+        {
+            CommonLog.Log($"complete download file {myRequestState.fileInfo.FileName}");
+            myRequestState.progress.RealCompletedSize -= myRequestState.downloadedSize;
+            myRequestState.progress.RealCompletedSize +=
+                myRequestState.fileInfo.FileSize; //myRequestState.fileSize;
+            myRequestState.progress.UpdateProgress();
+
+            FileUtils.RenameFile(pathRoot, myRequestState.fileInfo.FileName + TempExtension,
+                myRequestState.fileInfo.FileName);
+        }
+        else
+        {
+            var tempFilePath = pathRoot + myRequestState.fileInfo.FileName + TempExtension;
+            CommonLog.Error(MAuthor.WY, $"file {myRequestState.fileInfo.FileName} md5 error, delete file {tempFilePath}");
+            FileUtils.DeleteFile(tempFilePath);
+            myRequestState.progress.SetException("md5 check failed",
+                WWWFileDownloader.eWWWErrorType.WriteFileError);
+        }
+    }
+
     private void ReadCallBack(IAsyncResult asyncResult)
     {
-        RequestState myRequestState = (RequestState)asyncResult.AsyncState;
-        try
+        RequestState myRequestState = (RequestState) asyncResult.AsyncState;
+        //try
         {
             Stream responseStream = myRequestState.streamResponse;
             int read = responseStream.EndRead(asyncResult);
@@ -271,59 +263,24 @@ public class HttpFileDownloader
             }
             else
             {
-                //if (myRequestState.fileSize != myRequestState.downloadedSize)
-                //{
-                //    myRequestState.progress.UpdateTotalSize(myRequestState.m_file_stream.Length - myRequestState.fileSize);
-                //    Debug.LogError($"{myRequestState.fileName} {myRequestState.fileSize} {myRequestState.downloadedSize} {myRequestState.m_file_stream.Length}");
-                //}
-                //else
-                //    Debug.LogWarning($"{myRequestState.fileName} {myRequestState.fileSize} {myRequestState.downloadedSize} {myRequestState.m_file_stream.Length}");
-
                 // 校验md5
-                myRequestState.m_file_stream.Position = 0;
-                //var md5Struct = MD5Creater.GenerateMd5Code(myRequestState.m_file_stream);
-                var md5Struct = MD5Creater.GenerateMd5Code(ToBytes(myRequestState.m_file_stream));
-
-                // close fileStream
-                myRequestState.m_file_stream.Close();
-
-                var pathRoot = UnityPersistFileHelper.GetPersistAssetFilePath(SavedDir, "");
-                string tempFilePath = myRequestState.fileInfo.FileName + ".download";
-
-                if (md5Struct.MD51 == myRequestState.fileInfo.MapedFileName_MD51
-                    && md5Struct.MD52 == myRequestState.fileInfo.MapedFileName_MD52)
-                {
-                    myRequestState.progress.RealCompletedSize -= myRequestState.downloadedSize;
-                    myRequestState.progress.RealCompletedSize += myRequestState.fileInfo.FileSize;//myRequestState.fileSize;
-                    myRequestState.progress.UpdateProgress();
-
-                    FileUtils.RenameFile(pathRoot, myRequestState.fileInfo.FileName+".download", myRequestState.fileInfo.FileName);
-                }
-                else
-                {
-                    FileUtils.DeleteFile(tempFilePath);
-                    myRequestState.progress.SetException("md5 check failed", WWWFileDownloader.eWWWErrorType.WriteFileError);
-                }
+                CheckMd5AndReplaceTempFile(myRequestState);
                 responseStream.Close();
-
-                // 要写完文件再设置信号量，否则回调直接访问文件会出错
                 myRequestState.allDone.Set();
-
             }
         }
-        catch (Exception e)
+        /*catch (Exception e)
         {
-            if (myRequestState.m_file_stream != null)
-                myRequestState.m_file_stream.Close();
-
+            myRequestState.m_file_stream?.Close();
+            CommonLog.Error(MAuthor.WY, $"download {myRequestState.fileInfo.FileName} read exception {e.Message}");
             myRequestState.progress.SetException(e, WWWFileDownloader.eWWWErrorType.WriteFileError);
             myRequestState.allDone.Set();
-        }
+        }*/
     }
-    
+
     public static byte[] ToBytes(object obj)
     {
-        if (obj == null) throw new ArgumentNullException("obj");
+        if (obj == null) throw new ArgumentNullException(nameof(obj));
 
         BinaryFormatter serializer = new BinaryFormatter();
         using (MemoryStream memStream = new MemoryStream())
@@ -340,88 +297,89 @@ public class HttpFileDownloader
     {
         if (timedOut)
         {
-            RequestState myRequestState = state as RequestState;
-            if (myRequestState.request != null)
-            {
-                myRequestState.request.Abort();
-            }
-
+            var myRequestState = state as RequestState;
+            myRequestState.request?.Abort();
+            CommonLog.Log(MAuthor.WY, $"download {myRequestState.fileInfo.FileName} timeout");
             myRequestState.progress.SetException("timeout ", WWWFileDownloader.eWWWErrorType.DownloadNetError);
         }
     }
 
     const int DefaultTimeout = 2 * 60 * 1000; // 2 minutes timeout
-    private bool DownPart(RequestState myRequestState, 
-        int nFileOffset, int nDownSize)
+
+    private bool DownloadFile(RequestState myRequestState)
     {
-        try
+        //try
         {
             myRequestState.allDone.Reset();
-            Uri uri = new Uri(GetAbsoluteUri(myRequestState.fileInfo.FileName));
-            //Debug.Log("DownPart " + uri);
-            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
-            httpWebRequest.Method = "GET";
-            httpWebRequest.KeepAlive = true;
-            httpWebRequest.ReadWriteTimeout = 5*60*1000;
-
-            myRequestState.request = httpWebRequest;
-
             var pathRoot = UnityPersistFileHelper.GetPersistAssetFilePath(SavedDir, "");
-            //Debug.Log($"DownPart delete {pathRoot + fileName}");
-            //删了旧文件
             FileUtils.DeleteFile(pathRoot + myRequestState.fileInfo.FileName);
 
             if (Directory.Exists(pathRoot) == false)
                 Directory.CreateDirectory(pathRoot);
 
-            //Debug.LogError($"begin write {pathRoot + downloadResFile.fileName}");
-            string tempName = myRequestState.fileInfo.FileName + ".download";
-            myRequestState.m_file_stream = new FileStream(pathRoot + tempName, FileMode.OpenOrCreate, FileAccess.ReadWrite);
-
-            // Start the asynchronous request.
-            IAsyncResult result =
-              (IAsyncResult)httpWebRequest.BeginGetResponse(RespCallback, myRequestState);
-            // this line implements the timeout, if there is a timeout, the callback fires and the request becomes aborted
-            ThreadPool.RegisterWaitForSingleObject(result.AsyncWaitHandle, new WaitOrTimerCallback(TimeoutCallback), myRequestState, DefaultTimeout, true);
-
-            // The response came in the allowed time. The work processing will happen in the 
-            // callback function.
-            bool waitDone = false;
-            do
+            string tempName = myRequestState.fileInfo.FileName + TempExtension;
+            myRequestState.m_file_stream =
+                new FileStream(pathRoot + tempName, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            var position = myRequestState.m_file_stream.Length;
+            if (position < myRequestState.fileInfo.FileSize)
             {
-                waitDone = myRequestState.allDone.WaitOne(100);
-                myRequestState.progress.UpdateProgress();
+                myRequestState.m_file_stream.Seek(position, SeekOrigin.Begin);
+                var uri = new Uri(GetAbsoluteUri(myRequestState.fileInfo.FileName));
+                var httpWebRequest = (HttpWebRequest) WebRequest.Create(uri);
+                httpWebRequest.Method = "GET";
+                httpWebRequest.KeepAlive = true;
+                httpWebRequest.ReadWriteTimeout = 5 * 60 * 1000;
+                httpWebRequest.AddRange(position);
+                myRequestState.request = httpWebRequest;
 
-                //== TODO
-                if (stopAllDownload || myRequestState.progress.IsStop)
+                CommonLog.Log(MAuthor.WY, $"start Download {uri} from position {position}");
+                // Start the asynchronous request.
+                IAsyncResult result =
+                    httpWebRequest.BeginGetResponse(RespCallback, myRequestState);
+                ThreadPool.RegisterWaitForSingleObject(result.AsyncWaitHandle, new WaitOrTimerCallback(TimeoutCallback),
+                    myRequestState, DefaultTimeout, true);
+
+                // The response came in the allowed time. The work processing will happen in the 
+                // callback function.
+                bool waitDone;
+                do
                 {
-                    myRequestState.request.Abort();
-                    myRequestState.response.Close();
-                    if (myRequestState.streamResponse != null)
-                        myRequestState.streamResponse.Close();
-                    myRequestState.m_file_stream.Close();
-                    return false;
-                }
-            }
-            while (!waitDone);
+                    waitDone = myRequestState.allDone.WaitOne(100);
+                    myRequestState.progress.UpdateProgress();
 
-            // Release the HttpWebResponse resource.
-            myRequestState.response.Close();
-            if (myRequestState.streamResponse != null)
-                myRequestState.streamResponse.Close();
+                    //== TODO
+                    if (stopAllDownload || myRequestState.progress.IsStop)
+                    {
+                        myRequestState.request.Abort();
+                        myRequestState.response.Close();
+                        myRequestState.streamResponse?.Close();
+                        myRequestState.m_file_stream.Close();
+                        return false;
+                    }
+                } while (!waitDone);
+
+                // Release the HttpWebResponse resource.
+                myRequestState.response.Close();
+                myRequestState.streamResponse?.Close();
+            }
+            else
+            {
+                CheckMd5AndReplaceTempFile(myRequestState);
+            }
         }
-        catch (Exception ex)
+        /*catch (Exception ex)
         {
-            if (myRequestState.m_file_stream != null)
-                myRequestState.m_file_stream.Close();
+            myRequestState.m_file_stream?.Close();
+            CommonLog.Error(MAuthor.WY, $"download {myRequestState.fileInfo.FileName} cause exception {ex.Message}");
             myRequestState.progress.SetException(ex, WWWFileDownloader.eWWWErrorType.DownloadNetError);
             return false;
-        }
+        }*/
 
         return true;
     }
 
-    private bool PopDownFileInfo(WWWFileDownloader.DownloaderProgress progress, out WWWFileDownloader.DownloadFileInfo resInfo)
+    private bool PopDownFileInfo(WWWFileDownloader.DownloaderProgress progress,
+        out WWWFileDownloader.DownloadFileInfo resInfo)
     {
         resInfo = null;
         if (stopAllDownload || progress.IsStop)
@@ -440,19 +398,15 @@ public class HttpFileDownloader
     private void ThreadFunc(object obj)
     {
         WWWFileDownloader.DownloaderProgress progress = obj as WWWFileDownloader.DownloaderProgress;
-        WWWFileDownloader.DownloadFileInfo resInfo = null;
         while (!progress.IsStop && !stopAllDownload)
         {
             while (progress.IsPause)
                 Thread.Sleep(100);
 
-            if (PopDownFileInfo(progress, out resInfo))
+            if (PopDownFileInfo(progress, out var resInfo))
             {
                 // 将下载的内容提交到写线程
-                RequestState myRequestState = new RequestState();
-                myRequestState.progress = progress;
-                myRequestState.fileInfo = resInfo;
-
+                var myRequestState = new RequestState {progress = progress, fileInfo = resInfo};
                 DownloadFile(myRequestState);
 
                 // 发生错误，则跳出下载线程
@@ -464,10 +418,10 @@ public class HttpFileDownloader
                 break;
             }
         }
-        progress.SetRaw(null);
+
+        progress.SetComplete();
 
         // 线程退出，线程数减一
         Interlocked.Decrement(ref m_nDownThreadNumb);
     }
-
 }

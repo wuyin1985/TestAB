@@ -7,6 +7,7 @@ using BytesTools;
 using FileMapSystem;
 using Res.ABSystem;
 using SimpleDiskUtils;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -81,7 +82,8 @@ namespace NewWarMap.Patch
 
             _savePath = $"{Application.persistentDataPath}/{AssetBundlePathResolver.BundleSaveDirName}/";
             _tempDownloadPath = $"{Application.persistentDataPath}/TempDownload/";
-            _platform = GetPlatformForAssetBundles(Application.platform);
+
+            _platform = GetPlatformForAssetBundles(RuntimePlatform.Android);
             _step = Step.Wait;
 
             var version = AssetBundleManager.Instance.GetFileMapSystem().Version.ToString();
@@ -151,44 +153,6 @@ namespace NewWarMap.Patch
             }
 
             _reachabilityChanged = true;
-
-            /*if (reachability == NetworkReachability.NotReachable)
-            {
-                MessageBox.Show("提示！", "找不到网络，请确保手机已经联网", "确定", "退出").onComplete += delegate(MessageBox.EventId id)
-                {
-                    if (id == MessageBox.EventId.Ok)
-                    {
-                        if (_step == Step.Download)
-                        {
-                            _downloader.Restart();
-                        }
-                        else
-                        {
-                            StartUpdate();
-                        }
-
-                        _reachabilityChanged = false;
-                    }
-                    else
-                    {
-                        Quit();
-                    }
-                };
-            }
-            else
-            {
-                if (_step == Step.Download)
-                {
-                    _downloader.Restart();
-                }
-                else
-                {
-                    StartUpdate();
-                }
-
-                _reachabilityChanged = false;
-                MessageBox.CloseAll();
-            }*/
         }
 
         public static void DeleteDirectory(FileSystemInfo fileSystemInfo)
@@ -266,9 +230,9 @@ namespace NewWarMap.Patch
                 });
             }
         }
-        
+
         private const float BYTES_2_MB = 1f / (1024 * 1024);
-        
+
         public static string GetDisplaySpeed(float downloadSpeed)
         {
             if (downloadSpeed >= 1024 * 1024)
@@ -445,13 +409,54 @@ namespace NewWarMap.Patch
             public string url;
             public string targetPath;
             public bool success;
+            public MD5Creater.MD5Struct? md5;
 
-            public void Reset(string url, string targetPath)
+            public void Reset(string url, string targetPath, MD5Creater.MD5Struct? md5 = null)
             {
                 this.url = url;
                 this.targetPath = targetPath;
+                this.md5 = md5;
                 success = false;
             }
+        }
+
+        private enum WebRequestError
+        {
+            None,
+            Raw,
+            NoExist,
+            Md5,
+        }
+
+        private (WebRequestError, string) CheckWebRequestError(SingleFileDownloadRequest sr,
+            UnityWebRequest request)
+        {
+            var error = request.error;
+            if (!string.IsNullOrEmpty(error))
+            {
+                return (WebRequestError.Raw, error);
+            }
+
+            if (!File.Exists(sr.targetPath))
+            {
+                error = $"download finish but {sr.targetPath} not exist";
+                return (WebRequestError.NoExist, error);
+            }
+
+            if (sr.md5 != null)
+            {
+                var bs = File.ReadAllBytes(sr.targetPath);
+                var md5Struct = MD5Creater.GenerateMd5Code(bs);
+                var bm = sr.md5.Value;
+                if (md5Struct.MD51 != bm.MD51 || md5Struct.MD52 != bm.MD52)
+                {
+                    error =
+                        $"download file {sr.targetPath} md5 error {md5Struct.GetMD5Str(false)}->{bm.GetMD5Str(false)}";
+                    return (WebRequestError.Md5, error);
+                }
+            }
+
+            return (WebRequestError.None, null);
         }
 
         private IEnumerator DownloadSingleFile(SingleFileDownloadRequest sr)
@@ -461,17 +466,14 @@ namespace NewWarMap.Patch
             var request = UnityWebRequest.Get(sr.url);
             request.downloadHandler = new DownloadHandlerFile(sr.targetPath);
             yield return request.SendWebRequest();
-            var error = request.error;
+            var (errorType, errorMsg) = CheckWebRequestError(sr, request);
             request.Dispose();
 
-            if (string.IsNullOrEmpty(error) && !File.Exists(sr.targetPath))
+            if (errorType != WebRequestError.None)
             {
-                error = $"download finish but {sr.targetPath} not exist";
-            }
-
-            if (!string.IsNullOrEmpty(error))
-            {
-                var mb = MessageBox.Show("提示", $"获取服务器文件{sr.url} 失败：{error}", "重试", "退出");
+                CommonLog.Error(MAuthor.WY, errorMsg);
+                var displayError = errorType == WebRequestError.Raw ? errorMsg : $"错误码:10{(int) errorType}";
+                var mb = MessageBox.Show("提示", $"获取服务器文件{Path.GetFileName(sr.url)} 失败 {displayError}", "重试", "退出");
                 yield return mb;
                 if (mb.isOk)
                 {
@@ -552,7 +554,11 @@ namespace NewWarMap.Patch
                 //下载xmf
                 var xmfFileName = AssetBundlePathResolver.BundleSaveDirName + FileMapGroupInfo.FileExtension;
                 var xmfTargetPath = _tempDownloadPath + xmfFileName;
-                singleFileDownloadRequest.Reset(GetDownloadURL(xmfFileName, versionStr), xmfTargetPath);
+                singleFileDownloadRequest.Reset(GetDownloadURL(xmfFileName, versionStr), xmfTargetPath,
+                    new MD5Creater.MD5Struct
+                    {
+                        MD51 = versionInfo.AssetBundlesCacheXmfMd51, MD52 = versionInfo.AssetBundlesCacheXmfMd52
+                    });
                 yield return DownloadSingleFile(singleFileDownloadRequest);
                 if (!singleFileDownloadRequest.success)
                 {
@@ -562,8 +568,9 @@ namespace NewWarMap.Patch
                 //下载AssetBundleXMLData.xml 
                 var xmlPath = _tempDownloadPath + AssetBundlePathResolver.DependFileName;
                 singleFileDownloadRequest.Reset(
-                    GetDownloadURL(AssetBundlePathResolver.DependFileName, versionStr),
-                    xmlPath);
+                    GetDownloadURL(AssetBundlePathResolver.DependFileName, versionStr), xmlPath,
+                    new MD5Creater.MD5Struct
+                        {MD51 = versionInfo.AssetBundleXmlMd51, MD52 = versionInfo.AssetBundleXmlMd52});
                 yield return DownloadSingleFile(singleFileDownloadRequest);
 
                 if (!singleFileDownloadRequest.success)

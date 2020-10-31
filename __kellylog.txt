@@ -6,17 +6,17 @@
 Entitlement-based licensing initiated
 [LicensingClient] Licenses Updated successfully in LicensingClient
 
-LICENSE SYSTEM [20201030 15:57:37] Next license update check is after 2020-10-30T07:46:11
+LICENSE SYSTEM [20201031 17:49:9] Next license update check is after 2020-10-31T11:23:32
 
 
-LICENSE SYSTEM [20201030 15:57:37] Current license is already valid and activated. Skipping license activation process (Provided username/password will be ignored).
-Built from '2019.4/china_unity/release' branch; Version is '2019.4.8f1 (35029ca7eba8) revision 3474076'; Using compiler version '191627012'
+LICENSE SYSTEM [20201031 17:49:9] Current license is already valid and activated. Skipping license activation process (Provided username/password will be ignored).
+Built from '2019.4/china_unity/release' branch; Version is '2019.4.13f1c1 (ddecf0c37a3b) revision 14544112'; Using compiler version '191627012'
 OS: 'Windows 10  (10.0.0) 64bit' Language: 'zh' Physical Memory: 32703 MB
 [Licensing::Module] Serial number assigned to: "F4-FMDH-AERW-2E6X-KRFX-XXXX"\nBatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
-[Package Manager] Server::Start -- Port 61575 was selected
+[Package Manager] Server::Start -- Port 55059 was selected
 Adding genesis user token 
  COMMAND LINE ARGUMENTS:
-C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Unity.exe
+C:/Program Files/Unity/Hub/Editor/2019.4.13f1c1/Editor/Unity.exe
 -batchmode
 -projectPath
 E:/TestAB/xasset-master
@@ -31,61 +31,61 @@ Successfully changed project path to: E:/TestAB/xasset-master
 E:/TestAB/xasset-master
 Using Asset Import Pipeline V2.
 DisplayProgressbar: Unity Package Manager
-Adding genesis user token [Package Manager] Done resolving packages in 0.58s seconds
+Adding genesis user token [Package Manager] Done resolving packages in 0.38s seconds
 [Package Manager] Done checking package constraints in 0.00s seconds
 [Package Manager] 
 Registered 42 packages:
   Packages from [https://packages.unity.cn]:
     com.unity.collab-proxy@1.2.16 (location: E:\TestAB\xasset-master\Library\PackageCache\com.unity.collab-proxy@1.2.16)
     com.unity.ide.rider@2.0.7 (location: E:\TestAB\xasset-master\Library\PackageCache\com.unity.ide.rider@2.0.7)
-    com.unity.ide.vscode@1.2.1 (location: E:\TestAB\xasset-master\Library\PackageCache\com.unity.ide.vscode@1.2.1)
+    com.unity.ide.vscode@1.2.2 (location: E:\TestAB\xasset-master\Library\PackageCache\com.unity.ide.vscode@1.2.2)
     com.unity.immediate-window@1.1.0-preview.3 (location: E:\TestAB\xasset-master\Library\PackageCache\com.unity.immediate-window@1.1.0-preview.3)
-    com.unity.test-framework@1.1.16 (location: E:\TestAB\xasset-master\Library\PackageCache\com.unity.test-framework@1.1.16)
+    com.unity.test-framework@1.1.18 (location: E:\TestAB\xasset-master\Library\PackageCache\com.unity.test-framework@1.1.18)
     com.unity.textmeshpro@2.1.1 (location: E:\TestAB\xasset-master\Library\PackageCache\com.unity.textmeshpro@2.1.1)
     com.unity.timeline@1.2.15 (location: E:\TestAB\xasset-master\Library\PackageCache\com.unity.timeline@1.2.15)
     com.unity.ext.nunit@1.0.0 (location: E:\TestAB\xasset-master\Library\PackageCache\com.unity.ext.nunit@1.0.0)
     com.unity.code-analysis@0.1.0-preview.2 (location: E:\TestAB\xasset-master\Library\PackageCache\com.unity.code-analysis@0.1.0-preview.2)
   Built-in packages:
-    com.unity.ugui@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui)
-    com.unity.modules.ai@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ai)
-    com.unity.modules.androidjni@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.androidjni)
-    com.unity.modules.animation@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.animation)
-    com.unity.modules.assetbundle@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.assetbundle)
-    com.unity.modules.audio@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.audio)
-    com.unity.modules.cloth@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.cloth)
-    com.unity.modules.director@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.director)
-    com.unity.modules.imageconversion@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imageconversion)
-    com.unity.modules.imgui@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imgui)
-    com.unity.modules.jsonserialize@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.jsonserialize)
-    com.unity.modules.particlesystem@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.particlesystem)
-    com.unity.modules.physics@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics)
-    com.unity.modules.physics2d@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics2d)
-    com.unity.modules.screencapture@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.screencapture)
-    com.unity.modules.terrain@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrain)
-    com.unity.modules.terrainphysics@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrainphysics)
-    com.unity.modules.tilemap@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.tilemap)
-    com.unity.modules.ui@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ui)
-    com.unity.modules.uielements@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.uielements)
-    com.unity.modules.umbra@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.umbra)
-    com.unity.modules.unityanalytics@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unityanalytics)
-    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequest)
-    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestassetbundle)
-    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestaudio)
-    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequesttexture)
-    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestwww)
-    com.unity.modules.vehicles@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vehicles)
-    com.unity.modules.video@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.video)
-    com.unity.modules.vr@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vr)
-    com.unity.modules.wind@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.wind)
-    com.unity.modules.xr@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.xr)
-    com.unity.modules.subsystems@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.subsystems)
+    com.unity.ugui@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui)
+    com.unity.modules.ai@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.video)
+    com.unity.modules.vr@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vr)
+    com.unity.modules.wind@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Program Files\Unity\Hub\Editor\2019.4.13f1c1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.subsystems)
 
 [Subsystems] No new subsystems found in resolved package list.
-[Package Manager] Done registering packages in 0.05s seconds
-Refreshing native plugins compatible for Editor in 31.53 ms, found 0 plugins.
+[Package Manager] Done registering packages in 0.44s seconds
+Refreshing native plugins compatible for Editor in 33.38 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2019.4.8f1 (35029ca7eba8)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/Resources/UnitySubsystems
+Initialize engine version: 2019.4.13f1c1 (ddecf0c37a3b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2019.4.13f1c1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path E:/TestAB/xasset-master/Assets
 Forcing GfxDevice: Null
 GfxDevice: creating device client; threaded=0
@@ -94,153 +94,139 @@ NullGfxDevice:
     Renderer: Null Device
     Vendor:   Unity Technologies
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56976
-ImportWorker Server TCP listen port: 51409
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2019.4.13f1c1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2019.4.13f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2019.4.13f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56804
+ImportWorker Server TCP listen port: 60633
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 0.006725 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2019.4.13f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2019.4.13f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.006915 seconds.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 27.37 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 32.86 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.063 seconds
+- Completed reload, in  2.160 seconds
 Registering precompiled user dll's ...
-Registered in 0.094716 seconds.
+Registered in 0.074999 seconds.
 Platform modules already initialized, skipping
-Validating Project structure ... 0.005160 seconds.
+Validating Project structure ... 0.005414 seconds.
 Shader import version has changed; will reimport all shaders...
-Upgrading shader files ...0.005737 seconds.
-Start importing Assets/AssetBundles/Actor using Guid(e10add7d61067e2439ef341d775fa21a) Importer(-1,00000000000000000000000000000000)
-Done importing asset: 'Assets/AssetBundles/Actor' (target hash: '7ce04d5f3ff37f9f6e66b4b9669a1674') in 0.042940 seconds
-Start importing Assets/StreamingAssets/AssetbundlesCache/7cf6452ec6a9dce4b9724963291f5fc7.wmv using Guid(d88d219871cc3054b867839074c5c2b4) Importer(-1,00000000000000000000000000000000)
-Done importing asset: 'Assets/StreamingAssets/AssetbundlesCache/7cf6452ec6a9dce4b9724963291f5fc7.wmv' (target hash: '013ae5d7178644f8703a9a2775378cd3') in 0.062199 seconds
-Start importing Assets/StreamingAssets/AssetbundlesCache/237f74c3ae9c5b075369754d71dd0146.wmv using Guid(a9ecdf0924e6cc143b7ef76149d758c0) Importer(-1,00000000000000000000000000000000)
-Done importing asset: 'Assets/StreamingAssets/AssetbundlesCache/237f74c3ae9c5b075369754d71dd0146.wmv' (target hash: '44e048b15a2f883981dc74a9d235796f') in 0.050699 seconds
-Start importing Assets/StreamingAssets/AssetbundlesCache/AssetbundlesCache.xmf using Guid(0e2b7da8f24f6ec44a188ddcf2288b47) Importer(-1,00000000000000000000000000000000)
-Done importing asset: 'Assets/StreamingAssets/AssetbundlesCache/AssetbundlesCache.xmf' (target hash: '17ddc2563919dbf513566bd8a213c742') in 0.044802 seconds
-Start importing Assets/StreamingAssets/AssetbundlesCache/AssetbundlesCache.xmf.json using Guid(8e062a5163ab6d84e839e0db1b9d0163) Importer(-1,00000000000000000000000000000000)
-Done importing asset: 'Assets/StreamingAssets/AssetbundlesCache/AssetbundlesCache.xmf.json' (target hash: '7acebd4d26862933a16e608bb343c8ba') in 0.047178 seconds
+Upgrading shader files ...0.006297 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image E:\TestAB\xasset-master\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.993 seconds
+- Completed reload, in  1.004 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 RefreshInfo: InitialScriptRefreshV2(NoUpdateAssetOptions)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 2458.473ms
-	ApplyChangesToAssetFolders: 0.662ms
-	WriteModifiedImportersToTextMetaFiles: 0.044ms
+	InvokeBeforeRefreshCallbacks: 1564.017ms
+	ApplyChangesToAssetFolders: 0.262ms
+	WriteModifiedImportersToTextMetaFiles: 0.046ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 128.807ms
-	UnregisterDeletedAssets: 0.766ms
-	InitializeImportedAssetsSnapshot: 0.001ms
-	GetAllGuidsForCategorization: 0.116ms
-	CategorizeAssets: 0.137ms
-	ImportAndPostprocessOutOfDateAssets: 33.346ms (2281.834ms without children)
-		ImportManagerImport: 1524.513ms (290.644ms without children)
-			ImportInProcess: 0.639ms
-			ImportOutOfProcess: 289.958ms
-			UpdateCategorizedAssets: 0.000ms
-			RemoteAssetCacheGetArtifact: 0.046ms (0.000ms without children)
-				RemoteAssetCacheResolve: 0.000ms
-				RemoteAssetCacheDownloadFile: 0.000ms
-		CompileScripts: 0.000ms
-		PostProcessAllAssets: 0.000ms
-		ReloadImportedAssets: 463.927ms
-		VerifyAssetsAreUpToDateAndCorrect: 0.002ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
-		InitializingProgressBar: 0.138ms
-		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
-		OnDemandSchedulerStart: 0.133ms
-		RestoreLoadedAssetsState: 0.000ms
-	InvokeProjectHasChanged: 0.228ms
-	UpdateImportedAssetsSnapshot: 0.000ms
-	ReloadSourceAssets: 2.248ms
-	UnloadImportedAssets: 0.243ms
-	Hotreload: 0.003ms
-	FixTempGuids: 4.575ms
-	VerifyGuidPMRegistrations: 0.003ms
-	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.000ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.313ms
-	GetLoadedSourceAssetsSnapshot: 0.274ms
-	PersistCurrentRevisions: 0.536ms
-	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 5.630ms
-Start importing Library/BuildPlayer.prefs using Guid(00000000000000005000000000000000) Importer(-1,00000000000000000000000000000000)
-Done importing asset: 'Library/BuildPlayer.prefs' (target hash: 'fe3108a9ccf4ffdc149e560e6cf05620') in 0.014106 seconds
-Start importing Assets/AssetBundles/PatchAsset/UI/2MainMenu/bg_Title.png using Guid(c1baf1922fe46f546ae96e478f65b70b) Importer(-1,00000000000000000000000000000000)
-Done importing asset: 'Assets/AssetBundles/PatchAsset/UI/2MainMenu/bg_Title.png' (target hash: '18ec7cecb74ebc66b48b73660757b785') in 0.068183 seconds
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Refresh completed in 0.525540 seconds.
-RefreshInfo: RefreshV2(ForceSynchronousImport)
-RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 525.527ms
-	ApplyChangesToAssetFolders: 0.693ms
-	WriteModifiedImportersToTextMetaFiles: 0.047ms
-	CleanLegacyArtifacts: 0.000ms
-	Scan: 0.000ms
-	OnSourceAssetsModified: 66.500ms
+	OnSourceAssetsModified: 61.227ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.834ms
-	CategorizeAssets: 0.089ms
-	ImportAndPostprocessOutOfDateAssets: 26.802ms (425.541ms without children)
-		ImportManagerImport: 6.851ms (99.052ms without children)
-			ImportInProcess: 0.836ms
-			ImportOutOfProcess: 98.199ms
+	GetAllGuidsForCategorization: 0.122ms
+	CategorizeAssets: 0.133ms
+	ImportAndPostprocessOutOfDateAssets: 28.389ms (1467.592ms without children)
+		ImportManagerImport: 1467.098ms (0.000ms without children)
+			ImportInProcess: 0.000ms
+			ImportOutOfProcess: 0.000ms
 			UpdateCategorizedAssets: 0.000ms
-			RemoteAssetCacheGetArtifact: 0.018ms (0.000ms without children)
+			RemoteAssetCacheGetArtifact: 0.000ms (0.000ms without children)
 				RemoteAssetCacheResolve: 0.000ms
 				RemoteAssetCacheDownloadFile: 0.000ms
 		CompileScripts: 0.000ms
 		PostProcessAllAssets: 0.000ms
-		ReloadImportedAssets: 317.110ms
-		VerifyAssetsAreUpToDateAndCorrect: 0.003ms
+		ReloadImportedAssets: 0.000ms
+		VerifyAssetsAreUpToDateAndCorrect: 0.000ms
 		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
-		InitializingProgressBar: 0.160ms
+		InitializingProgressBar: 0.130ms
 		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
-		OnDemandSchedulerStart: 0.099ms
-		RestoreLoadedAssetsState: 0.447ms
-	InvokeProjectHasChanged: 0.621ms
+		OnDemandSchedulerStart: 0.137ms
+		RestoreLoadedAssetsState: 0.000ms
+	InvokeProjectHasChanged: 0.227ms
 	UpdateImportedAssetsSnapshot: 0.000ms
-	ReloadSourceAssets: 1.198ms
-	UnloadImportedAssets: 0.285ms
-	Hotreload: 0.043ms
-	FixTempGuids: 1.243ms
+	ReloadSourceAssets: 0.000ms
+	UnloadImportedAssets: 0.242ms
+	Hotreload: 0.003ms
+	FixTempGuids: 0.146ms
 	VerifyGuidPMRegistrations: 0.002ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.136ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.005ms
-	GetLoadedSourceAssetsSnapshot: 0.944ms
-	PersistCurrentRevisions: 1.213ms
+	UnloadStreamsBegin: 0.000ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.234ms
+	GetLoadedSourceAssetsSnapshot: 0.004ms
+	PersistCurrentRevisions: 0.282ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.023ms
-RefreshInfo: StopAssetImportingV2(ForceSynchronousImport)
+	GenerateScriptTypeHashes: 3.993ms
+Start importing Library/BuildPlayer.prefs using Guid(00000000000000005000000000000000) Importer(-1,00000000000000000000000000000000)
+Done importing asset: 'Library/BuildPlayer.prefs' (target hash: 'fe3108a9ccf4ffdc149e560e6cf05620') in 0.015626 seconds
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Refresh completed in 0.542933 seconds.
+RefreshInfo: RefreshV2(ForceSynchronousImport)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 44.864ms
-	ApplyChangesToAssetFolders: 1.147ms
+	InvokeBeforeRefreshCallbacks: 542.789ms
+	ApplyChangesToAssetFolders: 0.328ms
 	WriteModifiedImportersToTextMetaFiles: 0.048ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 40.814ms
+	OnSourceAssetsModified: 52.291ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.638ms
+	GetAllGuidsForCategorization: 2.028ms
+	CategorizeAssets: 0.117ms
+	ImportAndPostprocessOutOfDateAssets: 27.855ms (453.908ms without children)
+		ImportManagerImport: 0.938ms (16.703ms without children)
+			ImportInProcess: 0.712ms
+			ImportOutOfProcess: 15.986ms
+			UpdateCategorizedAssets: 0.000ms
+			RemoteAssetCacheGetArtifact: 0.005ms (0.000ms without children)
+				RemoteAssetCacheResolve: 0.000ms
+				RemoteAssetCacheDownloadFile: 0.000ms
+		CompileScripts: 0.000ms
+		PostProcessAllAssets: 0.000ms
+		ReloadImportedAssets: 433.776ms
+		VerifyAssetsAreUpToDateAndCorrect: 0.002ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
+		InitializingProgressBar: 0.200ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.094ms
+		RestoreLoadedAssetsState: 0.444ms
+	InvokeProjectHasChanged: 0.497ms
+	UpdateImportedAssetsSnapshot: 0.000ms
+	ReloadSourceAssets: 1.253ms
+	UnloadImportedAssets: 0.236ms
+	Hotreload: 0.048ms
+	FixTempGuids: 4.655ms
+	VerifyGuidPMRegistrations: 0.003ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
+	UnloadStreamsBegin: 0.132ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.005ms
+	GetLoadedSourceAssetsSnapshot: 0.263ms
+	PersistCurrentRevisions: 1.032ms
+	UnloadStreamsEnd: 0.000ms
+	GenerateScriptTypeHashes: 0.025ms
+RefreshInfo: StopAssetImportingV2(ForceSynchronousImport)
+RefreshProfiler: Total: 0.000ms
+	InvokeBeforeRefreshCallbacks: 28.169ms
+	ApplyChangesToAssetFolders: 0.276ms
+	WriteModifiedImportersToTextMetaFiles: 0.047ms
+	CleanLegacyArtifacts: 0.000ms
+	Scan: 0.000ms
+	OnSourceAssetsModified: 24.962ms
+	UnregisterDeletedAssets: 0.000ms
+	InitializeImportedAssetsSnapshot: 0.000ms
+	GetAllGuidsForCategorization: 1.373ms
 	CategorizeAssets: 0.000ms
 	ImportAndPostprocessOutOfDateAssets: 0.000ms (0.000ms without children)
 		ImportManagerImport: 0.000ms (0.000ms without children)
@@ -264,30 +250,30 @@ RefreshProfiler: Total: 0.000ms
 	ReloadSourceAssets: 0.000ms
 	UnloadImportedAssets: 0.000ms
 	Hotreload: 0.000ms
-	FixTempGuids: 0.016ms
+	FixTempGuids: 0.024ms
 	VerifyGuidPMRegistrations: 0.003ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.134ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.021ms
-	GetLoadedSourceAssetsSnapshot: 0.383ms
-	PersistCurrentRevisions: 0.251ms
+	UnloadStreamsBegin: 0.153ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.014ms
+	GetLoadedSourceAssetsSnapshot: 0.485ms
+	PersistCurrentRevisions: 0.265ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.004ms
-Refresh completed in 0.096593 seconds.
+	GenerateScriptTypeHashes: 0.006ms
+Refresh completed in 0.091640 seconds.
 RefreshInfo: RefreshV2(NoUpdateAssetOptions)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 96.463ms
-	ApplyChangesToAssetFolders: 0.657ms
-	WriteModifiedImportersToTextMetaFiles: 0.045ms
+	InvokeBeforeRefreshCallbacks: 91.621ms
+	ApplyChangesToAssetFolders: 0.287ms
+	WriteModifiedImportersToTextMetaFiles: 0.048ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 65.136ms
+	OnSourceAssetsModified: 58.754ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.892ms
-	CategorizeAssets: 0.112ms
-	ImportAndPostprocessOutOfDateAssets: 25.074ms (1.574ms without children)
-		ImportManagerImport: 0.409ms (0.000ms without children)
+	GetAllGuidsForCategorization: 1.904ms
+	CategorizeAssets: 0.155ms
+	ImportAndPostprocessOutOfDateAssets: 26.052ms (1.724ms without children)
+		ImportManagerImport: 0.512ms (0.000ms without children)
 			ImportInProcess: 0.000ms
 			ImportOutOfProcess: 0.000ms
 			UpdateCategorizedAssets: 0.000ms
@@ -299,32 +285,32 @@ RefreshProfiler: Total: 0.000ms
 		ReloadImportedAssets: 0.000ms
 		VerifyAssetsAreUpToDateAndCorrect: 0.000ms
 		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
-		InitializingProgressBar: 0.158ms
+		InitializingProgressBar: 0.213ms
 		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
-		OnDemandSchedulerStart: 0.094ms
-		RestoreLoadedAssetsState: 0.290ms
-	InvokeProjectHasChanged: 0.622ms
+		OnDemandSchedulerStart: 0.140ms
+		RestoreLoadedAssetsState: 0.266ms
+	InvokeProjectHasChanged: 0.592ms
 	UpdateImportedAssetsSnapshot: 0.000ms
 	ReloadSourceAssets: 0.000ms
-	UnloadImportedAssets: 0.399ms
-	Hotreload: 0.042ms
-	FixTempGuids: 0.033ms
-	VerifyGuidPMRegistrations: 0.002ms
+	UnloadImportedAssets: 0.500ms
+	Hotreload: 0.083ms
+	FixTempGuids: 0.043ms
+	VerifyGuidPMRegistrations: 0.003ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.134ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.021ms
-	GetLoadedSourceAssetsSnapshot: 0.491ms
-	PersistCurrentRevisions: 0.903ms
+	UnloadStreamsBegin: 0.140ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.019ms
+	GetLoadedSourceAssetsSnapshot: 0.589ms
+	PersistCurrentRevisions: 0.952ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.004ms
+	GenerateScriptTypeHashes: 0.009ms
 Initializing Unity extensions:
- 'C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll'  GUID: 4ba2329b63d54f0187bcaa12486b1b0f
-Unloading 58 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 42.2 MB.
-System memory in use after: 41.5 MB.
+ 'C:/Program Files/Unity/Hub/Editor/2019.4.13f1c1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll'  GUID: 4ba2329b63d54f0187bcaa12486b1b0f
+Unloading 57 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 42.3 MB.
+System memory in use after: 41.6 MB.
 
-Unloading 100 unused Assets to reduce memory usage. Loaded Objects now: 1521.
-Total: 2.668900 ms (FindLiveObjects: 0.241100 ms CreateObjectMapping: 0.025600 ms MarkObjects: 1.931500 ms  DeleteObjects: 0.470300 ms)
+Unloading 98 unused Assets to reduce memory usage. Loaded Objects now: 1525.
+Total: 2.970500 ms (FindLiveObjects: 0.355800 ms CreateObjectMapping: 0.027500 ms MarkObjects: 2.121100 ms  DeleteObjects: 0.465600 ms)
 
 ExtraArg = [Development=true],[ConnectWithProfiler=false],[EnableDeepProfilingSupport=false],[AllowDebugging=false],[ReImportUIRes=true],[ClearOldAB=false],[ProductName=TheWar2061],[VersionCfg=${VersionCfg}],[IL2CPP=true],[AppVersion=1.0.0],[BundleIdentifier=com.thewar.wargame],[DefineSymbols=MHY_DEBUG]
 UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
@@ -515,7 +501,7 @@ AutoPacker:PackAB_Android() (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Edit
  
 (Filename: Assets/MiHoYo/Scripts/Common/CommonLog.cs Line: 124)
 
-Refreshing native plugins compatible for Editor in 4.97 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 4.64 ms, found 1 plugins.
 DisplayProgressbar: Loading
 出现了重复的MD5路径对象,关注看下是否是创建了同名对象！Assets/AssetBundles/PatchAsset/Animations/MessageBox.anim,路径：MD5Creater+MD5Struct
 UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
@@ -544,67 +530,67 @@ AutoPacker:PackAB_Android() (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Edit
 (Filename: Assets/MiHoYo/Scripts/Common/CommonLog.cs Line: 124)
 
 Start importing ProjectSettings/ProjectSettings.asset using Guid(00000000000000004000000000000000) Importer(-1,00000000000000000000000000000000)
-Done importing asset: 'ProjectSettings/ProjectSettings.asset' (target hash: '7fce501f3eefae2c4dd549c0dbb5c2e3') in 0.005673 seconds
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Done importing asset: 'ProjectSettings/ProjectSettings.asset' (target hash: '284616b84b4bb3c9c35201156daa8fa9') in 0.003711 seconds
+Refreshing native plugins compatible for Editor in 0.31 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 53.751ms
-	ApplyChangesToAssetFolders: 0.623ms
-	WriteModifiedImportersToTextMetaFiles: 0.047ms
+	InvokeBeforeRefreshCallbacks: 49.153ms
+	ApplyChangesToAssetFolders: 0.273ms
+	WriteModifiedImportersToTextMetaFiles: 0.081ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 35.923ms
+	OnSourceAssetsModified: 34.235ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 2.436ms
-	CategorizeAssets: 0.124ms
-	ImportAndPostprocessOutOfDateAssets: 0.698ms (11.619ms without children)
-		ImportManagerImport: 0.672ms (6.821ms without children)
-			ImportInProcess: 0.722ms
-			ImportOutOfProcess: 6.085ms
+	GetAllGuidsForCategorization: 1.704ms
+	CategorizeAssets: 0.117ms
+	ImportAndPostprocessOutOfDateAssets: 0.668ms (9.880ms without children)
+		ImportManagerImport: 0.664ms (4.815ms without children)
+			ImportInProcess: 0.768ms
+			ImportOutOfProcess: 4.027ms
 			UpdateCategorizedAssets: 0.000ms
-			RemoteAssetCacheGetArtifact: 0.015ms (0.000ms without children)
+			RemoteAssetCacheGetArtifact: 0.020ms (0.000ms without children)
 				RemoteAssetCacheResolve: 0.000ms
 				RemoteAssetCacheDownloadFile: 0.000ms
 		CompileScripts: 0.000ms
 		PostProcessAllAssets: 0.000ms
-		ReloadImportedAssets: 1.855ms
+		ReloadImportedAssets: 1.891ms
 		VerifyAssetsAreUpToDateAndCorrect: 0.001ms
 		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
-		InitializingProgressBar: 0.158ms
+		InitializingProgressBar: 0.157ms
 		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
-		OnDemandSchedulerStart: 0.099ms
-		RestoreLoadedAssetsState: 0.287ms
-	InvokeProjectHasChanged: 0.561ms
+		OnDemandSchedulerStart: 0.118ms
+		RestoreLoadedAssetsState: 0.408ms
+	InvokeProjectHasChanged: 0.726ms
 	UpdateImportedAssetsSnapshot: 0.000ms
-	ReloadSourceAssets: 1.164ms
-	UnloadImportedAssets: 0.410ms
-	Hotreload: 0.033ms
-	FixTempGuids: 0.372ms
-	VerifyGuidPMRegistrations: 0.001ms
+	ReloadSourceAssets: 1.100ms
+	UnloadImportedAssets: 0.402ms
+	Hotreload: 0.032ms
+	FixTempGuids: 0.414ms
+	VerifyGuidPMRegistrations: 0.002ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.133ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.131ms
-	GetLoadedSourceAssetsSnapshot: 0.457ms
-	PersistCurrentRevisions: 1.138ms
+	UnloadStreamsBegin: 0.147ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.144ms
+	GetLoadedSourceAssetsSnapshot: 0.266ms
+	PersistCurrentRevisions: 1.401ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.023ms
-Refresh completed in 0.091296 seconds.
+	GenerateScriptTypeHashes: 0.021ms
+Refresh completed in 0.088649 seconds.
 RefreshInfo: RefreshV2(NoUpdateAssetOptions)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 91.285ms
-	ApplyChangesToAssetFolders: 0.746ms
-	WriteModifiedImportersToTextMetaFiles: 0.044ms
+	InvokeBeforeRefreshCallbacks: 88.637ms
+	ApplyChangesToAssetFolders: 0.300ms
+	WriteModifiedImportersToTextMetaFiles: 0.049ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 59.096ms
+	OnSourceAssetsModified: 57.702ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 2.087ms
-	CategorizeAssets: 0.087ms
-	ImportAndPostprocessOutOfDateAssets: 25.961ms (1.359ms without children)
-		ImportManagerImport: 0.407ms (0.000ms without children)
+	GetAllGuidsForCategorization: 1.602ms
+	CategorizeAssets: 0.109ms
+	ImportAndPostprocessOutOfDateAssets: 25.611ms (1.516ms without children)
+		ImportManagerImport: 0.412ms (0.000ms without children)
 			ImportInProcess: 0.000ms
 			ImportOutOfProcess: 0.000ms
 			UpdateCategorizedAssets: 0.000ms
@@ -616,883 +602,37 @@ RefreshProfiler: Total: 0.000ms
 		ReloadImportedAssets: 0.000ms
 		VerifyAssetsAreUpToDateAndCorrect: 0.000ms
 		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
-		InitializingProgressBar: 0.161ms
+		InitializingProgressBar: 0.194ms
 		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
-		OnDemandSchedulerStart: 0.095ms
-		RestoreLoadedAssetsState: 0.191ms
-	InvokeProjectHasChanged: 0.504ms
+		OnDemandSchedulerStart: 0.093ms
+		RestoreLoadedAssetsState: 0.321ms
+	InvokeProjectHasChanged: 0.496ms
 	UpdateImportedAssetsSnapshot: 0.000ms
 	ReloadSourceAssets: 0.000ms
-	UnloadImportedAssets: 0.397ms
-	Hotreload: 0.044ms
+	UnloadImportedAssets: 0.402ms
+	Hotreload: 0.045ms
 	FixTempGuids: 0.020ms
 	VerifyGuidPMRegistrations: 0.002ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
 	UnloadStreamsBegin: 0.141ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.005ms
-	GetLoadedSourceAssetsSnapshot: 0.550ms
-	PersistCurrentRevisions: 0.818ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.006ms
+	GetLoadedSourceAssetsSnapshot: 0.305ms
+	PersistCurrentRevisions: 0.832ms
 	UnloadStreamsEnd: 0.000ms
 	GenerateScriptTypeHashes: 0.004ms
-[ScriptCompilation] Recompiling all scripts because: Recompiling scripts for player build.
-BuildPlayer: start building target 13
-- Starting script compilation
-- Starting compile Library/PlayerScriptAssemblies/UnityEngine.TestRunner.dll
-- Starting compile Library/PlayerScriptAssemblies/UnityEngine.UI.dll
-- Finished compile Library/PlayerScriptAssemblies/UnityEngine.TestRunner.dll in 0.326384 seconds
-- Finished compile Library/PlayerScriptAssemblies/UnityEngine.UI.dll in 0.398443 seconds
-- Starting compile Library/PlayerScriptAssemblies/Unity.TextMeshPro.dll
-- Starting compile Library/PlayerScriptAssemblies/Unity.Timeline.dll
-- Finished compile Library/PlayerScriptAssemblies/Unity.Timeline.dll in 0.427221 seconds
-- Finished compile Library/PlayerScriptAssemblies/Unity.TextMeshPro.dll in 0.625098 seconds
-- Starting compile Library/PlayerScriptAssemblies/Assembly-CSharp-firstpass.dll
-- Finished compile Library/PlayerScriptAssemblies/Assembly-CSharp-firstpass.dll in 0.217914 seconds
-- Starting compile Library/PlayerScriptAssemblies/Assembly-CSharp.dll
-- Finished compile Library/PlayerScriptAssemblies/Assembly-CSharp.dll in 0.335379 seconds
-- Finished script compilation in 1.660239 seconds
-Assets\MiHoYo\Scripts\AssetManager\Patch\Download.cs(67,33): warning CS0672: Member 'Download.ReceiveContentLength(int)' overrides obsolete member 'DownloadHandler.ReceiveContentLength(int)'. Add the Obsolete attribute to 'Download.ReceiveContentLength(int)'.
-Assets\MiHoYo\Scripts\FileLoaderSystem\FileMapSystemDefine.cs(9,19): warning CS0660: 'Version' defines operator == or operator != but does not override Object.Equals(object o)
-Assets\MiHoYo\Scripts\AssetManager\Patch\Updater.cs(570,25): warning CS0162: Unreachable code detected
-Assets\MiHoYo\Scripts\UI\ScrollContent.cs(34,45): warning CS0649: Field 'ScrollContent.scroll' is never assigned to, and will always have its default value null
-Assets\MiHoYo\Scripts\UI\ScrollContent.cs(35,40): warning CS0649: Field 'ScrollContent.speed' is never assigned to, and will always have its default value 0
-Assets\MiHoYo\Scripts\AssetManager\Patch\Updater.cs(132,22): warning CS0414: The field 'Updater._reachabilityChanged' is assigned but its value is never used
-DisplayProgressbar: Building AssetBundle
-DisplayProgressbar: Building Asset Bundle
-
-***Player size statistics***
-Total compressed size 32.6 MB. Total uncompressed size 185.0 MB.
-Unloading 671 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 261.1 MB.
-System memory in use after: 259.8 MB.
-
-Unloading 1401 unused Assets to reduce memory usage. Loaded Objects now: 1550.
-Total: 6.582400 ms (FindLiveObjects: 0.485900 ms CreateObjectMapping: 0.060300 ms MarkObjects: 3.790800 ms  DeleteObjects: 2.244600 ms)
-
-DisplayProgressbar: Building AssetBundle
-DisplayProgressbar: Building Asset Bundle
-
-***Player size statistics***
-Total compressed size 1.4 KB. Total uncompressed size 4.6 KB.
-DisplayProgressbar: Building AssetBundle
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-DisplayProgressbar: Compiling shader variants
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Compiled shader 'Standard' in 4.22s
-    gles (total internal programs: 258, unique: 85)
-    gles3 (total internal programs: 258, unique: 85)
-DisplayProgressbar: Building Asset Bundle
-
-***Player size statistics***
-Total compressed size 73.7 KB. Total uncompressed size 218.6 KB.
-DisplayProgressbar: Building AssetBundle
-DisplayProgressbar: Compiling shader variants
-DisplayProgressbar: Building Asset Bundle
-
-***Player size statistics***
-Total compressed size 74.0 KB. Total uncompressed size 219.7 KB.
-DisplayProgressbar: Building AssetBundle
-DisplayProgressbar: Building Asset Bundle
-
-***Player size statistics***
-Total compressed size 6.3 KB. Total uncompressed size 25.1 KB.
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 47.6 MB.
-System memory in use after: 46.8 MB.
-
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 1562.
-Total: 5.368200 ms (FindLiveObjects: 0.325300 ms CreateObjectMapping: 0.076300 ms MarkObjects: 4.400700 ms  DeleteObjects: 0.565100 ms)
-
 DisplayProgressbar: Building AssetBundle
 DisplayProgressbar: Building Asset Bundle
 
 ***Player size statistics***
 Total compressed size 1.9 KB. Total uncompressed size 4.7 KB.
 Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 46.0 MB.
-System memory in use after: 46.1 MB.
+System memory in use before: 43.3 MB.
+System memory in use after: 43.4 MB.
 
-Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 1564.
-Total: 4.525000 ms (FindLiveObjects: 0.544500 ms CreateObjectMapping: 0.029100 ms MarkObjects: 3.945900 ms  DeleteObjects: 0.004700 ms)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 1552.
+Total: 4.221800 ms (FindLiveObjects: 0.407900 ms CreateObjectMapping: 0.071500 ms MarkObjects: 3.723500 ms  DeleteObjects: 0.018100 ms)
 
 
--------------------------------------------------------------------------------
-Bundle Name: ddfee75addc660d3
-Compressed Size:32.6 mb
-Uncompressed usage by category (Percentages based on user generated assets only):
-Textures               184.2 mb	 99.6% 
-Meshes                 0.0 kb	 0.0% 
-Animations             0.0 kb	 0.0% 
-Sounds                 0.0 kb	 0.0% 
-Shaders                0.0 kb	 0.0% 
-Other Assets           770.3 kb	 0.4% 
-Levels                 0.0 kb	 0.0% 
-Scripts                0.8 kb	 0.0% 
-Included DLLs          0.0 kb	 0.0% 
-File headers           59.1 kb	 0.0% 
-Total User Assets      185.0 mb	 100.0% 
-Complete build size    185.0 mb
-Used Assets and files from the Resources folder, sorted by uncompressed size:
- 5.9 mb	 3.2% Assets/AssetBundles/PatchAsset/UI/Components1/bg_LoadingPage.png
- 5.9 mb	 3.2% Assets/AssetBundles/PatchAsset/UI/Backgrounds/background6_v2.png
- 5.9 mb	 3.2% Assets/AssetBundles/PatchAsset/UI/Backgrounds/background5_v2.png
- 5.9 mb	 3.2% Assets/AssetBundles/PatchAsset/UI/Backgrounds/background4_v2.png
- 5.9 mb	 3.2% Assets/AssetBundles/PatchAsset/UI/Backgrounds/background3_v2.png
- 5.9 mb	 3.2% Assets/AssetBundles/PatchAsset/UI/Backgrounds/background2_v2.png
- 5.9 mb	 3.2% Assets/AssetBundles/PatchAsset/UI/Backgrounds/background1_v2.png
- 5.9 mb	 3.2% Assets/AssetBundles/PatchAsset/UI/Components3/background.png
- 5.9 mb	 3.2% Assets/AssetBundles/PatchAsset/UI/Components2/login bg.png
- 4.9 mb	 2.7% Assets/AssetBundles/PatchAsset/UI/Components6/Large panel01.png
- 4.5 mb	 2.4% Assets/AssetBundles/PatchAsset/UI/Components6/Large panel03.png
- 4.4 mb	 2.4% Assets/AssetBundles/PatchAsset/UI/Components6/Large panel04.png
- 4.4 mb	 2.4% Assets/AssetBundles/PatchAsset/UI/Components6/Large panel02.png
- 3.2 mb	 1.8% Assets/AssetBundles/PatchAsset/UI/15Opotions/Window_Settings.png
- 3.2 mb	 1.7% Assets/AssetBundles/PatchAsset/UI/Components3/bg_Window1.png
- 3.1 mb	 1.7% Assets/AssetBundles/PatchAsset/UI/16Victory1/bg_Victory2.png
- 2.5 mb	 1.3% Assets/AssetBundles/PatchAsset/UI/10Character/Stage_bg01.png
- 2.1 mb	 1.1% Assets/AssetBundles/PatchAsset/UI/10Character/Panel1.png
- 2.0 mb	 1.1% Assets/AssetBundles/PatchAsset/UI/18Warning/bg_Warning_Red.png
- 2.0 mb	 1.1% Assets/AssetBundles/PatchAsset/UI/5Login1/bg_black.png
- 2.0 mb	 1.1% Assets/AssetBundles/PatchAsset/UI/15Opotions/bg_black.png
- 2.0 mb	 1.1% Assets/AssetBundles/PatchAsset/UI/14Pause/bg_black.png
- 2.0 mb	 1.1% Assets/AssetBundles/PatchAsset/UI/11NotEnoughMoney/bg_black.png
- 1.9 mb	 1.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/bg_Popup1.png
- 1.6 mb	 0.9% Assets/AssetBundles/PatchAsset/UI/19Died/Icon_Died.png
- 1.6 mb	 0.9% Assets/AssetBundles/PatchAsset/UI/5Login1/Window_Login.png
- 1.5 mb	 0.8% Assets/AssetBundles/PatchAsset/UI/18Warning/bg_Warning.png
- 1.5 mb	 0.8% Assets/AssetBundles/PatchAsset/UI/Components8/Prop.png
- 1.5 mb	 0.8% Assets/AssetBundles/PatchAsset/UI/Components6/middle panel01.png
- 1.5 mb	 0.8% Assets/AssetBundles/PatchAsset/UI/Components7/middle panel01_Opaque.png
- 1.5 mb	 0.8% Assets/AssetBundles/PatchAsset/UI/Components6/middle panel02.png
- 1.5 mb	 0.8% Assets/AssetBundles/PatchAsset/UI/Components7/middle panel02_Opaque.png
- 1.5 mb	 0.8% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Sci-fi Circle_Large stars.png
- 1.5 mb	 0.8% Assets/AssetBundles/PatchAsset/UI/Components6/middle panel03.png
- 1.5 mb	 0.8% Assets/AssetBundles/PatchAsset/UI/Components7/middle panel03_Opaque.png
- 1.5 mb	 0.8% Assets/AssetBundles/PatchAsset/UI/Components6/middle panel04.png
- 1.5 mb	 0.8% Assets/AssetBundles/PatchAsset/UI/Components7/middle panel04_Opaque.png
- 1.4 mb	 0.8% Assets/AssetBundles/PatchAsset/UI/16Victory1/Lights1.png
- 1.4 mb	 0.7% Assets/AssetBundles/PatchAsset/UI/2MainMenu/bg_Title.png
- 1.3 mb	 0.7% Assets/AssetBundles/PatchAsset/UI/11NotEnoughMoney/bg_NotEnoughMoney.png
- 1.2 mb	 0.6% Assets/AssetBundles/PatchAsset/UI/8Scence2/DialogWindow2.png
- 1.1 mb	 0.6% Assets/AssetBundles/PatchAsset/UI/9Store/bg_Good.png
- 1.1 mb	 0.6% Assets/AssetBundles/PatchAsset/UI/8Scence2/DialogWindow1.png
- 1.1 mb	 0.6% Assets/AssetBundles/PatchAsset/UI/10Character/bg_RoleBackground.png
- 1.0 mb	 0.6% Assets/AssetBundles/PatchAsset/UI/9Store/bg_Black Mask2.png
- 861.0 kb	 0.5% Assets/AssetBundles/PatchAsset/UI/Components9/bg_toolbox.png
- 843.6 kb	 0.4% Assets/AssetBundles/PatchAsset/UI/10Character/Icon_Role.png
- 834.2 kb	 0.4% Assets/AssetBundles/PatchAsset/UI/Components2/bg_Login.png
- 832.5 kb	 0.4% Assets/AssetBundles/PatchAsset/UI/16Victory1/bg_Victory1.png
- 822.6 kb	 0.4% Assets/AssetBundles/PatchAsset/UI/1LoadingPage/Title2_bg.png
- 756.0 kb	 0.4% Assets/AssetBundles/PatchAsset/UI/13Ranking/bg_Ranking.png
- 719.4 kb	 0.4% Assets/AssetBundles/PatchAsset/UI/Components4/textbox01.png
- 719.3 kb	 0.4% Assets/AssetBundles/PatchAsset/UI/Components7/textbox01_Opaque.png
- 706.5 kb	 0.4% Assets/AssetBundles/PatchAsset/UI/3StageSelect/Battlefield 2.png
- 691.6 kb	 0.4% Assets/AssetBundles/PatchAsset/UI/Components4/textbox02.png
- 691.5 kb	 0.4% Assets/AssetBundles/PatchAsset/UI/Components7/textbox02_Opaque.png
- 658.1 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components4/textbox03.png
- 657.8 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components7/textbox03_Opaque.png
- 635.1 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components4/textbox04.png
- 635.1 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components7/textbox04_Opaque.png
- 628.6 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components3/bg_Window2.png
- 626.6 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components4/textbox05.png
- 626.3 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components7/textbox05_Opaque.png
- 596.4 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/12Recharge/bg_BuyCoins2.png
- 596.4 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/12Recharge/bg_BuyCoins.png
- 569.9 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/16Victory1/Lights2.png
- 564.0 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/15Opotions/bg_LeftTab.png
- 548.4 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components3/bg_LargeTitle1.png
- 546.6 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components5/small panel03.png
- 546.1 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components7/small panel03_Opaque.png
- 542.8 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components5/small panel04.png
- 542.7 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components7/small panel04 _Opaque.png
- 527.8 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components3/bg_Window3.png
- 521.9 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components5/small panel01.png
- 521.6 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components7/small panel01_Opaque.png
- 501.5 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components5/small panel05.png
- 501.2 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components7/small panel05_Opaque.png
- 499.9 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components5/small panel02.png
- 499.8 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/Components7/small panel02_Opaque.png
- 492.4 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/10Character/Stage_bg02.png
- 480.5 kb	 0.3% Assets/AssetBundles/PatchAsset/UI/10Character/bg_describtion.png
- 440.7 kb	 0.2% Assets/AssetBundles/PatchAsset/UI/17Victory2/bg_Victory.png
- 425.4 kb	 0.2% Assets/AssetBundles/PatchAsset/UI/Components5/bg_LargeTitle2.png
- 368.9 kb	 0.2% Assets/AssetBundles/PatchAsset/UI/12Recharge/Radiated light2.png
- 361.5 kb	 0.2% Assets/AssetBundles/PatchAsset/UI/15Opotions/bg_SettingsTitle.png
- 337.5 kb	 0.2% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Sci-fi-Circle_Large3.png
- 337.3 kb	 0.2% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Sci-fi-Circle_Large1.png
- 336.4 kb	 0.2% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Sci-fi-Circle_Large2.png
- 334.2 kb	 0.2% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Sci-fi-Circle_Large4.png
- 332.0 kb	 0.2% Assets/AssetBundles/PatchAsset/UI/Components6/bg_Title_LargePanel03.png
- 316.3 kb	 0.2% Assets/AssetBundles/PatchAsset/UI/Components8/Icon_GameOver2.png
- 316.1 kb	 0.2% Assets/AssetBundles/PatchAsset/UI/Components3/bg_map.png
- 289.2 kb	 0.2% Assets/AssetBundles/PatchAsset/UI/10Character/Stage_bg03.png
- 278.0 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/15Opotions/Dropdown_menu_bg.png
- 270.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Attack_p.png
- 270.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Attack_h.png
- 270.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/Icon_Gun.png
- 270.0 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Attack_n.png
- 265.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components8/Icon_You lose2.png
- 265.4 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/10Character/Stage light01.png
- 263.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/bg_GoodsTitle.png
- 263.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/12Recharge/Radiated light1.png
- 259.6 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components9/bg_CircleMap.png
- 239.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components8/Icon_Complete1.png
- 237.4 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Sci-fi Circle_Large Line.png
- 229.1 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/16Victory1/Light line.png
- 221.9 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/3StageSelect/bg_Stage2_01.png
- 221.9 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/3StageSelect/bg_Stage1_01.png
- 221.8 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/3StageSelect/bg_Stage1_02.png
- 221.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/3StageSelect/bg_Stage2_02.png
- 221.0 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/13Ranking/bg_Ranking1.png
- 219.9 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components8/Icon_Defeat1.png
- 218.0 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components3/bg_block.png
- 209.8 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components8/Icon_Level up1.png
- 205.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Circle1.png
- 203.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/14Pause/Btn_Continue_p.png
- 203.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/14Pause/Btn_Continue_h.png
- 203.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/14Pause/Btn_Continue_n.png
- 203.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/14Pause/Btn_Continue0_n.png
- 202.9 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components8/Icon_YouWin1.png
- 202.4 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Btn_MainMenu_n.png
- 202.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Btn_MainMenu_p.png
- 202.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Btn_MainMenu_h.png
- 201.1 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/14Pause/Btn_Continue0_p.png
- 201.1 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/14Pause/Btn_Continue0_h.png
- 195.8 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/bg_Title.png
- 190.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components8/Icon_Victory1.png
- 168.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/20GameOver/GAME OVER.png
- 167.4 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Title_p.png
- 167.4 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Title_h.png
- 167.0 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Title_n.png
- 164.1 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/Tips.png
- 164.1 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/7Scence1/Tips.png
- 162.1 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Guns_s.png
- 161.8 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Guns_n.png
- 159.0 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Circle2_02.png
- 158.1 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components4/loading-bar02_02.png
- 156.4 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components4/loading bar02.png
- 155.9 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Circle2.png
- 155.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Circle2_03.png
- 154.6 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Circle2_01.png
- 154.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components4/loading-bar02_01.png
- 153.0 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components8/Icon_Start1.png
- 146.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/10Character/bg_RECHARGE.png
- 143.0 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components6/bg_Title_middlePanel03.png
- 140.1 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/8Scence2/bg_Popup1Title.png
- 140.1 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/18Warning/bg_WarningTitle.png
- 139.6 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/10Character/Btn_Buy1_p.png
- 139.6 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/10Character/Btn_Buy1_h.png
- 138.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/10Character/Btn_Buy1_n.png
- 133.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/12Recharge/Icon_Gems.png
- 132.6 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/5Login1/Btn_LOGIN_n.png
- 132.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/5Login1/Btn_LOGIN_p.png
- 132.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/5Login1/Btn_LOGIN_h.png
- 130.8 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/10Character/Btn_Role_p.png
- 130.8 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/10Character/Btn_Role_h.png
- 130.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/10Character/Btn_Role_n.png
- 128.9 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/small title02_bg.png
- 122.6 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/small title01_bg.png
- 119.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/8Scence2/Btn_Prop_p.png
- 119.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/8Scence2/Btn_Prop_h.png
- 119.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/8Scence2/Btn_Prop_n.png
- 117.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Back_n.png
- 117.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Back1_n.png
- 117.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Back_p.png
- 117.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Back_h.png
- 117.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Back1_p.png
- 117.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Back1_h.png
- 115.4 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/Icon_LargeLocked.png
- 114.8 kb	 0.1% AssetBundle Object
- 114.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button04_n.png
- 114.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button04_p.png
- 114.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button04_h.png
- 114.1 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button04_Yellow.png
- 111.8 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/16Victory1/bg_block.png
- 110.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/5Login1/bg_Input2_s.png
- 110.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/5Login1/bg_Input2_n.png
- 110.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/5Login1/bg_Input1_s .png
- 110.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/5Login1/bg_Input1_n.png
- 110.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/5Login1/bg_Input0_s .png
- 110.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/5Login1/bg_Input0_n.png
- 109.6 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/1LoadingPage/Progress1.png
- 109.6 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_GoBack1_n.png
- 109.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_GoBack2_n.png
- 109.5 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/1LoadingPage/bg_Progress.png
- 109.4 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_GoBack1_p.png
- 109.4 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_GoBack1_h.png
- 109.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_GoBack2_p.png
- 109.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_GoBack2_h.png
- 109.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/13Ranking/bg_TitleRanking.png
- 109.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/10Character/bg_CHARACTOR.png
- 109.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/9Store/bg_SHOP.png
- 107.0 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Line3_bg.png
- 107.0 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Line3.png
- 105.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Line2_bg.png
- 105.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components4/bg_loading-bar01.png
- 105.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button02_Yellow.png
- 105.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button02_p.png
- 105.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button02_n.png
- 105.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button02_h.png
- 105.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Line2.png
- 105.6 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components4/loading-bar01.png
- 105.1 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components8/Line0.png
- 104.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/3StageSelect/bg_Name1.png
- 104.4 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_sci-fi button03_h.png
- 104.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_sci-fi button03_p.png
- 104.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_sci-fi button03_n.png
- 101.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_sci-fi button01_p.png
- 101.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_sci-fi button01_h.png
- 101.7 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_sci-fi button01_n.png
- 100.8 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/20GameOver/GameOver.png
- 99.6 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Line1.png
- 99.6 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Line1_bg.png
- 99.0 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Skill_p.png
- 99.0 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Skill_n.png
- 99.0 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Skill_h.png
- 98.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components8/Btn1_n.png
- 98.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components8/Btn1_h.png
- 98.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components8/Btn1_c.png
- 98.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button03_Yellow.png
- 98.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button03_p.png
- 98.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button03_n.png
- 98.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button03_h.png
- 98.1 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_Gun1.png
- 97.3 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/12Recharge/Icon_Emerald.png
- 96.2 kb	 0.1% Assets/AssetBundles/PatchAsset/UI/16Victory1/title_Victory.png
- 93.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button01_yellow.png
- 92.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button01_n.png
- 92.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button01_p.png
- 92.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_button01_h.png
- 92.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_sci-fi button02_P.png
- 92.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_sci-fi button02_h.png
- 92.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_sci-fi button02_n.png
- 91.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/12Recharge/Icon_Coins.png
- 90.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Buy_p.png
- 90.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Buy_h.png
- 89.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_Level Locked.png
- 89.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Buy_n.png
- 89.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Icon_Attack.png
- 89.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_sci-fi-button04_h.png
- 89.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/bg_Direction1.png
- 88.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/Icon_Go1.png
- 88.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_sci-fi-button04_n.png
- 87.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_sci-fi-button04_P.png
- 87.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_Button5-3_yellow.png
- 87.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components1/line01.png
- 87.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_Button5-2_p.png
- 87.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_Button5-2_h.png
- 87.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Btn_Button5-1_n.png
- 85.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Line4.png
- 85.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Line4_bg.png
- 85.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Btn_Cancle_p.png
- 85.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Btn_Cancle_n.png
- 85.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Btn_Cancle_h.png
- 85.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Progress2.png
- 85.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/1LoadingPage/Progress2.png
- 84.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/Point_Yellow.png
- 84.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/Point_Red.png
- 84.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/Point_Green.png
- 84.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/Point_Color2.png
- 84.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/bg_Map.png
- 79.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Icon_Attack1.png
- 79.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/bg_MoneyBar1.png
- 76.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Dropdown_bg_s.png
- 76.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Dropdown_bg_n.png
- 72.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Icon4-2.png
- 72.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Icon4-1.png
- 69.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Range.png
- 68.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/bg_Time.png
- 68.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Btn_OK_n.png
- 68.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Btn_OK_h.png
- 68.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Btn_OK_P.png
- 67.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components2/Btn_Login_p.png
- 67.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components2/Btn_Login_n.png
- 67.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components2/Btn_Login_h.png
- 67.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Sci-fi-Circle02_01.png
- 66.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Circle_Black Mask.png
- 66.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/2MainMenu/bg_Title2 .png
- 66.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Sci-fi-Circle02_02.png
- 65.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Sci-fi-Circle02_03.png
- 65.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/bg_Direction2.png
- 63.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/bg_Direction2.png
- 63.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/bg_RoleDown.png
- 63.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/bg_RoleDown.png
- 63.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Dropdown_menu.png
- 62.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Icon_star1_gray.png
- 62.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Icon_star1_light.png
- 61.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components2/bg_Input_s.png
- 61.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components2/bg_Input_n.png
- 61.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components2/Input_h.png
- 61.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/SmallTitle2-1.png
- 61.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/bg_slider1.png
- 61.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/slider1.png
- 60.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components6/bg_Title_LargePanel01.png
- 60.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_Sword.png
- 59.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/bg_Title_Window1.png
- 59.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/Circle.png
- 58.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Icon3-2.png
- 58.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Icon3-1.png
- 57.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components6/bg_Title_LargePanel02.png
- 57.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Icon_Prop4.png
- 56.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Icon_Prop6.png
- 54.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_Skill2.png
- 54.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_Skill3.png
- 54.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_Skill1.png
- 53.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Icon_Prop5.png
- 53.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Icon_Prop1.png
- 52.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Icon_Prop2.png
- 51.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/Icon_Role3.png
- 51.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/Icon_Role4.png
- 51.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_tool_n.png
- 51.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_tool_p.png
- 51.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_tool_h.png
- 50.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/Icon_Skill3.png
- 50.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/Icon_Skill2.png
- 50.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Front sight7.png
- 50.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/14Pause/TitleLine_Right.png
- 50.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/14Pause/PAUSE.png
- 50.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/14Pause/TitleLine_Left.png
- 50.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/circle01-1.png
- 49.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/bg_ItemIntrudction.png
- 49.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Btn_Tab1_s.png
- 49.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Icon_Prop3.png
- 49.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Btn_User_p.png
- 49.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Btn_User_h.png
- 49.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Btn_User_n.png
- 49.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/bg_Title_Window2.png
- 49.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/SmallTitle1-1.png
- 49.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/circle01.png
- 48.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/circle01-2.png
- 48.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/bg_Title_Window3.png
- 47.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_Sword1.png
- 47.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/bg_Title line.png
- 46.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/bg_ProgressBar_Attack.png
- 45.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/bg_LifeProgress bar.png
- 45.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/bg_LifeProgress bar.png
- 45.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Progress-bar_life.png
- 45.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Progress-bar_life.png
- 45.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_Start_h.png
- 45.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_Start_p.png
- 45.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_Start_n.png
- 44.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/Icon_Role2.png
- 44.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/bg_Direction1.png
- 44.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/ProgressBar_Speed.png
- 44.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/ProgressBar_Defense.png
- 44.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/ProgressBar_Attack.png
- 43.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/Icon_Role1.png
- 41.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/switch01-on.png
- 41.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/switch01-off.png
- 41.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/switch02-on.png
- 41.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/switch02-off.png
- 41.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Circle5.png
- 40.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Front sight2.png
- 39.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/13Ranking/Icon_Role1.png
- 39.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/13Ranking/Icon_Role4.png
- 39.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/13Ranking/Icon_Role2.png
- 38.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/13Ranking/Icon_Role3.png
- 37.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Btn_Tab1_n.png
- 37.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/6.png
- 37.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/0.png
- 36.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Circle3_bg.png
- 36.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/4.png
- 36.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Front sight3.png
- 36.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/8.png
- 36.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/9.png
- 36.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Front sight5.png
- 36.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/bg_RoleUp.png
- 36.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/bg_RoleUp.png
- 36.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/3.png
- 35.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/2.png
- 35.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Front sight6.png
- 35.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_exit_p.png
- 35.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_exit_n.png
- 35.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_exit_h.png
- 35.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Icon_reward.png
- 35.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/5.png
- 34.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/7.png
- 34.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components6/bg_Title_middlePanel01.png
- 34.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Circle3.png
- 32.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/bg_MoneyBar2.png
- 31.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components7/bg_Title_textbox01_Opaque.png
- 31.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/bg_Title_textbox01.png
- 31.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components6/bg_Title_middlePanel02.png
- 31.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/18Warning/Btn_RedOk_n.png
- 31.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/18Warning/Btn_RedOk_p.png
- 31.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/18Warning/Btn_RedOk_h.png
- 30.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Sci-fi-Circle01_04.png
- 30.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Sci-fi-Circle01_03.png
- 30.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Sci-fi-Circle01_02.png
- 30.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/11NotEnoughMoney/Btn_Buy_p.png
- 30.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/11NotEnoughMoney/Btn_Buy_h.png
- 29.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Sci-fi-Circle01_01.png
- 29.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Front sight1.png
- 29.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/17Victory2/VICTORY.png
- 29.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/13Ranking/2st.png
- 29.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_Level2_n.png
- 29.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/11NotEnoughMoney/Btn_Buy_n.png
- 28.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_Level2_p.png
- 28.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_Level2_h.png
- 28.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_Level1_n.png
- 28.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_Level1_p.png
- 28.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_Level1_h.png
- 28.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Btn_Resume_n.png
- 28.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Btn_Resume_p.png
- 28.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Btn_Resume_h.png
- 28.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/switch02-on.png
- 28.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/switch02-off.png
- 28.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/switch01-off.png
- 28.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Slider2_bg.png
- 27.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/switch01-on.png
- 27.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/Btn_Previous_n.png
- 27.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/Btn_Previous_h.png
- 27.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/Btn_Previous_c.png
- 27.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/Btn_Next_n.png
- 27.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/Btn_Next_h.png
- 27.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/Btn_Next_c .png
- 27.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Btn_Restart_p.png
- 27.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Btn_Restart_h.png
- 27.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Btn_Next_n.png
- 27.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Btn_Next_p.png
- 27.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Btn_Next_h.png
- 27.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/13Ranking/3rd.png
- 26.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Icon_Role.png
- 26.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Icon_Role.png
- 26.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Icon_Back.png
- 26.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/Stage light03.png
- 26.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/Stage light02.png
- 26.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Btn_Restart_n.png
- 26.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Back_p.png
- 26.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Back_h.png
- 26.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/1.png
- 26.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Back_n.png
- 25.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Circle4_bg.png
- 25.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Attack0_p.png
- 24.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Circle4.png
- 24.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Icon_Potion.png
- 24.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Attack0_n.png
- 24.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/2MainMenu/bg_Title1.png
- 23.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Attack1_p.png
- 23.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Attack1_n.png
- 23.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/13Ranking/1st.png
- 22.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/radio_selected.png
- 22.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/radio_hover.png
- 22.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/radio_normal.png
- 22.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/checkbox_select.png
- 22.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/checkbox_normal.png
- 22.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/checkbox_hover.png
- 21.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Previous_p.png
- 21.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Previous_n.png
- 21.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Previous_h.png
- 21.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/3StageSelect/Btn_Previous_p.png
- 21.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/3StageSelect/Btn_Previous_n.png
- 21.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/3StageSelect/Btn_Previous_h.png
- 21.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Next_p.png
- 21.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Next_n.png
- 21.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Next_h.png
- 21.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/3StageSelect/Btn_Next_p.png
- 21.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/3StageSelect/Btn_Next_n.png
- 21.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/3StageSelect/Btn_Next_h.png
- 21.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/bg_ProgressLv.png
- 21.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Slider2.png
- 20.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Icon_Jump.png
- 20.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/12Recharge/Btn_Buy_Yellow_n.png
- 20.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/12Recharge/Btn_Buy_Yellow_p.png
- 20.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/12Recharge/Btn_Buy_Yellow_h.png
- 20.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/12Recharge/Btn_Buy2_p.png
- 20.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/12Recharge/Btn_Buy2_n.png
- 20.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/12Recharge/Btn_Buy2_h.png
- 20.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Icon_star0.png
- 20.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Icon_Setting.png
- 20.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/Icon_Skill.png
- 20.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Btn_Character_p.png
- 20.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Btn_Character_n.png
- 20.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Btn_Character_h.png
- 19.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/12Recharge/Icon_Sale.png
- 19.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_pause_p.png
- 19.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_pause_n.png
- 19.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_pause_h.png
- 19.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Btn_number_n.png
- 19.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Btn_number_p.png
- 19.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Btn_number_h.png
- 19.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Btn_GoBack.png
- 18.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Icon_Silver.png
- 18.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Circle_Progress.png
- 17.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Icon_Ring.png
- 17.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Icon_Shield.png
- 16.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components7/bg_Title_small panel03_Opaque.png
- 16.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/bg_Title_small panel03.png
- 16.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Btn_Add_p.png
- 16.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Btn_Add_n.png
- 16.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Btn_Add_h.png
- 16.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Icon_Earth_n.png
- 16.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/ProgressLv.png
- 15.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components1/line02.png
- 15.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Btn_slider1.png
- 15.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/close_pressed.png
- 15.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/5Login1/close_pressed.png
- 15.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/close_normal.png
- 15.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/5Login1/close_normal.png
- 15.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/close_hover.png
- 15.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/5Login1/close_hover.png
- 15.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Icon_Jump1.png
- 15.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/Icon_Money.png
- 14.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Icon_OrangeDiamond.png
- 14.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Run .png
- 14.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Radio_null.png
- 13.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/checkbox_normal.png
- 13.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Attack0.png
- 13.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Radio_selected.png
- 13.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/checkbox_select.png
- 13.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Home_n.png
- 13.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Icon_SmallStar_Light.png
- 13.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_Previous_p.png
- 13.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_Previous_h.png
- 13.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Btn_Previous_n.png
- 13.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/16Victory1/Icon_SmallStar_Gray.png
- 13.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Prostrate.png
- 13.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Icon_Quit.png
- 13.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/Icon_Skill1.png
- 13.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Home_p .png
- 13.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Btn_Home_h .png
- 12.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Icon_Character.png
- 12.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Title spacer.png
- 12.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Icon_Recharge.png
- 12.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/5Login1/checkbox_nul.png
- 12.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/checkbox_nul.png
- 12.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/5Login1/checkbox_select.png
- 12.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/checkbox_select.png
- 12.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Icon_Resume.png
- 12.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_Diamond.png
- 12.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Icoon_Person.png
- 11.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Icon_Money.png
- 11.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Spanner.png
- 10.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Previouspage_gray.png
- 10.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Previouspage_n.png
- 10.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components5/Icon00.png
- 10.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_nextpage_gray.png
- 10.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_nextpage_n.png
- 10.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Add_p.png
- 10.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Add_n.png
- 10.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Add_h.png
- 10.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/bg_Item.png
- 10.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_Money.png
- 9.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Icon_Ranking.png
- 9.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Icon_Restart.png
- 9.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Icon_Shop.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components6/Btn_LargeClose_p.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components6/Btn_LargeClose_n.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components6/Btn_LargeClose_h.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Right_p.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Right_h.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Left_p.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Left_h.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Down_p.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Down_h.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Up_p.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Up_h.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Right_n.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Left_n.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Down_n.png
- 9.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_Up_n.png
- 9.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_AtackTarget.png
- 9.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_back.png
- 8.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Front sight4.png
- 8.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/5Login1/line.png
- 8.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/13Ranking/Btn_Tab1_s.png
- 8.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/13Ranking/Btn_Tab1_n.png
- 7.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_Light.png
- 7.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/bg_EnergyProgress bar.png
- 7.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/bg_EnergyProgress bar.png
- 7.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_Diamond1.png
- 7.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Progress-bar_Energy.png
- 7.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Progress-bar_Energy.png
- 7.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components6/Btn_MiddleClose_p.png
- 7.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components6/Btn_MiddleClose_n.png
- 7.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components6/Btn_MiddleClose_h.png
- 6.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Bullet.png
- 6.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Slider1_Btn.png
- 6.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Dropdown_Btn_p.png
- 6.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Dropdown_Btn_n.png
- 6.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Dropdown_Btn_h.png
- 6.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components8/Icon_pause.png
- 6.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/5Login1/Icon_Password1.png
- 6.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/5Login1/Icon_Password.png
- 6.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/5Login1/Icon_UserName1.png
- 6.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/5Login1/Icon_UserName.png
- 5.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/TargetRed.png
- 5.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_Money1.png
- 5.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_Target.png
- 5.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Icon_Settings.png
- 5.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Icon_Lock0.png
- 4.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Hp_Red.png
- 4.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Hp_Green.png
- 4.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Hp_Blue.png
- 4.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Sci-fi-Mouse-cursor_a1.png
- 4.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Sci-fi-Mouse-cursor_b2.png
- 4.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Sci-fi-Mouse-cursor_b1.png
- 4.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Sci-fi-Mouse-cursor_a2.png
- 4.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Sci-fi-Mouse-cursor_a3.png
- 4.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Sci-fi-Mouse-cursor_b3.png
- 4.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Sci-fi-Mouse-cursor_a4.png
- 4.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Sci-fi-Mouse-cursor_b4.png
- 4.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/MessageBox.prefab
- 4.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Icon_AddProp.png
- 4.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_Add1.png
- 4.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/TargetGreen.png
- 4.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Level star_Light.png
- 4.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/4Levels/Level star_Gray.png
- 3.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Jump .png
- 3.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Icon_Pause.png
- 3.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Btn_Previous1_p.png
- 3.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Btn_Previous1_n.png
- 3.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Btn_Previous1_h.png
- 3.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/ProgressBar_Circle1_Ball.png
- 3.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Partition line.png
- 3.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Icon_Previous.png
- 3.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Icon_Next.png
- 3.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Previouspage_p.png
- 3.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Previouspage_h.png
- 3.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_nextpage_p.png
- 3.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_nextpage_h.png
- 3.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Icon_Plaly.png
- 3.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Icon_Target.png
- 3.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Slider1_bg.png
- 3.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Slider1.png
- 2.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_Exit.png
- 2.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Btn_OpenArrow.png
- 2.9 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/10Character/Partition line.png
- 2.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/12Recharge/Icon_dolor.png
- 2.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components4/Icon_Stop.png
- 2.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Hp_Yellow_bg.png
- 2.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Icon_Music.png
- 2.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Slider2_Btn.png
- 2.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Icon_TargetYellow.png
- 2.6 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components3/Icon_TargetGreen.png
- 2.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/15Opotions/Icon_Sound.png
- 2.5 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/2MainMenu/Icon_User.png
- 2.4 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_target.png
- 2.3 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Hp_Yellow.png
- 2.2 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Parting line.png
- 2.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Hp_Green_bg.png
- 2.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_down_p.png
- 2.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_down_n .png
- 2.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_down_h.png
- 2.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_left_p.png
- 2.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_left_n .png
- 2.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_left_h.png
- 2.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Right_p .png
- 2.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Right_n.png
- 2.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_Right_h .png
- 2.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_up_p.png
- 2.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_up_n.png
- 2.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Btn_up_h.png
- 1.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/7Scence1/Icon_DistanceTarget.png
- 1.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/3StageSelect/Radio1_select.png
- 1.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Radio_select.png
- 1.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Radio_null.png
- 1.7 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/3StageSelect/Radio1_null.png
- 1.1 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/Icon_Task.png
- 1.0 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/8Scence2/bg_Title.png
- 0.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_YellowPoint.png
- 0.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_RedPoint.png
- 0.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/Components9/Icon_GreenPoint.png
- 0.8 kb	 0.0% Assets/AssetBundles/PatchAsset/UI/9Store/Icon_Trigonometry.png
- 0.1 kb	 0.0% Packages/com.unity.ugui/Runtime/UI/Core/Layout/HorizontalLayoutGroup.cs
- 0.1 kb	 0.0% Packages/com.unity.ugui/Runtime/UI/Core/Layout/ContentSizeFitter.cs
- 0.1 kb	 0.0% Assets/MiHoYo/Scripts/UI/BackgroundAdapter.cs
- 0.1 kb	 0.0% Packages/com.unity.ugui/Runtime/UI/Core/GraphicRaycaster.cs
- 0.1 kb	 0.0% Packages/com.unity.ugui/Runtime/UI/Core/Layout/CanvasScaler.cs
- 0.1 kb	 0.0% Packages/com.unity.ugui/Runtime/UI/Core/Image.cs
- 0.1 kb	 0.0% Packages/com.unity.ugui/Runtime/UI/Core/Button.cs
- 0.1 kb	 0.0% Packages/com.unity.ugui/Runtime/UI/Core/Text.cs
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
-Bundle Name: 9ee339894452084e
-Compressed Size:1.4 kb
-Uncompressed usage by category (Percentages based on user generated assets only):
-Textures               0.0 kb	 0.0% 
-Meshes                 0.0 kb	 0.0% 
-Animations             0.0 kb	 0.0% 
-Sounds                 0.0 kb	 0.0% 
-Shaders                0.0 kb	 0.0% 
-Other Assets           0.6 kb	 13.7% 
-Levels                 0.0 kb	 0.0% 
-Scripts                0.0 kb	 0.0% 
-Included DLLs          0.0 kb	 0.0% 
-File headers           4.0 kb	 86.3% 
-Total User Assets      4.6 kb	 100.0% 
-Complete build size    4.6 kb
-Used Assets and files from the Resources folder, sorted by uncompressed size:
- 0.5 kb	 10.5% Assets/AssetBundles/Actor/abcd.txt
- 0.1 kb	 3.2% AssetBundle Object
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
-Bundle Name: bc56580c6b75d2ec
-Compressed Size:73.7 kb
-Uncompressed usage by category (Percentages based on user generated assets only):
-Textures               0.0 kb	 0.0% 
-Meshes                 0.0 kb	 0.0% 
-Animations             0.0 kb	 0.0% 
-Sounds                 0.0 kb	 0.0% 
-Shaders                159.1 kb	 72.8% 
-Other Assets           1.6 kb	 0.7% 
-Levels                 0.0 kb	 0.0% 
-Scripts                0.0 kb	 0.0% 
-Included DLLs          0.0 kb	 0.0% 
-File headers           57.9 kb	 26.5% 
-Total User Assets      218.6 kb	 100.0% 
-Complete build size    218.6 kb
-Used Assets and files from the Resources folder, sorted by uncompressed size:
- 160.1 kb	 73.3% Resources/unity_builtin_extra
- 0.3 kb	 0.2% Assets/AssetBundles/Actor/Sphere.prefab
- 0.2 kb	 0.1% AssetBundle Object
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
-Bundle Name: ffeaca440fc53ca2
-Compressed Size:74.0 kb
-Uncompressed usage by category (Percentages based on user generated assets only):
-Textures               0.0 kb	 0.0% 
-Meshes                 0.0 kb	 0.0% 
-Animations             0.0 kb	 0.0% 
-Sounds                 0.0 kb	 0.0% 
-Shaders                159.1 kb	 72.4% 
-Other Assets           2.0 kb	 0.9% 
-Levels                 0.0 kb	 0.0% 
-Scripts                0.0 kb	 0.0% 
-Included DLLs          0.0 kb	 0.0% 
-File headers           58.6 kb	 26.7% 
-Total User Assets      219.7 kb	 100.0% 
-Complete build size    219.7 kb
-Used Assets and files from the Resources folder, sorted by uncompressed size:
- 160.1 kb	 72.9% Resources/unity_builtin_extra
- 0.7 kb	 0.3% Assets/AssetBundles/Actor/Cube.prefab
- 0.3 kb	 0.1% AssetBundle Object
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
-Bundle Name: 310ecd798244f3f8
-Compressed Size:6.3 kb
-Uncompressed usage by category (Percentages based on user generated assets only):
-Textures               0.0 kb	 0.0% 
-Meshes                 0.0 kb	 0.0% 
-Animations             0.0 kb	 0.0% 
-Sounds                 0.0 kb	 0.0% 
-Shaders                0.0 kb	 0.0% 
-Other Assets           21.1 kb	 84.1% 
-Levels                 0.0 kb	 0.0% 
-Scripts                0.0 kb	 0.0% 
-Included DLLs          0.0 kb	 0.0% 
-File headers           4.0 kb	 15.9% 
-Total User Assets      25.1 kb	 100.0% 
-Complete build size    25.1 kb
-Used Assets and files from the Resources folder, sorted by uncompressed size:
- 20.9 kb	 83.5% Assets/AssetBundles/Actor/test.txt
- 0.1 kb	 0.6% AssetBundle Object
--------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 Bundle Name: ab
 Compressed Size:1.9 kb
@@ -1513,18 +653,18 @@ Used Assets and files from the Resources folder, sorted by uncompressed size:
  0.6 kb	 12.1% Built-in AssetBundleManifest: AssetBundleManifest
  0.1 kb	 2.2% AssetBundle Object
 -------------------------------------------------------------------------------
-Refresh completed in 0.078277 seconds.
+Refresh completed in 0.076609 seconds.
 RefreshInfo: RefreshV2(NoUpdateAssetOptions)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 78.265ms
-	ApplyChangesToAssetFolders: 0.631ms
-	WriteModifiedImportersToTextMetaFiles: 0.049ms
+	InvokeBeforeRefreshCallbacks: 76.598ms
+	ApplyChangesToAssetFolders: 0.266ms
+	WriteModifiedImportersToTextMetaFiles: 0.050ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 74.581ms
+	OnSourceAssetsModified: 73.352ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.817ms
+	GetAllGuidsForCategorization: 1.719ms
 	CategorizeAssets: 0.000ms
 	ImportAndPostprocessOutOfDateAssets: 0.000ms (0.000ms without children)
 		ImportManagerImport: 0.000ms (0.000ms without children)
@@ -1548,15 +688,15 @@ RefreshProfiler: Total: 0.000ms
 	ReloadSourceAssets: 0.000ms
 	UnloadImportedAssets: 0.000ms
 	Hotreload: 0.000ms
-	FixTempGuids: 0.037ms
-	VerifyGuidPMRegistrations: 0.004ms
+	FixTempGuids: 0.029ms
+	VerifyGuidPMRegistrations: 0.003ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.160ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.008ms
-	GetLoadedSourceAssetsSnapshot: 0.307ms
-	PersistCurrentRevisions: 0.268ms
+	UnloadStreamsBegin: 0.137ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.023ms
+	GetLoadedSourceAssetsSnapshot: 0.304ms
+	PersistCurrentRevisions: 0.284ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.007ms
+	GenerateScriptTypeHashes: 0.004ms
 热更新XML生成完成
 UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -1570,18 +710,18 @@ AutoPacker:PackAB_Android() (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Edit
  
 (Filename: Assets/MiHoYo/Scripts/Common/CommonLog.cs Line: 228)
 
-Refresh completed in 0.088704 seconds.
+Refresh completed in 0.070150 seconds.
 RefreshInfo: RefreshV2(NoUpdateAssetOptions)
 RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 88.691ms
-	ApplyChangesToAssetFolders: 0.684ms
-	WriteModifiedImportersToTextMetaFiles: 0.045ms
+	InvokeBeforeRefreshCallbacks: 70.139ms
+	ApplyChangesToAssetFolders: 0.303ms
+	WriteModifiedImportersToTextMetaFiles: 0.047ms
 	CleanLegacyArtifacts: 0.000ms
 	Scan: 0.000ms
-	OnSourceAssetsModified: 85.130ms
+	OnSourceAssetsModified: 67.171ms
 	UnregisterDeletedAssets: 0.000ms
 	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.562ms
+	GetAllGuidsForCategorization: 1.454ms
 	CategorizeAssets: 0.000ms
 	ImportAndPostprocessOutOfDateAssets: 0.000ms (0.000ms without children)
 		ImportManagerImport: 0.000ms (0.000ms without children)
@@ -1606,14 +746,14 @@ RefreshProfiler: Total: 0.000ms
 	UnloadImportedAssets: 0.000ms
 	Hotreload: 0.000ms
 	FixTempGuids: 0.021ms
-	VerifyGuidPMRegistrations: 0.003ms
+	VerifyGuidPMRegistrations: 0.004ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.150ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.010ms
-	GetLoadedSourceAssetsSnapshot: 0.410ms
-	PersistCurrentRevisions: 0.268ms
+	UnloadStreamsBegin: 0.138ms
+	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.006ms
+	GetLoadedSourceAssetsSnapshot: 0.313ms
+	PersistCurrentRevisions: 0.271ms
 	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.007ms
+	GenerateScriptTypeHashes: 0.009ms
 资源打包完成！
 UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -1639,132 +779,44 @@ AutoPacker:PackAB_Android() (at Assets\MiHoYo\Scripts\AssetManager\ABSystem\Edit
 (Filename: Assets/MiHoYo/Scripts/Common/CommonLog.cs Line: 124)
 
 Batchmode quit successfully invoked - shutting down!
-[Performance] WinEditorMain                                               :        1 samples, Peak.  1.67 s (1.0x), Avg.  1.67 s, Total. 1.673 s (4.5%)
-[Performance] WinEditorMain.ConfigureCrashHandler                         :        1 samples, Peak.  17.9 us (1.0x), Avg.  17.9 us, Total. 17.90 us (0.0%)
-[Performance] WinEditorMain.CurlRequestInitialize                         :        1 samples, Peak.  6.39 ms (1.0x), Avg.  6.39 ms, Total. 6.386 ms (0.0%)
-[Performance] WinEditorMain.SetupLogFile                                  :        1 samples, Peak.   549 us (1.0x), Avg.   549 us, Total. 549.3 us (0.0%)
-[Performance] WinEditorMain.RunNativeTestsIfRequiredAndExit               :        1 samples, Peak.  1.30 us (1.0x), Avg.  1.30 us, Total. 1.300 us (0.0%)
-[Performance] WinEditorMain.Licensing                                     :        1 samples, Peak.  1.66 s (1.0x), Avg.  1.66 s, Total. 1.657 s (4.5%)
-[Performance] WinEditorMain.InitializeCrashHandler                        :        1 samples, Peak.  7.91 ms (1.0x), Avg.  7.91 ms, Total. 7.908 ms (0.0%)
-[Performance] WinEditorMain.CreateApplication                             :        1 samples, Peak.   342 us (1.0x), Avg.   342 us, Total. 342.4 us (0.0%)
-[Performance] Application.InitializeProject                               :        1 samples, Peak.  7.22 s (1.0x), Avg.  7.22 s, Total. 7.216 s (19.5%)
-[Performance] Application.PackageManager.StartServer                      :        1 samples, Peak.  6.01 ms (1.0x), Avg.  6.01 ms, Total. 6.014 ms (0.0%)
-[Performance] Application.IsBrowserCacheEmpty                             :        1 samples, Peak.   925 us (1.0x), Avg.   925 us, Total. 924.7 us (0.0%)
-[Performance] Application.AcquireProjectLock                              :        1 samples, Peak.  6.79 ms (1.0x), Avg.  6.79 ms, Total. 6.786 ms (0.0%)
-[Performance] Application.InitializeEngineNoGraphics                      :        1 samples, Peak.  32.7 ms (1.0x), Avg.  32.7 ms, Total. 32.74 ms (0.1%)
-[Performance] Application.PackageManager.Initialize                       :        1 samples, Peak.  1.51 s (1.0x), Avg.  1.51 s, Total. 1.508 s (4.1%)
-[Performance] CurlRequestCheck                                            :       25 samples, Peak.   275 us (10.2x), Avg.  27.0 us, Total. 675.7 us (0.0%)
-[Performance] PackageManager::RunRequestSynchronously                     :       10 samples, Peak.  68.1 us (3.4x), Avg.  20.2 us, Total. 202.1 us (0.0%)
-[Performance] Application.EngineGraphics.Initialize                       :        1 samples, Peak.  25.9 ms (1.0x), Avg.  25.9 ms, Total. 25.92 ms (0.1%)
-[Performance] Application.GI.Initialize                                   :        1 samples, Peak.   257 ms (1.0x), Avg.   257 ms, Total. 257.4 ms (0.7%)
-[Performance] Application.LoadAllDefaultResourcesFromEditor               :        1 samples, Peak.  2.39 ms (1.0x), Avg.  2.39 ms, Total. 2.391 ms (0.0%)
-[Performance] Application.LoadMonoAssemblies                              :        1 samples, Peak.  1.25 s (1.0x), Avg.  1.25 s, Total. 1.255 s (3.4%)
-[Performance] ProcessService.EditorAfterLoadAllAssemblies                 :        2 samples, Peak.  41.3 ms (1.3x), Avg.  31.2 ms, Total. 62.33 ms (0.2%)
-[Performance] Application.ReadLicenseInfo                                 :        1 samples, Peak.  2.55 ms (1.0x), Avg.  2.55 ms, Total. 2.552 ms (0.0%)
-[Performance] Application.InitialScriptRefresh                            :        1 samples, Peak.  2.46 s (1.0x), Avg.  2.46 s, Total. 2.460 s (6.6%)
-[Performance] BuildCatalog                                                :        1 samples, Peak.  39.8 ms (1.0x), Avg.  39.8 ms, Total. 39.77 ms (0.1%)
-[Performance] Application.AssetDatabase.Refresh                           :        1 samples, Peak.   526 ms (1.0x), Avg.   526 ms, Total. 525.7 ms (1.4%)
-[Performance] Application.ImportAssetsWithMismatchingAssetImporterVersion :        1 samples, Peak.   154 ms (1.0x), Avg.   154 ms, Total. 154.2 ms (0.4%)
-[Performance] Application.SyncCurrentColorSpace                           :        1 samples, Peak.  6.02 ms (1.0x), Avg.  6.02 ms, Total. 6.018 ms (0.0%)
-[Performance] Application.OnUsbDevicesChanged                             :        1 samples, Peak.  9.88 ms (1.0x), Avg.  9.88 ms, Total. 9.882 ms (0.0%)
+[Performance] WinEditorMain                                               :        1 samples, Peak.  1.54 s (1.0x), Avg.  1.54 s, Total. 1.541 s (15.0%)
+[Performance] WinEditorMain.ConfigureCrashHandler                         :        1 samples, Peak.  15.5 us (1.0x), Avg.  15.5 us, Total. 15.50 us (0.0%)
+[Performance] WinEditorMain.CurlRequestInitialize                         :        1 samples, Peak.  4.39 ms (1.0x), Avg.  4.39 ms, Total. 4.386 ms (0.0%)
+[Performance] WinEditorMain.SetupLogFile                                  :        1 samples, Peak.   587 us (1.0x), Avg.   587 us, Total. 587.1 us (0.0%)
+[Performance] WinEditorMain.RunNativeTestsIfRequiredAndExit               :        1 samples, Peak.  1.40 us (1.0x), Avg.  1.40 us, Total. 1.400 us (0.0%)
+[Performance] WinEditorMain.Licensing                                     :        1 samples, Peak.  1.53 s (1.0x), Avg.  1.53 s, Total. 1.530 s (14.8%)
+[Performance] WinEditorMain.InitializeCrashHandler                        :        1 samples, Peak.  5.61 ms (1.0x), Avg.  5.61 ms, Total. 5.611 ms (0.1%)
+[Performance] WinEditorMain.CreateApplication                             :        1 samples, Peak.   324 us (1.0x), Avg.   324 us, Total. 323.7 us (0.0%)
+[Performance] Application.InitializeProject                               :        1 samples, Peak.  7.55 s (1.0x), Avg.  7.55 s, Total. 7.555 s (73.3%)
+[Performance] Application.PackageManager.StartServer                      :        1 samples, Peak.  5.22 ms (1.0x), Avg.  5.22 ms, Total. 5.215 ms (0.1%)
+[Performance] Application.IsBrowserCacheEmpty                             :        1 samples, Peak.   809 us (1.0x), Avg.   809 us, Total. 809.4 us (0.0%)
+[Performance] Application.AcquireProjectLock                              :        1 samples, Peak.  5.62 ms (1.0x), Avg.  5.62 ms, Total. 5.624 ms (0.1%)
+[Performance] Application.InitializeEngineNoGraphics                      :        1 samples, Peak.  31.9 ms (1.0x), Avg.  31.9 ms, Total. 31.89 ms (0.3%)
+[Performance] Application.PackageManager.Initialize                       :        1 samples, Peak.  1.02 s (1.0x), Avg.  1.02 s, Total. 1.020 s (9.9%)
+[Performance] CurlRequestCheck                                            :       17 samples, Peak.  40.1 us (2.4x), Avg.  16.8 us, Total. 285.5 us (0.0%)
+[Performance] PackageManager::RunRequestSynchronously                     :        7 samples, Peak.  74.5 us (2.6x), Avg.  28.4 us, Total. 198.9 us (0.0%)
+[Performance] Application.EngineGraphics.Initialize                       :        1 samples, Peak.  29.4 ms (1.0x), Avg.  29.4 ms, Total. 29.43 ms (0.3%)
+[Performance] Application.GI.Initialize                                   :        1 samples, Peak.   267 ms (1.0x), Avg.   267 ms, Total. 267.1 ms (2.6%)
+[Performance] Application.LoadAllDefaultResourcesFromEditor               :        1 samples, Peak.  2.36 ms (1.0x), Avg.  2.36 ms, Total. 2.356 ms (0.0%)
+[Performance] Application.LoadMonoAssemblies                              :        1 samples, Peak.  2.31 s (1.0x), Avg.  2.31 s, Total. 2.315 s (22.5%)
+[Performance] ProcessService.EditorAfterLoadAllAssemblies                 :        2 samples, Peak.  43.6 ms (1.3x), Avg.  33.3 ms, Total. 66.52 ms (0.6%)
+[Performance] Application.ReadLicenseInfo                                 :        1 samples, Peak.  2.05 ms (1.0x), Avg.  2.05 ms, Total. 2.048 ms (0.0%)
+[Performance] Application.InitialScriptRefresh                            :        1 samples, Peak.  1.57 s (1.0x), Avg.  1.57 s, Total. 1.565 s (15.2%)
+[Performance] Application.AssetDatabase.Refresh                           :        1 samples, Peak.   543 ms (1.0x), Avg.   543 ms, Total. 543.1 ms (5.3%)
+[Performance] BuildCatalog                                                :        1 samples, Peak.  44.4 ms (1.0x), Avg.  44.4 ms, Total. 44.38 ms (0.4%)
+[Performance] Application.ImportAssetsWithMismatchingAssetImporterVersion :        1 samples, Peak.   132 ms (1.0x), Avg.   132 ms, Total. 132.5 ms (1.3%)
+[Performance] Application.SyncCurrentColorSpace                           :        1 samples, Peak.  5.56 ms (1.0x), Avg.  5.56 ms, Total. 5.561 ms (0.1%)
+[Performance] Application.OnUsbDevicesChanged                             :        1 samples, Peak.  9.56 ms (1.0x), Avg.  9.56 ms, Total. 9.558 ms (0.1%)
 [Performance] Application.AssetInstanceCacheUpdate                        :        1 samples, Peak.   200 ns (1.0x), Avg.   200 ns, Total. 200.0 ns (0.0%)
-[Performance] Application.UnityExtensions.Initialize                      :        1 samples, Peak.   597 us (1.0x), Avg.   597 us, Total. 597.1 us (0.0%)
-[Performance] Application.InitializeManagedCompilationPipeline            :        1 samples, Peak.  65.6 ms (1.0x), Avg.  65.6 ms, Total. 65.56 ms (0.2%)
-[Performance] Application.ExecuteStartups                                 :        1 samples, Peak.  6.79 ms (1.0x), Avg.  6.79 ms, Total. 6.793 ms (0.0%)
-[Performance] Application.RebuildOSMenu                                   :        1 samples, Peak.  60.9 ms (1.0x), Avg.  60.9 ms, Total. 60.89 ms (0.2%)
-[Performance] UpdateAllMenus                                              :        1 samples, Peak.  59.6 ms (1.0x), Avg.  59.6 ms, Total. 59.65 ms (0.2%)
-[Performance] Application.editorInitializingProject                       :        1 samples, Peak.  7.40 us (1.0x), Avg.  7.40 us, Total. 7.400 us (0.0%)
-[Performance] GUIView.RepaintAll.PlayerLoopController                     :        1 samples, Peak.   500 ns (1.0x), Avg.   500 ns, Total. 500.0 ns (0.0%)
-[Performance] Application.InvokeFinishedLoadingProject                    :        1 samples, Peak.  42.8 ms (1.0x), Avg.  42.8 ms, Total. 42.80 ms (0.1%)
-[Performance] ProcessService.OnProjectLoaded                              :        1 samples, Peak.  40.3 ms (1.0x), Avg.  40.3 ms, Total. 40.35 ms (0.1%)
-Refresh completed in 0.078158 seconds.
-RefreshInfo: RefreshV2(ForceSynchronousImport)
-RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 78.146ms
-	ApplyChangesToAssetFolders: 0.631ms
-	WriteModifiedImportersToTextMetaFiles: 0.045ms
-	CleanLegacyArtifacts: 0.000ms
-	Scan: 0.000ms
-	OnSourceAssetsModified: 74.758ms
-	UnregisterDeletedAssets: 0.000ms
-	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.458ms
-	CategorizeAssets: 0.000ms
-	ImportAndPostprocessOutOfDateAssets: 0.000ms (0.000ms without children)
-		ImportManagerImport: 0.000ms (0.000ms without children)
-			ImportInProcess: 0.000ms
-			ImportOutOfProcess: 0.000ms
-			UpdateCategorizedAssets: 0.000ms
-			RemoteAssetCacheGetArtifact: 0.000ms (0.000ms without children)
-				RemoteAssetCacheResolve: 0.000ms
-				RemoteAssetCacheDownloadFile: 0.000ms
-		CompileScripts: 0.000ms
-		PostProcessAllAssets: 0.000ms
-		ReloadImportedAssets: 0.000ms
-		VerifyAssetsAreUpToDateAndCorrect: 0.000ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
-		InitializingProgressBar: 0.000ms
-		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
-		OnDemandSchedulerStart: 0.000ms
-		RestoreLoadedAssetsState: 0.000ms
-	InvokeProjectHasChanged: 0.000ms
-	UpdateImportedAssetsSnapshot: 0.000ms
-	ReloadSourceAssets: 0.000ms
-	UnloadImportedAssets: 0.000ms
-	Hotreload: 0.000ms
-	FixTempGuids: 0.013ms
-	VerifyGuidPMRegistrations: 0.003ms
-	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.234ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.008ms
-	GetLoadedSourceAssetsSnapshot: 0.309ms
-	PersistCurrentRevisions: 0.274ms
-	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.007ms
-Refresh completed in 0.080608 seconds.
-RefreshInfo: RefreshV2(ForceSynchronousImport)
-RefreshProfiler: Total: 0.000ms
-	InvokeBeforeRefreshCallbacks: 80.597ms
-	ApplyChangesToAssetFolders: 0.616ms
-	WriteModifiedImportersToTextMetaFiles: 0.044ms
-	CleanLegacyArtifacts: 0.000ms
-	Scan: 0.000ms
-	OnSourceAssetsModified: 77.412ms
-	UnregisterDeletedAssets: 0.000ms
-	InitializeImportedAssetsSnapshot: 0.000ms
-	GetAllGuidsForCategorization: 1.394ms
-	CategorizeAssets: 0.000ms
-	ImportAndPostprocessOutOfDateAssets: 0.000ms (0.000ms without children)
-		ImportManagerImport: 0.000ms (0.000ms without children)
-			ImportInProcess: 0.000ms
-			ImportOutOfProcess: 0.000ms
-			UpdateCategorizedAssets: 0.000ms
-			RemoteAssetCacheGetArtifact: 0.000ms (0.000ms without children)
-				RemoteAssetCacheResolve: 0.000ms
-				RemoteAssetCacheDownloadFile: 0.000ms
-		CompileScripts: 0.000ms
-		PostProcessAllAssets: 0.000ms
-		ReloadImportedAssets: 0.000ms
-		VerifyAssetsAreUpToDateAndCorrect: 0.000ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.000ms
-		InitializingProgressBar: 0.000ms
-		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
-		OnDemandSchedulerStart: 0.000ms
-		RestoreLoadedAssetsState: 0.000ms
-	InvokeProjectHasChanged: 0.000ms
-	UpdateImportedAssetsSnapshot: 0.000ms
-	ReloadSourceAssets: 0.000ms
-	UnloadImportedAssets: 0.000ms
-	Hotreload: 0.000ms
-	FixTempGuids: 0.013ms
-	VerifyGuidPMRegistrations: 0.004ms
-	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 0.134ms
-	LoadedImportedAssetsSnapshotReleaseGCHandles: 0.006ms
-	GetLoadedSourceAssetsSnapshot: 0.307ms
-	PersistCurrentRevisions: 0.251ms
-	UnloadStreamsEnd: 0.000ms
-	GenerateScriptTypeHashes: 0.007ms
+[Performance] Application.UnityExtensions.Initialize                      :        1 samples, Peak.   644 us (1.0x), Avg.   644 us, Total. 644.1 us (0.0%)
+[Performance] Application.InitializeManagedCompilationPipeline            :        1 samples, Peak.  68.1 ms (1.0x), Avg.  68.1 ms, Total. 68.12 ms (0.7%)
+[Performance] Application.ExecuteStartups                                 :        1 samples, Peak.   481 ms (1.0x), Avg.   481 ms, Total. 481.5 ms (4.7%)
+[Performance] Application.RebuildOSMenu                                   :        1 samples, Peak.  60.6 ms (1.0x), Avg.  60.6 ms, Total. 60.61 ms (0.6%)
+[Performance] UpdateAllMenus                                              :        1 samples, Peak.  59.4 ms (1.0x), Avg.  59.4 ms, Total. 59.37 ms (0.6%)
+[Performance] Application.editorInitializingProject                       :        1 samples, Peak.  7.60 us (1.0x), Avg.  7.60 us, Total. 7.600 us (0.0%)
+[Performance] GUIView.RepaintAll.PlayerLoopController                     :        1 samples, Peak.   600 ns (1.0x), Avg.   600 ns, Total. 600.0 ns (0.0%)
+[Performance] Application.InvokeFinishedLoadingProject                    :        1 samples, Peak.  42.4 ms (1.0x), Avg.  42.4 ms, Total. 42.39 ms (0.4%)
+[Performance] ProcessService.OnProjectLoaded                              :        1 samples, Peak.  40.4 ms (1.0x), Avg.  40.4 ms, Total. 40.38 ms (0.4%)
 Cleanup mono
 Exiting batchmode successfully now!
 Exiting without the bug reporter. Application will terminate with return code 0
